@@ -422,6 +422,115 @@
   };
 
   /* ================================================================================= */
+  /* ================================= 6. NON-STOP-POP FM ============================ */
+  /* ================================================================================= */
+
+  const bpPop = 'RADIO_02_POP';
+  
+  const obj_pop = {
+    chanceLocucao: 0.9,
+    musicasList: [
+      { id: 'adult_education', name: 'ADULT_EDUCATION', arquivo: `${bpPop}/musicas/ADULT_EDUCATION.ogg`, introStart: 312704, introEnd: 1577088, finalStart: 10340352, finalEnd: 11907072 },
+      { id: 'alright', name: 'ALRIGHT', arquivo: `${bpPop}/musicas/ALRIGHT.ogg`, finalStart: 9302016, finalEnd: 10407936 },
+      { id: 'anthem', name: 'ANTHEM', arquivo: `${bpPop}/musicas/ANTHEM.ogg`, introStart: 872943, introEnd: 1428496, finalStart: 7946240, finalEnd: 9422848 },
+      { id: 'applause', name: 'APPLAUSE', arquivo: `${bpPop}/musicas/APPLAUSE.ogg`, introStart: 263584, introEnd: 634272, finalStart: 8839842, finalEnd: 9795919 },
+      { id: 'bad_girls', name: 'BAD_GIRLS', arquivo: `${bpPop}/musicas/BAD_GIRLS.ogg`, introStart: 1284015, introEnd: 1863979, finalStart: 9207530, finalEnd: 10285444 },
+      { id: 'cooler_than_me', name: 'COOLER_THAN_ME', arquivo: `${bpPop}/musicas/COOLER_THAN_ME.ogg`, introStart: 725540, introEnd: 1483300, finalStart: 8905252, finalEnd: 9929927 },
+      { id: 'days_go_by', name: 'DAYS_GO_BY', arquivo: `${bpPop}/musicas/DAYS_GO_BY.ogg`, introStart: 241679, introEnd: 1417216, finalStart: 12492800, finalEnd: 13714432 },
+      { id: 'dont_wanna_fall_in_love', name: 'DONT_WANNA_FALL_IN_LOVE', arquivo: `${bpPop}/musicas/DONT_WANNA_FALL_IN_LOVE.ogg`, introStart: 422016, introEnd: 1467520, finalStart: 8276096, finalEnd: 9316352 },
+      { id: 'everything_she_wants', name: 'EVERYTHING_SHE_WANTS', arquivo: `${bpPop}/musicas/EVERYTHING_SHE_WANTS.ogg`, introStart: 240026, introEnd: 1619968, finalStart: 9048064, finalEnd: 10176512 },
+      { id: 'feel_good_inc', name: 'FEEL_GOOD_INC', arquivo: `${bpPop}/musicas/FEEL_GOOD_INC.ogg`, introStart: 334688, introEnd: 1567584, finalStart: 9767776, finalEnd: 10343449 },
+      { id: 'gimme_more', name: 'GIMME_MORE', arquivo: `${bpPop}/musicas/GIMME_MORE.ogg`, introStart: 263857, introEnd: 1031040, finalStart: 7540736, finalEnd: 9347072 },
+      { id: 'glamorous', name: 'GLAMOROUS', arquivo: `${bpPop}/musicas/GLAMOROUS.ogg`, introStart: 154624, introEnd: 741888, finalStart: 9553920, finalEnd: 10544128 },
+      { id: 'i_want_it_that_way', name: 'I_WANT_IT_THAT_WAY', arquivo: `${bpPop}/musicas/I_WANT_IT_THAT_WAY.ogg`, finalStart: 8835072, finalEnd: 9754624 },
+      { id: 'kids', name: 'KIDS', arquivo: `${bpPop}/musicas/KIDS.ogg`, introStart: 231332, introEnd: 976356, finalStart: 11361664, finalEnd: 12141952 },
+      { id: 'lady_hear_me_tonight', name: 'LADY_HEAR_ME_TONIGHT', arquivo: `${bpPop}/musicas/LADY_HEAR_ME_TONIGHT.ogg`, introStart: 239335, introEnd: 1095680, finalStart: 7544832, finalEnd: 9176064 },
+      { id: 'lets_go_all_the_way', name: 'LETS_GO_ALL_THE_WAY', arquivo: `${bpPop}/musicas/LETS_GO_ALL_THE_WAY.ogg`, introStart: 258432, introEnd: 1401216, finalStart: 9262080, finalEnd: 10230784 },
+      { id: 'living_in_a_box', name: 'LIVING_IN_A_BOX', arquivo: `${bpPop}/musicas/LIVING_IN_A_BOX.ogg`, introStart: 232960, introEnd: 861696, finalStart: 7355904, finalEnd: 8339856 },
+      { id: 'meet_me_halfway', name: 'MEET_ME_HALFWAY', arquivo: `${bpPop}/musicas/MEET_ME_HALFWAY.ogg`, finalStart: 10723328, finalEnd: 11677696 },
+      { id: 'me_and_you', name: 'ME_AND_YOU', arquivo: `${bpPop}/musicas/ME_AND_YOU.ogg`, introStart: 255763, introEnd: 886784, finalStart: 7949310, finalEnd: 8861696 },
+      { id: 'midnight_city', name: 'MIDNIGHT_CITY', arquivo: `${bpPop}/musicas/MIDNIGHT_CITY.ogg`, introStart: 278528, introEnd: 844299, finalStart: 8327168, finalEnd: 9519104 },
+      { id: 'moves_like_jagger', name: 'MOVES_LIKE_JAGGER', arquivo: `${bpPop}/musicas/MOVES_LIKE_JAGGER.ogg`, introStart: 247000, introEnd: 638976, finalStart: 8365272, finalEnd: 9347084 },
+      { id: 'music_sounds_better_with_you', name: 'MUSIC_SOUNDS_BETTER_WITH_YOU', arquivo: `${bpPop}/musicas/MUSIC_SOUNDS_BETTER_WITH_YOU.ogg`, introStart: 238592, introEnd: 743552, finalStart: 9500672, finalEnd: 10819584 },
+      { id: 'new_sensation', name: 'NEW_SENSATION', arquivo: `${bpPop}/musicas/NEW_SENSATION.ogg`, finalStart: 9200029, finalEnd: 10262936 },
+      { id: 'one_thing', name: 'ONE_THING', arquivo: `${bpPop}/musicas/ONE_THING.ogg`, introStart: 257531, introEnd: 1400832, finalStart: 9243606, finalEnd: 9926656 },
+      { id: 'only_girl_in_the_world', name: 'ONLY_GIRL_IN_THE_WORLD', arquivo: `${bpPop}/musicas/ONLY_GIRL_IN_THE_WORLD.ogg`, introStart: 255930, introEnd: 703616, finalStart: 9601024, finalEnd: 10849460 },
+      { id: 'on_our_own', name: 'ON_OUR_OWN', arquivo: `${bpPop}/musicas/ON_OUR_OWN.ogg`, introStart: 1133132, introEnd: 2033513, finalStart: 10887385, finalEnd: 11939840 },
+      { id: 'promises_promises', name: 'PROMISES_PROMISES', arquivo: `${bpPop}/musicas/PROMISES_PROMISES.ogg`, introStart: 245184, introEnd: 855488, finalStart: 9297344, finalEnd: 10355589 },
+      { id: 'pure_shores', name: 'PURE_SHORES', arquivo: `${bpPop}/musicas/PURE_SHORES.ogg`, introStart: 236544, introEnd: 943360, finalStart: 9560064, finalEnd: 10760192 },
+      { id: 'rythm_of_the_night', name: 'RYTHM_OF_THE_NIGHT', arquivo: `${bpPop}/musicas/RYTHM_OF_THE_NIGHT.ogg`, introStart: 317763, introEnd: 1011456, finalStart: 8403456, finalEnd: 9468928 },
+      { id: 'scandalous', name: 'SCANDALOUS', arquivo: `${bpPop}/musicas/SCANDALOUS.ogg`, introStart: 249250, introEnd: 1077376, finalStart: 9863040, finalEnd: 10617216 },
+      { id: 'send_me_an_angel', name: 'SEND_ME_AN_ANGEL', arquivo: `${bpPop}/musicas/SEND_ME_AN_ANGEL.ogg`, finalStart: 9735120, finalEnd: 10738985 },
+      { id: 'six_underground', name: 'SIX_UNDERGROUND', arquivo: `${bpPop}/musicas/SIX_UNDERGROUND.ogg`, introStart: 258764, introEnd: 538648, finalStart: 8490895, finalEnd: 9897216 },
+      { id: 'smalltown_boy', name: 'SMALLTOWN_BOY', arquivo: `${bpPop}/musicas/SMALLTOWN_BOY.ogg`, introStart: 245760, introEnd: 1413120 },
+      { id: 'something_got_me_started_remix', name: 'SOMETHING_GOT_ME_STARTED_REMIX', arquivo: `${bpPop}/musicas/SOMETHING_GOT_ME_STARTED_REMIX.ogg`, introStart: 245760, introEnd: 1236992, finalStart: 8810496, finalEnd: 10334208 },
+      { id: 'tape_loop', name: 'TAPE_LOOP', arquivo: `${bpPop}/musicas/TAPE_LOOP.ogg`, introStart: 208896, introEnd: 507904, finalStart: 8663040, finalEnd: 9897984 },
+      { id: 'tell_to_my_heart', name: 'TELL_TO_MY_HEART', arquivo: `${bpPop}/musicas/TELL_TO_MY_HEART.ogg`, introStart: 249856, introEnd: 783140, finalStart: 8392704, finalEnd: 9560064 },
+      { id: 'tennis_court', name: 'TENNIS_COURT', arquivo: `${bpPop}/musicas/TENNIS_COURT.ogg`, finalStart: 8249712, finalEnd: 9241030 },
+      { id: 'the_time_is_now', name: 'THE_TIME_IS_NOW', arquivo: `${bpPop}/musicas/THE_TIME_IS_NOW.ogg`, introStart: 231340, introEnd: 732902, finalStart: 8871142, finalEnd: 10021990 },
+      { id: 'wait', name: 'WAIT', arquivo: `${bpPop}/musicas/WAIT.ogg`, introStart: 263872, introEnd: 1005248, finalStart: 7282688, finalEnd: 8620544 },
+      { id: 'west_end_girls', name: 'WEST_END_GIRLS', arquivo: `${bpPop}/musicas/WEST_END_GIRLS.ogg`, introStart: 253767, introEnd: 1323008, finalStart: 8597504, finalEnd: 9611520 },
+      { id: 'with_every_heartbeat', name: 'WITH_EVERY_HEARTBEAT', arquivo: `${bpPop}/musicas/WITH_EVERY_HEARTBEAT.ogg`, introStart: 516096, introEnd: 1474368, finalStart: 9355264, finalEnd: 10135552 },
+      { id: 'work', name: 'WORK', arquivo: `${bpPop}/musicas/WORK.ogg`, introStart: 459136, introEnd: 975488, finalStart: 7661952, finalEnd: 8791936 }
+    ],
+    grupoID: genList(bpPop, 'narracoes', padArr('ID', 1, 17)),
+    grupoDJSolo: genList(bpPop, 'narracoes', padArr('MONO_SOLO', 1, 29)),
+    narracoesGeneral: genList(bpPop, 'narracoes', padArr('GENERAL', 1, 46)),
+    timePools: {
+      morning: genList(bpPop, 'narracoes', padArr('MORNING', 1, 6)),
+      evening: genList(bpPop, 'narracoes', padArr('EVENING', 1, 6))
+    },
+    endto: {
+      toad: genList(bpPop, 'narracoes', padArr('TO_AD', 1, 6)),
+      tonews: genList(bpPop, 'narracoes', padArr('TO_NEWS', 1, 6))
+    },
+    grupoAdv: G.adv.gtav || [],
+    grupoWeazelNews: G.news.gtav || [],
+    musicIntroNarrations: {
+      'ADULT_EDUCATION': genList(bpPop, 'narracoes', ['ADULT_EDUCATION_01', 'ADULT_EDUCATION_02']),
+      'ANTHEM': genList(bpPop, 'narracoes', ['ANTHEM_01', 'ANTHEM_02']),
+      'APPLAUSE': genList(bpPop, 'narracoes', ['APPLAUSE_01', 'APPLAUSE_02']),
+      'BAD_GIRLS': genList(bpPop, 'narracoes', ['BAD_GIRLS_01', 'BAD_GIRLS_02']),
+      'COOLER_THAN_ME': genList(bpPop, 'narracoes', ['COOLER_THAN_ME_01', 'COOLER_THAN_ME_02']),
+      'DAYS_GO_BY': genList(bpPop, 'narracoes', ['DAYS_GO_BY_01', 'DAYS_GO_BY_02']),
+      'DONT_WANNA_FALL_IN_LOVE': genList(bpPop, 'narracoes', ['DONT_WANNA_FALL_IN_LOVE_01', 'DONT_WANNA_FALL_IN_LOVE_02']),
+      'EVERYTHING_SHE_WANTS': genList(bpPop, 'narracoes', ['EVERYTHING_SHE_WANTS_01', 'EVERYTHING_SHE_WANTS_02']),
+      'FEEL_GOOD_INC': genList(bpPop, 'narracoes', ['FEEL_GOOD_INC_01', 'FEEL_GOOD_INC_02']),
+      'GIMME_MORE': genList(bpPop, 'narracoes', ['GIMME_MORE_01', 'GIMME_MORE_02']),
+      'GLAMOROUS': genList(bpPop, 'narracoes', ['GLAMOROUS_01', 'GLAMOROUS_02']),
+      'I_WANT_IT_THAT_WAY': genList(bpPop, 'narracoes', ['I_WANT_IT_THAT_WAY_01', 'I_WANT_IT_THAT_WAY_02']),
+      'KIDS': genList(bpPop, 'narracoes', ['KIDS_01', 'KIDS_02']),
+      'LADY_HEAR_ME_TONIGHT': genList(bpPop, 'narracoes', ['LADY_HEAR_ME_TONIGHT_01', 'LADY_HEAR_ME_TONIGHT_02']),
+      'LETS_GO_ALL_THE_WAY': genList(bpPop, 'narracoes', ['LETS_GO_ALL_THE_WAY_01', 'LETS_GO_ALL_THE_WAY_02']),
+      'LIVING_IN_A_BOX': genList(bpPop, 'narracoes', ['LIVING_IN_A_BOX_01', 'LIVING_IN_A_BOX_02']),
+      'MEET_ME_HALFWAY': genList(bpPop, 'narracoes', ['MEET_ME_HALFWAY_01', 'MEET_ME_HALFWAY_02']),
+      'ME_AND_YOU': genList(bpPop, 'narracoes', ['ME_AND_YOU_01', 'ME_AND_YOU_02']),
+      'MIDNIGHT_CITY': genList(bpPop, 'narracoes', ['MIDNIGHT_CITY_01', 'MIDNIGHT_CITY_02']),
+      'MOVES_LIKE_JAGGER': genList(bpPop, 'narracoes', ['MOVES_LIKE_JAGGER_01', 'MOVES_LIKE_JAGGER_02']),
+      'MUSIC_SOUNDS_BETTER_WITH_YOU': genList(bpPop, 'narracoes', ['MUSIC_SOUNDS_BETTER_WITH_YOU_01', 'MUSIC_SOUNDS_BETTER_WITH_YOU_02']),
+      'NEW_SENSATION': genList(bpPop, 'narracoes', ['NEW_SENSATION_01', 'NEW_SENSATION_02']),
+      'ONE_THING': genList(bpPop, 'narracoes', ['ONE_THING_01', 'ONE_THING_02']),
+      'ONLY_GIRL_IN_THE_WORLD': genList(bpPop, 'narracoes', ['ONLY_GIRL_IN_THE_WORLD_01', 'ONLY_GIRL_IN_THE_WORLD_02']),
+      'ON_OUR_OWN': genList(bpPop, 'narracoes', ['ON_OUR_OWN_01', 'ON_OUR_OWN_02']),
+      'PROMISES_PROMISES': genList(bpPop, 'narracoes', ['PROMISES_PROMISES_01', 'PROMISES_PROMISES_02']),
+      'PURE_SHORES': genList(bpPop, 'narracoes', ['PURE_SHORES_01', 'PURE_SHORES_02']),
+      'RYTHM_OF_THE_NIGHT': genList(bpPop, 'narracoes', ['RYTHM_OF_THE_NIGHT_01', 'RYTHM_OF_THE_NIGHT_02']),
+      'SCANDALOUS': genList(bpPop, 'narracoes', ['SCANDALOUS_01', 'SCANDALOUS_02', 'SCANDALOUS_03']),
+      'SIX_UNDERGROUND': genList(bpPop, 'narracoes', ['SIX_UNDERGROUND_01', 'SIX_UNDERGROUND_02']),
+      'SMALLTOWN_BOY': genList(bpPop, 'narracoes', ['SMALLTOWN_BOY_01', 'SMALLTOWN_BOY_02']),
+      'SOMETHING_GOT_ME_STARTED_REMIX': genList(bpPop, 'narracoes', ['SOMETHING_GOT_ME_STARTED_REMIX_01', 'SOMETHING_GOT_ME_STARTED_REMIX_02']),
+      'TAPE_LOOP': genList(bpPop, 'narracoes', ['TAPE_LOOP_01', 'TAPE_LOOP_02', 'TAPE_LOOP_03', 'TAPE_LOOP_04']),
+      'TELL_TO_MY_HEART': genList(bpPop, 'narracoes', ['TELL_IT_TO_MY_HEART_01', 'TELL_IT_TO_MY_HEART_02']),
+      'TENNIS_COURT': genList(bpPop, 'narracoes', ['TENNIS_COURT_01', 'TENNIS_COURT_02']),
+      'THE_TIME_IS_NOW': genList(bpPop, 'narracoes', ['THE_TIME_IS_NOW_01', 'THE_TIME_IS_NOW_02', 'THE_TIME_IS_NOW_03', 'THE_TIME_IS_NOW_04']),
+      'WAIT': genList(bpPop, 'narracoes', ['WAIT_01', 'WAIT_02']),
+      'WEST_END_GIRLS': genList(bpPop, 'narracoes', ['WEST_END_GIRLS_01', 'WEST_END_GIRLS_02']),
+      'WITH_EVERY_HEARTBEAT': genList(bpPop, 'narracoes', ['WITH_EVERY_HEARTBEAT_01', 'WITH_EVERY_HEARTBEAT_02']),
+      'WORK': genList(bpPop, 'narracoes', ['WORK_01', 'WORK_02'])
+    }
+  };
+
+  /* ================================================================================= */
   /* =========================== EXPORTAÇÃO GLOBAL (GTA V) =========================== */
   /* ================================================================================= */
   
@@ -432,7 +541,8 @@
         'radio_16_silverlake': obj_silverlake,
         'radio_18_90s_rock': obj_90s_rock,
         'radio_34_dlc_hei4_kult': obj_kult,
-        'radio_15_motown': obj_motown
+        'radio_15_motown': obj_motown,
+        'radio_02_pop': obj_pop
       }
     }
   };

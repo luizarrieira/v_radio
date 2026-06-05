@@ -163,10 +163,10 @@
       -webkit-user-drag: none;
     }
 
-    /* === FIX DA KULT FM (Aumenta a imagem cortando a borda preta) === */
-    .zoom-kult {
-      transform: scale(1.064);
-      clip-path: circle(47% at 50% 50%);
+    /* === FIX DAS RÁDIOS COM ZOOM (Aumenta a imagem cortando a borda preta) === */
+    .zoom-radio {
+      transform: scale(1.087);
+      clip-path: circle(46% at 50% 50%);
     }
 
     /* === DISPLAY CENTRAL === */
@@ -185,13 +185,25 @@
       pointer-events: none;
     }
 
-    #activeColorLogo {
+    #centerLogoWrapper {
       width: 128px;
       height: 128px;
       border-radius: 50%;
-      object-fit: cover;
       margin-bottom: 20px;
-      display: none; 
+      display: none;
+      box-sizing: border-box;
+      /* Traz a borda de seleção para a troca rápida (clique) */
+      border: 3px solid #65d671;
+      box-shadow: 0 0 10px rgba(101, 214, 113, 0.4);
+      background: transparent;
+    }
+
+    #activeColorLogo {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block; 
     }
     
     #radioNameText {
@@ -210,23 +222,11 @@
       display: block; 
     }
 
-    #centerDisplay.wheel-open #activeColorLogo { display: none !important; }
+    #centerDisplay.wheel-open #centerLogoWrapper { display: none !important; }
     #centerDisplay.wheel-open #radioNameText { display: block !important; }
 
-    #centerDisplay.flash-image:not(.wheel-open) #activeColorLogo { display: block; }
+    #centerDisplay.flash-image:not(.wheel-open) #centerLogoWrapper { display: block; }
     #centerDisplay.flash-image:not(.wheel-open) #radioNameText { display: none; }
-
-    /* === ÁREA DE LOGS === */
-    #logArea {
-      position: absolute;
-      bottom: 20px;
-      width: 90%; max-width: 600px; height: 100px;
-      background: rgba(17, 17, 17, 0.8); border: 1px solid #333; padding: 10px;
-      font-family: monospace; font-size: 0.8rem; color: #0f0;
-      overflow-y: auto; border-radius: 8px; box-sizing: border-box;
-      pointer-events: auto; z-index: 50;
-    }
-    #logArea div { border-bottom: 1px solid #222; padding: 2px 0; }
 
     /* Ajustes específicos de celular para a roda */
     @media (max-width: 768px) {
@@ -253,12 +253,13 @@
     </div>
 
     <div id="centerDisplay">
-      <img id="activeColorLogo" src="capas/default.png" draggable="false" />
+      <div id="centerLogoWrapper">
+        <img id="activeColorLogo" src="capas/default.png" draggable="false" />
+      </div>
       <div id="radioNameText"></div>
     </div>
     
     <div id="wheelContainer"></div>
-    <div id="logArea"></div>
   </div>
 
   <script src="geral.js"></script>
@@ -268,17 +269,6 @@
   
   <script>
     document.addEventListener('contextmenu', event => event.preventDefault());
-
-    // ----------------- SISTEMA DE LOGS -----------------
-    const logArea = document.getElementById('logArea');
-    const oldLog = console.log;
-    console.log = (...args) => {
-      oldLog(...args);
-      const line = document.createElement('div');
-      line.textContent = args.join(' ');
-      logArea.appendChild(line);
-      logArea.scrollTop = logArea.scrollHeight;
-    };
 
     // ----------------- SONS DA INTERFACE -----------------
     const uiAudioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -351,38 +341,40 @@
 
     // ----------------- CONFIGURAÇÃO DAS RÁDIOS (26 SLOTS) -----------------
     const todasAsRadios = [
+      { key: 'radio', name: 'blonded Los Santos 97.8 FM', imgBW: 'capas/radio_station19.png', expansoes: ['v'] },
+      { key: 'radio', name: 'Los Santos Underground Radio', imgBW: 'capas/radio_station20.png', expansoes: ['v'] },
+      { key: 'radio', name: 'iFruit Radio', imgBW: 'capas/radio_station21.png', expansoes: ['v'] },
+      { key: 'radio', name: 'Still Slipping Los Santos', imgBW: 'capas/radio_station23.png', expansoes: ['v'] },
       { key: 'radio_01_class_rock', name: 'Los Santos Rock Radio', imgBW: 'capas/radio_station04.png', expansoes: ['v'] },
-      { key: 'radio_16_silverlake', name: 'Radio Mirror Park', imgBW: 'capas/radio_station08.png', expansoes: ['v'] },
-      { key: 'radio_18_90s_rock', name: 'Vinewood Boulevard Radio', imgBW: 'capas/radio_station10.png', expansoes: ['v'] },
-      { key: 'radio_34_dlc_hei4_kult', name: 'Kult FM', imgBW: 'capas/radio_station25.png', expansoes: ['v'] },
-      
-      { key: 'radio_15_motown', name: 'The Lowdown 91.1', imgBW: 'capas/radio_station15.png', expansoes: ['v'] },
       { key: 'radio_02_pop', name: 'Non-Stop-Pop FM', imgBW: 'capas/radio_station05.png', expansoes: ['v'] },
-      { key: 'radio_18_90s_rock', name: 'Rádio 07 (Slot Livre)', imgBW: 'capas/radio_18_90s_rock.png', expansoes: ['v'] },
-      { key: 'radio_34_dlc_hei4_kult', name: 'Rádio 08 (Slot Livre)', imgBW: 'capas/radio_34_dlc_hei4_kult.png', expansoes: ['v'] },
-      
-      { key: 'radio_01_class_rock', name: 'Rádio 09 (Slot Livre)', imgBW: 'capas/radio_01_class_rock.png', expansoes: ['v'] },
-      { key: 'radio_16_silverlake', name: 'Rádio 10 (Slot Livre)', imgBW: 'capas/radio_16_silverlake.png', expansoes: ['v'] },
-      { key: 'radio_18_90s_rock', name: 'Rádio 11 (Slot Livre)', imgBW: 'capas/radio_18_90s_rock.png', expansoes: ['v'] },
-      { key: 'radio_34_dlc_hei4_kult', name: 'Rádio 12 (Slot Livre)', imgBW: 'capas/radio_34_dlc_hei4_kult.png', expansoes: ['v'] },
-      
-      { key: 'radio_01_class_rock', name: 'Rádio 13 (Slot Livre)', imgBW: 'capas/radio_01_class_rock.png', expansoes: ['v'] },
-      { key: 'radio_16_silverlake', name: 'Rádio 14 (Slot Livre)', imgBW: 'capas/radio_16_silverlake.png', expansoes: ['v'] },
-      { key: 'radio_18_90s_rock', name: 'Rádio 15 (Slot Livre)', imgBW: 'capas/radio_18_90s_rock.png', expansoes: ['v'] },
-      { key: 'radio_34_dlc_hei4_kult', name: 'Rádio 16 (Slot Livre)', imgBW: 'capas/radio_34_dlc_hei4_kult.png', expansoes: ['v'] },
-      
-      { key: 'radio_01_class_rock', name: 'Rádio 17 (Slot Livre)', imgBW: 'capas/radio_01_class_rock.png', expansoes: ['v'] },
-      { key: 'radio_16_silverlake', name: 'Rádio 18 (Slot Livre)', imgBW: 'capas/radio_16_silverlake.png', expansoes: ['v'] },
-      { key: 'radio_18_90s_rock', name: 'Rádio 19 (Slot Livre)', imgBW: 'capas/radio_18_90s_rock.png', expansoes: ['v'] },
-      { key: 'radio_34_dlc_hei4_kult', name: 'Rádio 20 (Slot Livre)', imgBW: 'capas/radio_34_dlc_hei4_kult.png', expansoes: ['v'] },
-      
-      { key: 'radio_01_class_rock', name: 'Rádio 21 (Slot Livre)', imgBW: 'capas/radio_01_class_rock.png', expansoes: ['v'] },
-      { key: 'radio_16_silverlake', name: 'Rádio 22 (Slot Livre)', imgBW: 'capas/radio_16_silverlake.png', expansoes: ['v'] },
+      { key: 'radio', name: 'Radio Los Santos', imgBW: 'capas/radio_station11.png', expansoes: ['v'] },
+      { key: 'radio', name: 'Channel X', imgBW: 'capas/radio_station03.png', expansoes: ['v'] },
+      { key: 'radio', name: 'WCTR', imgBW: 'capas/radio_station17.png', expansoes: ['v'] },
+      { key: 'radio', name: 'Rebel Radio', imgBW: 'capas/radio_station01.png', expansoes: ['v'] },
+      { key: 'radio', name: 'Soulwax FM', imgBW: 'capas/radio_station06.png', expansoes: ['v'] },
+      { key: 'radio', name: 'East Los FM', imgBW: 'capas/radio_station02.png', expansoes: ['v'] },
+      { key: 'radio', name: 'West Coast Classics', imgBW: 'capas/radio_station09.png', expansoes: ['v'] },
+      { key: 'radio', name: 'Media Player', imgBW: 'capas/radio_station26.png', expansoes: ['v'] },
+      { key: 'radio', name: 'Blaine County Radio', imgBW: 'capas/radio_station07.png', expansoes: ['v'] },
+      { key: 'radio', name: 'MOTOMAMI Los Santos', imgBW: 'capas/radio_station24.png', expansoes: ['v'] },
+      { key: 'radio', name: 'Music Locker Radio', imgBW: 'capas/radio_station22.png', expansoes: ['v'] },
+      { key: 'radio', name: 'The Blue Ark', imgBW: 'capas/radio_station12.png', expansoes: ['v'] },
+      { key: 'radio', name: 'WorldWide FM', imgBW: 'capas/radio_station13.png', expansoes: ['v'] },
+      { key: 'radio', name: 'FlyLo FM', imgBW: 'capas/radio_station14.png', expansoes: ['v'] },
+      { key: 'radio_15_motown', name: 'The Lowdown 91.1', imgBW: 'capas/radio_station15.png', expansoes: ['v'] },
+      { key: 'radio', name: 'The Lab', imgBW: 'capas/radio_station18.png', expansoes: ['v'] },
+      { key: 'radio_16_silverlake', name: 'Radio Mirror Park', imgBW: 'capas/radio_station08.png', expansoes: ['v'] },
+      { key: 'radio_34_dlc_hei4_kult', name: 'Kult FM 99.1', imgBW: 'capas/radio_station25.png', expansoes: ['v'] },
+      { key: 'radio', name: 'Space 103.2', imgBW: 'capas/radio_station16.png', expansoes: ['v'] },
+      { key: 'radio_18_90s_rock', name: 'Vinewood Boulevard Radio', imgBW: 'capas/radio_station10.png', expansoes: ['v'] }
+    ];
 
-      { key: 'radio_01_class_rock', name: 'Rádio 23 (Slot Livre)', imgBW: 'capas/radio_01_class_rock.png', expansoes: ['v'] },
-      { key: 'radio_16_silverlake', name: 'Rádio 24 (Slot Livre)', imgBW: 'capas/radio_16_silverlake.png', expansoes: ['v'] },
-      { key: 'radio_18_90s_rock', name: 'Rádio 25 (Slot Livre)', imgBW: 'capas/radio_18_90s_rock.png', expansoes: ['v'] },
-      { key: 'radio_34_dlc_hei4_kult', name: 'Rádio 26 (Slot Livre)', imgBW: 'capas/radio_34_dlc_hei4_kult.png', expansoes: ['v'] }
+    const radiosComZoom = [
+      'Kult FM 99.1',
+      'Los Santos Underground Radio',
+      'iFruit Radio',
+      'Still Slipping Los Santos',
+      'Music Locker Radio'
     ];
 
     // ----------------- ESTADO GLOBAL E VARIÁVEIS -----------------
@@ -415,11 +407,11 @@
         activeColorLogo.src = rad.imgBW;
         radioNameText.textContent = rad.name;
         
-        // Aplica o zoom específico para cortar as bordas da Kult FM
-        if (rad.key === 'radio_34_dlc_hei4_kult') {
-            activeColorLogo.classList.add('zoom-kult');
+        // Aplica o zoom específico nas rádios configuradas
+        if (radiosComZoom.includes(rad.name)) {
+            activeColorLogo.classList.add('zoom-radio');
         } else {
-            activeColorLogo.classList.remove('zoom-kult');
+            activeColorLogo.classList.remove('zoom-radio');
         }
     }
 
@@ -484,8 +476,8 @@
         div.className = 'wheel-item';
         div.id = `wheel_item_${index}`;
         
-        const isKult = r.key === 'radio_34_dlc_hei4_kult' ? 'zoom-kult' : '';
-        div.innerHTML = `<img src="${r.imgBW}" draggable="false" class="${isKult}" onerror="this.src='capas/default.png'" />`;
+        const isZoom = radiosComZoom.includes(r.name) ? 'zoom-radio' : '';
+        div.innerHTML = `<img src="${r.imgBW}" draggable="false" class="${isZoom}" onerror="this.src='capas/default.png'" />`;
         
         const angle = (index / N) * 2 * Math.PI - (Math.PI / 2);
         const x = Math.cos(angle) * radius;
@@ -574,7 +566,7 @@
 
     // ----------------- EVENTOS DE INTERAÇÃO -----------------
     const handlePointerDown = (e) => {
-      if (e.target.closest('#logArea') || e.target.closest('#btnBack')) return;
+      if (e.target.closest('#btnBack')) return;
       
       isPointerDown = true;
       forceWakeUpAudio();
@@ -696,7 +688,7 @@
     // Roda do Mouse (Scroll)
     let lastWheelTime = 0;
     viewPlayer.addEventListener('wheel', (e) => {
-      if (isHoldingWheel || e.target.closest('#logArea')) return; 
+      if (isHoldingWheel) return; 
       e.preventDefault(); 
       const now = Date.now();
       if (now - lastWheelTime < 250) return; 

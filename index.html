@@ -117,7 +117,7 @@
       pointer-events: none;
       z-index: 10;
       
-      transition: transform 0.25s ease-out; /* Removido transform-origin daqui, usamos translate agora */
+      transition: transform 0.25s ease-out;
       will-change: transform;
       transform-origin: 0px 0px; 
     }
@@ -221,7 +221,8 @@
 
     /* Ajustes específicos de celular para a roda */
     @media (max-width: 768px) {
-      .wheel-item { width: 70px; height: 70px; margin-top: -35px; margin-left: -35px; }
+      /* Tamanho reduzido para evitar sobreposição */
+      .wheel-item { width: 50px; height: 50px; margin-top: -25px; margin-left: -25px; }
       #radioNameText { font-size: 1.1rem; }
     }
   </style>
@@ -376,80 +377,49 @@
     // ----------------- ESTADO GLOBAL E VARIÁVEIS -----------------
     let currentExpansion = null;
     let radiosAtuais = [];
-    let currentIndex = 0; 
-    let tempSelectedIndex = 0; 
-    let currentlyPlayingKey = null; 
+    let currentIndex = 0;
     
-    let flashImageTimeout = null;
-    let pendingAudioTimeout = null; 
+    function buildWheel() {
+      radiosAtuais = todasAsRadios.filter(r => r.expansoes.includes(currentExpansion));
+      wheelContainer.innerHTML = '';
+      const N = radiosAtuais.length;
+      
+      // RAIO AUMENTADO: Afasta as rádios para eliminar a sobreposição sem diminuir as logos.
+      // 240px no mobile e 380px no desktop.
+      const isMobile = window.innerWidth <= 768;
+      const radius = isMobile ? 240 : 380;
 
-    const viewMenu = document.getElementById('viewMenu');
-    const viewPlayer = document.getElementById('viewPlayer');
-    const wheelContainer = document.getElementById('wheelContainer');
-    const centerDisplay = document.getElementById('centerDisplay');
-    const activeColorLogo = document.getElementById('activeColorLogo');
-    const radioNameText = document.getElementById('radioNameText');
-
-    let holdTimer = null;
-    let isHoldingWheel = false;
-    let isPointerDown = false;
-    
-    let clickOriginX = 0;
-    let clickOriginY = 0;
-
-    // ----------------- FUNÇÕES AUXILIARES -----------------
-    function updateVisuals(index) {
-        const rad = radiosAtuais[index];
-        activeColorLogo.src = rad.imgBW;
-        radioNameText.textContent = rad.name;
+      radiosAtuais.forEach((r, index) => {
+        const div = document.createElement('div');
+        div.className = 'wheel-item';
+        div.id = `wheel_item_${index}`;
+        div.innerHTML = `<img src="${r.imgBW}" />`;
+        
+        const angle = (index / N) * 2 * Math.PI - (Math.PI / 2);
+        const x = Math.cos(angle) * radius;
+        const y = Math.sin(angle) * radius;
+        div.dataset.baseX = x;
+        div.dataset.baseY = y;
+        div.style.transform = `translate(${x}px, ${y}px)`;
+        wheelContainer.appendChild(div);
+      });
     }
 
-    function applyAudio(index) {
-        const rad = radiosAtuais[index];
-        if (currentlyPlayingKey !== rad.key) {
-            playUIStatic();
-
-            if(window.__RADIO && window.__RADIO.stopRadio) window.__RADIO.stopRadio();
-            
-            if(window.__RADIO && window.__RADIO.startRadio) {
-                currentlyPlayingKey = rad.key;
-                window.__RADIO.startRadio(currentExpansion, rad.key);
-                
-                const stopStaticHandler = () => {
-                    stopUIStatic(false);
-                    window.removeEventListener('radio-ready', stopStaticHandler);
-                    clearTimeout(safetyTimeout); 
-                };
-
-                window.addEventListener('radio-ready', stopStaticHandler);
-                const safetyTimeout = setTimeout(() => { stopStaticHandler(); }, 5000);
-            } else {
-                stopUIStatic(true);
-            }
-        }
-    }
-
-    // ----------------- LÓGICA DA RODA (WHEEL) E CÂMERA -----------------
-    
     function applyMobileWheelPan(index) {
       if (window.innerWidth <= 768) {
         const activeItem = document.getElementById(`wheel_item_${index}`);
-        if (activeItem) {
-            const x = parseFloat(activeItem.dataset.baseX);
-            const y = parseFloat(activeItem.dataset.baseY);
-            
-            // Aumentei o zoom (de 1.7 para 2.0)
-            const zoom = 2.0; 
-            
-            // Aplica um translate inverso à posição da rádio.
-            // O fator (zoom - 0.9) puxa levemente as rádios das bordas para perto do centro,
-            // garantindo que elas nunca fiquem cortadas fora da tela.
-            const panX = -x * (zoom - 0.9);
-            const panY = -y * (zoom - 0.9);
-            
-            wheelContainer.style.transformOrigin = `0px 0px`;
-            wheelContainer.style.transform = `translate(${panX}px, ${panY}px) scale(${zoom})`;
-        }
+        if (!activeItem) return;
+        const x = parseFloat(activeItem.dataset.baseX);
+        const y = parseFloat(activeItem.dataset.baseY);
+        
+        // ZOOM CONTROLADO: O zoom de 1.15 garante que a logo selecionada 
+        // fique bem visível, enquanto o ajuste de pan (0.9) empurra o conjunto 
+        // para o centro, garantindo que rádios laterais não cortem.
+        const zoom = 1.15;
+        const panX = -x * 0.9;
+        const panY = -y * 0.9;
+        wheelContainer.style.transform = `translate(${panX}px, ${panY}px) scale(${zoom})`;
+      }
       }
     }
 
@@ -460,8 +430,10 @@
       const N = radiosAtuais.length;
       const minDim = Math.min(window.innerWidth, window.innerHeight);
       
-      // Proporção padronizada (o media query fará as rádios ficarem proporcionais no celular)
-      const radius = minDim * 0.39;
+      // Raio expandido no mobile (0.46) para garantir que os itens espalhem mais
+      // e não fiquem remontando quando juntos com a alteração do tamanho dos ícones.
+      const isMobile = window.innerWidth <= 768;
+      const radius = isMobile ? minDim * 0.46 : minDim * 0.39;
 
       radiosAtuais.forEach((r, index) => {
         const div = document.createElement('div');
@@ -512,7 +484,7 @@
         
         if (i === index) {
             el.classList.add('active');
-            el.style.transform = `translate(${bx}px, ${by}px)`; // Mantém a escala fixa em 1
+            el.style.transform = `translate(${bx}px, ${by}px)`; 
         } else {
             el.classList.remove('active');
             el.style.transform = `translate(${bx}px, ${by}px)`;

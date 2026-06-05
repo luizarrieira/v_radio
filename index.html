@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>V Radio Player</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+    
+    body {
+      margin: 0;
+      color: #eee;
+      font-family: 'Roboto Condensed', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      user-select: none;
+      overflow: hidden;
+      overscroll-behavior: none;
+      position: relative; 
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: -10%; left: -10%; 
+      width: 120%; height: 120%; 
+      background: url('https://img.goodfon.com/original/1920x1080/b/6f/gta-5-proshlo-desyat-let.jpg') center/cover;
+      /* Ajuste no fundo: menos desfocado e mais claro */
+      filter: blur(10px) brightness(0.75); 
+      animation: cameraPan 40s linear infinite alternate;
+      z-index: -1;
+    }
+
+    @keyframes cameraPan {
+      0% { transform: scale(1) translate(0, 0); }
+      100% { transform: scale(1.1) translate(-2%, -2%); }
+    }
+    
+    /* === SISTEMA DE TELAS === */
+    .view {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+    .view.active { display: flex; }
+
+    /* === MENU INICIAL === */
+    #menuTitle {
+      font-size: 2rem;
+      color: #65d671;
+      margin-bottom: 40px;
+      text-shadow: 0 0 10px rgba(101, 214, 113, 0.5);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-align: center;
+      font-weight: 700;
+    }
+    .menu-row { display: flex; gap: 20px; margin-bottom: 20px; flex-wrap: wrap; justify-content: center; }
+    .btn-exp {
+      background: #222; color: #fff; border: 2px solid #555;
+      padding: 20px 40px; font-size: 1.2rem; font-family: inherit;
+      cursor: pointer; border-radius: 8px; transition: all 0.2s;
+      min-width: 250px; text-align: center; text-transform: uppercase;
+      font-weight: 700;
+    }
+    .btn-exp:hover {
+      background: #65d671; color: #000; border-color: #65d671;
+      transform: scale(1.05); box-shadow: 0 0 15px rgba(101, 214, 113, 0.6);
+    }
+
+    /* === TELA DO PLAYER === */
+    #viewPlayer {
+      position: relative;
+      touch-action: none; 
+      cursor: crosshair;
+    }
+
+    #radioHeader {
+      position: absolute;
+      top: 40px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 90%;
+      max-width: 1000px;
+      z-index: 50;
+      pointer-events: auto;
+    }
+    #btnBack {
+      background: transparent; color: #aaa; border: 1px solid #aaa;
+      padding: 8px 16px; font-family: inherit; cursor: pointer;
+      border-radius: 4px; transition: 0.2s;
+      z-index: 60;
+    }
+    #btnBack:hover { background: #333; color: #fff; border-color: #fff; }
+
+    /* === RODA DE RÁDIOS === */
+    #wheelContainer {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      display: none; 
+      pointer-events: none;
+      z-index: 10;
+    }
+    
+    #wheelContainer.visible {
+      display: block;
+    }
+
+    .wheel-item {
+      position: absolute;
+      width: 90px; 
+      height: 90px;
+      margin-top: -45px;
+      margin-left: -45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* Rádios não selecionadas ficam mais transparentes */
+      opacity: 0.25;
+      pointer-events: none;
+      border-radius: 50%;
+      border: 3px solid transparent; 
+      padding: 0; 
+      box-sizing: border-box;
+      background: transparent;
+      z-index: 10;
+    }
+    
+    .wheel-item.active {
+      opacity: 1;
+      z-index: 20; 
+      border-color: #65d671; 
+      box-shadow: 0 0 10px rgba(101, 214, 113, 0.4);
+    }
+
+    .wheel-item img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover; 
+      -webkit-user-drag: none;
+    }
+
+    /* === DISPLAY CENTRAL === */
+    #centerDisplay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 5; 
+      width: 100%;
+      max-width: 500px;
+      pointer-events: none;
+    }
+
+    #activeColorLogo {
+      width: 128px;
+      height: 128px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      display: none; 
+    }
+    
+    #radioNameText {
+      font-size: 1.3rem; 
+      color: #ffffff;
+      text-align: center;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      text-shadow:
+        -1px -1px 0 #000,
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000,
+         0px  4px 10px rgba(0,0,0,0.8);
+      display: block; 
+    }
+
+    #centerDisplay.wheel-open #activeColorLogo { display: none !important; }
+    #centerDisplay.wheel-open #radioNameText { display: block !important; }
+
+    #centerDisplay.flash-image:not(.wheel-open) #activeColorLogo { display: block; }
+    #centerDisplay.flash-image:not(.wheel-open) #radioNameText { display: none; }
+
+    /* === ÁREA DE LOGS === */
+    #logArea {
+      position: absolute;
+      bottom: 20px;
+      width: 90%; max-width: 600px; height: 100px;
+      background: rgba(17, 17, 17, 0.8); border: 1px solid #333; padding: 10px;
+      font-family: monospace; font-size: 0.8rem; color: #0f0;
+      overflow-y: auto; border-radius: 8px; box-sizing: border-box;
+      pointer-events: auto; z-index: 50;
+    }
+    #logArea div { border-bottom: 1px solid #222; padding: 2px 0; }
+  </style>
+</head>
+<body>
+
+  <div id="viewMenu" class="view active">
+    <div id="menuTitle">Selecione a Plataforma</div>
+    <div class="menu-row">
+      <button class="btn-exp" data-exp="v">Grand Theft Auto V</button>
+    </div>
+  </div>
+
+  <div id="viewPlayer" class="view">
+    <div id="radioHeader">
+      <button id="btnBack">⬅ Voltar</button>
+    </div>
+
+    <div id="centerDisplay">
+      <img id="activeColorLogo" src="capas/default.png" draggable="false" />
+      <div id="radioNameText"></div>
+    </div>
+    
+    <div id="wheelContainer"></div>
+    <div id="logArea"></div>
+  </div>
+
+  <script src="geral.js"></script>
+  <script src="station.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
+  <script src="renderer.js"></script>
+  
+  <script>
+    // ----------------- SISTEMA DE LOGS -----------------
+    const logArea = document.getElementById('logArea');
+    const oldLog = console.log;
+    console.log = (...args) => {
+      oldLog(...args);
+      const line = document.createElement('div');
+      line.textContent = args.join(' ');
+      logArea.appendChild(line);
+      logArea.scrollTop = logArea.scrollHeight;
+    };
+
+    // ----------------- SONS DA INTERFACE -----------------
+    const uiAudioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    let clickBuffer = null;
+    let staticBuffer = null;
+    let staticSource = null;
+    let staticGain = null;
+
+    function forceWakeUpAudio() {
+        if (uiAudioCtx.state !== 'running') uiAudioCtx.resume();
+        const osc = uiAudioCtx.createOscillator();
+        const gain = uiAudioCtx.createGain();
+        gain.gain.value = 0;
+        osc.connect(gain);
+        gain.connect(uiAudioCtx.destination);
+        osc.start();
+        osc.stop(uiAudioCtx.currentTime + 0.01);
+    }
+    ['click', 'touchstart'].forEach(e => document.addEventListener(e, forceWakeUpAudio, {once:true}));
+
+    fetch('RADIO_CLICK.ogg').then(r=>r.arrayBuffer()).then(ab=>uiAudioCtx.decodeAudioData(ab)).then(b=>clickBuffer=b).catch(()=>{});
+    fetch('RADIO_STATIC_LOOP.ogg').then(r=>r.arrayBuffer()).then(ab=>uiAudioCtx.decodeAudioData(ab)).then(b=>staticBuffer=b).catch(()=>{});
+
+    function playUIClick() {
+        forceWakeUpAudio();
+        if (!clickBuffer) return;
+        const src = uiAudioCtx.createBufferSource();
+        src.buffer = clickBuffer;
+        const gain = uiAudioCtx.createGain();
+        gain.gain.value = 4.0; 
+        src.connect(gain);
+        gain.connect(uiAudioCtx.destination);
+        src.start();
+    }
+
+    function playUIStatic() {
+        forceWakeUpAudio();
+        if (!staticBuffer) return;
+        if (staticSource) stopUIStatic(true); 
+        
+        staticSource = uiAudioCtx.createBufferSource();
+        staticSource.buffer = staticBuffer;
+        staticSource.loop = true;
+        
+        staticGain = uiAudioCtx.createGain();
+        staticGain.gain.value = 0.4; 
+        
+        staticSource.connect(staticGain);
+        staticGain.connect(uiAudioCtx.destination);
+        staticSource.start();
+    }
+
+    function stopUIStatic(immediate = false) {
+        if (!staticSource || !staticGain) return;
+        const srcToStop = staticSource;
+        const gainToFade = staticGain;
+        staticSource = null;
+        staticGain = null;
+
+        if (immediate) {
+            try { srcToStop.stop(); } catch(e){}
+            return;
+        }
+        const now = uiAudioCtx.currentTime;
+        gainToFade.gain.cancelScheduledValues(now);
+        gainToFade.gain.setValueAtTime(gainToFade.gain.value, now);
+        gainToFade.gain.linearRampToValueAtTime(0.001, now + 1.0); 
+        setTimeout(() => { try { srcToStop.stop(); } catch(e){} }, 1000);
+    }
+
+    // ----------------- CONFIGURAÇÃO DAS RÁDIOS (26 SLOTS) -----------------
+    const todasAsRadios = [
+      { key: 'radio_01_class_rock', name: 'Los Santos Rock Radio', imgBW: 'capas/gtav_radio_stations_texture_512_04.png', expansoes: ['v'] },
+      { key: 'radio_16_silverlake', name: 'Radio Mirror Park', imgBW: 'capas/gtav_radio_stations_texture_512_08.png', expansoes: ['v'] },
+      { key: 'radio_18_90s_rock', name: 'Vinewood Boulevard Radio', imgBW: 'capas/gtav_radio_stations_texture_512_10.png', expansoes: ['v'] },
+      { key: 'radio_34_dlc_hei4_kult', name: 'Kult FM', imgBW: 'capas/gta_radio_stations_texture10_128.png', expansoes: ['v'] },
+      
+      { key: 'radio_15_motown', name: 'The Lowdown 91.1', imgBW: 'capas/gtav_radio_stations_texture_512_15.png', expansoes: ['v'] },
+      { key: 'radio_16_silverlake', name: 'Rádio 06 (Slot Livre)', imgBW: 'capas/radio_16_silverlake.png', expansoes: ['v'] },
+      { key: 'radio_18_90s_rock', name: 'Rádio 07 (Slot Livre)', imgBW: 'capas/radio_18_90s_rock.png', expansoes: ['v'] },
+      { key: 'radio_34_dlc_hei4_kult', name: 'Rádio 08 (Slot Livre)', imgBW: 'capas/radio_34_dlc_hei4_kult.png', expansoes: ['v'] },
+      
+      { key: 'radio_01_class_rock', name: 'Rádio 09 (Slot Livre)', imgBW: 'capas/radio_01_class_rock.png', expansoes: ['v'] },
+      { key: 'radio_16_silverlake', name: 'Rádio 10 (Slot Livre)', imgBW: 'capas/radio_16_silverlake.png', expansoes: ['v'] },
+      { key: 'radio_18_90s_rock', name: 'Rádio 11 (Slot Livre)', imgBW: 'capas/radio_18_90s_rock.png', expansoes: ['v'] },
+      { key: 'radio_34_dlc_hei4_kult', name: 'Rádio 12 (Slot Livre)', imgBW: 'capas/radio_34_dlc_hei4_kult.png', expansoes: ['v'] },
+      
+      { key: 'radio_01_class_rock', name: 'Rádio 13 (Slot Livre)', imgBW: 'capas/radio_01_class_rock.png', expansoes: ['v'] },
+      { key: 'radio_16_silverlake', name: 'Rádio 14 (Slot Livre)', imgBW: 'capas/radio_16_silverlake.png', expansoes: ['v'] },
+      { key: 'radio_18_90s_rock', name: 'Rádio 15 (Slot Livre)', imgBW: 'capas/radio_18_90s_rock.png', expansoes: ['v'] },
+      { key: 'radio_34_dlc_hei4_kult', name: 'Rádio 16 (Slot Livre)', imgBW: 'capas/radio_34_dlc_hei4_kult.png', expansoes: ['v'] },
+      
+      { key: 'radio_01_class_rock', name: 'Rádio 17 (Slot Livre)', imgBW: 'capas/radio_01_class_rock.png', expansoes: ['v'] },
+      { key: 'radio_16_silverlake', name: 'Rádio 18 (Slot Livre)', imgBW: 'capas/radio_16_silverlake.png', expansoes: ['v'] },
+      { key: 'radio_18_90s_rock', name: 'Rádio 19 (Slot Livre)', imgBW: 'capas/radio_18_90s_rock.png', expansoes: ['v'] },
+      { key: 'radio_34_dlc_hei4_kult', name: 'Rádio 20 (Slot Livre)', imgBW: 'capas/radio_34_dlc_hei4_kult.png', expansoes: ['v'] },
+      
+      { key: 'radio_01_class_rock', name: 'Rádio 21 (Slot Livre)', imgBW: 'capas/radio_01_class_rock.png', expansoes: ['v'] },
+      { key: 'radio_16_silverlake', name: 'Rádio 22 (Slot Livre)', imgBW: 'capas/radio_16_silverlake.png', expansoes: ['v'] },
+
+      { key: 'radio_01_class_rock', name: 'Rádio 23 (Slot Livre)', imgBW: 'capas/radio_01_class_rock.png', expansoes: ['v'] },
+      { key: 'radio_16_silverlake', name: 'Rádio 24 (Slot Livre)', imgBW: 'capas/radio_16_silverlake.png', expansoes: ['v'] },
+      { key: 'radio_18_90s_rock', name: 'Rádio 25 (Slot Livre)', imgBW: 'capas/radio_18_90s_rock.png', expansoes: ['v'] },
+      { key: 'radio_34_dlc_hei4_kult', name: 'Rádio 26 (Slot Livre)', imgBW: 'capas/radio_34_dlc_hei4_kult.png', expansoes: ['v'] }
+    ];
+
+    // ----------------- ESTADO GLOBAL E VARIÁVEIS -----------------
+    let currentExpansion = null;
+    let radiosAtuais = [];
+    let currentIndex = 0; 
+    let tempSelectedIndex = 0; 
+    let currentlyPlayingKey = null; 
+    
+    let flashImageTimeout = null;
+    let pendingAudioTimeout = null; 
+
+    const viewMenu = document.getElementById('viewMenu');
+    const viewPlayer = document.getElementById('viewPlayer');
+    const wheelContainer = document.getElementById('wheelContainer');
+    const centerDisplay = document.getElementById('centerDisplay');
+    const activeColorLogo = document.getElementById('activeColorLogo');
+    const radioNameText = document.getElementById('radioNameText');
+
+    let holdTimer = null;
+    let isHoldingWheel = false;
+    let isPointerDown = false;
+    
+    let clickOriginX = 0;
+    let clickOriginY = 0;
+
+    // ----------------- FUNÇÕES AUXILIARES -----------------
+    function updateVisuals(index) {
+        const rad = radiosAtuais[index];
+        activeColorLogo.src = rad.imgBW;
+        radioNameText.textContent = rad.name;
+    }
+
+    function applyAudio(index) {
+        const rad = radiosAtuais[index];
+        if (currentlyPlayingKey !== rad.key) {
+            playUIStatic();
+
+            if(window.__RADIO && window.__RADIO.stopRadio) window.__RADIO.stopRadio();
+            
+            if(window.__RADIO && window.__RADIO.startRadio) {
+                currentlyPlayingKey = rad.key;
+                window.__RADIO.startRadio(currentExpansion, rad.key);
+                
+                const stopStaticHandler = () => {
+                    stopUIStatic(false);
+                    window.removeEventListener('radio-ready', stopStaticHandler);
+                    clearTimeout(safetyTimeout); 
+                };
+
+                window.addEventListener('radio-ready', stopStaticHandler);
+                const safetyTimeout = setTimeout(() => { stopStaticHandler(); }, 5000);
+            } else {
+                stopUIStatic(true);
+            }
+        }
+    }
+
+    // ----------------- LÓGICA DA RODA (WHEEL) -----------------
+    function buildWheel() {
+      radiosAtuais = todasAsRadios.filter(r => r.expansoes.includes(currentExpansion));
+      wheelContainer.innerHTML = '';
+      
+      const N = radiosAtuais.length;
+      // Ajuste de raio: de 0.32 para 0.37 para dar a "pequena afastada" e acomodar os 26 slots
+      const radius = Math.min(window.innerWidth, window.innerHeight) * 0.39; 
+
+      radiosAtuais.forEach((r, index) => {
+        const div = document.createElement('div');
+        div.className = 'wheel-item';
+        div.id = `wheel_item_${index}`;
+        
+        div.innerHTML = `<img src="${r.imgBW}" draggable="false" onerror="this.src='capas/default.png'" />`;
+        
+        const angle = (index / N) * 2 * Math.PI - (Math.PI / 2);
+        const x = Math.cos(angle) * radius;
+        const y = Math.sin(angle) * radius;
+        
+        div.dataset.baseX = x;
+        div.dataset.baseY = y;
+        div.style.transform = `translate(${x}px, ${y}px)`;
+
+        wheelContainer.appendChild(div);
+      });
+    }
+
+    function calculateWheelIndexByAngle(clientX, clientY) {
+      const N = radiosAtuais.length;
+      if(N === 0) return currentIndex;
+
+      const dx = clientX - clickOriginX;
+      const dy = clientY - clickOriginY;
+      
+      if (Math.abs(dx) < 15 && Math.abs(dy) < 15) return tempSelectedIndex;
+
+      let angle = Math.atan2(dy, dx) + Math.PI / 2;
+      if (angle < 0) angle += 2 * Math.PI;
+
+      const slice = (2 * Math.PI) / N;
+      return Math.round(angle / slice) % N;
+    }
+
+    function updateWheelUI(index) {
+      if (index === tempSelectedIndex) return;
+      
+      tempSelectedIndex = index;
+      
+      updateVisuals(index);
+      playUIClick();
+
+      document.querySelectorAll('.wheel-item').forEach((el, i) => {
+        if (i === index) el.classList.add('active');
+        else el.classList.remove('active');
+      });
+
+      clearTimeout(pendingAudioTimeout);
+      pendingAudioTimeout = setTimeout(() => {
+          currentIndex = tempSelectedIndex;
+          applyAudio(tempSelectedIndex);
+      }, 1000);
+    }
+
+    function handleFastChange(direction) {
+      // NOVA LÓGICA 100% PRECISA:
+      // Se a tela central não está exibindo a logo e a roda está fechada,
+      // então a interface está "limpa". Nesse caso, anula a direção.
+      const isHudHidden = !centerDisplay.classList.contains('flash-image') && !centerDisplay.classList.contains('wheel-open');
+
+      if (isHudHidden) {
+          direction = 0; // O primeiro clique APENAS exibe a rádio atual
+      }
+
+      currentIndex = (currentIndex + direction + radiosAtuais.length) % radiosAtuais.length;
+      tempSelectedIndex = currentIndex; 
+      
+      updateVisuals(currentIndex);
+      if (direction !== 0) playUIClick();
+
+      // Pisca a logo central por 2.5s (substitui o texto temporariamente)
+      centerDisplay.classList.add('flash-image');
+      clearTimeout(flashImageTimeout);
+      flashImageTimeout = setTimeout(() => {
+          centerDisplay.classList.remove('flash-image');
+      }, 2500); 
+
+      // Se de fato mudou de rádio, sintoniza o áudio
+      if (direction !== 0) {
+          clearTimeout(pendingAudioTimeout);
+          pendingAudioTimeout = setTimeout(() => {
+              applyAudio(currentIndex);
+          }, 800);
+      }
+    }
+
+    // ----------------- EVENTOS DE INTERAÇÃO -----------------
+    const handlePointerDown = (e) => {
+      if (e.target.closest('#logArea') || e.target.closest('#btnBack')) return;
+      
+      isPointerDown = true;
+      forceWakeUpAudio();
+
+      clickOriginX = e.clientX ?? (e.touches && e.touches[0].clientX);
+      clickOriginY = e.clientY ?? (e.touches && e.touches[0].clientY);
+      
+      tempSelectedIndex = currentIndex;
+
+      holdTimer = setTimeout(() => {
+        isHoldingWheel = true;
+        wheelContainer.classList.add('visible');
+        centerDisplay.classList.add('wheel-open');
+
+        document.querySelectorAll('.wheel-item').forEach((el, i) => {
+            if (i === currentIndex) el.classList.add('active');
+            else el.classList.remove('active');
+        });
+        updateVisuals(currentIndex);
+
+      }, 150); 
+    };
+
+    const handlePointerMove = (e) => {
+      if (!isHoldingWheel) return;
+      const clientX = e.clientX ?? (e.touches && e.touches[0].clientX);
+      const clientY = e.clientY ?? (e.touches && e.touches[0].clientY);
+      
+      if (clientX !== undefined && clientY !== undefined) {
+          const hoverIndex = calculateWheelIndexByAngle(clientX, clientY);
+          if (hoverIndex !== tempSelectedIndex) {
+              updateWheelUI(hoverIndex);
+          }
+      }
+    };
+
+    const handlePointerUp = (e) => {
+      if (!isPointerDown) return;
+      isPointerDown = false;
+      clearTimeout(holdTimer);
+
+      if (isHoldingWheel) {
+        // --- FECHANDO A RODA ---
+        isHoldingWheel = false;
+        wheelContainer.classList.remove('visible');
+        centerDisplay.classList.remove('wheel-open');
+        
+        if (currentIndex !== tempSelectedIndex) {
+          currentIndex = tempSelectedIndex;
+          clearTimeout(pendingAudioTimeout);
+          applyAudio(currentIndex);
+        }
+        
+      } else {
+        // --- CLIQUE RÁPIDO ---
+        handleFastChange(1);
+      }
+    };
+
+    viewPlayer.addEventListener('pointerdown', handlePointerDown);
+    window.addEventListener('pointermove', handlePointerMove); 
+    window.addEventListener('pointerup', handlePointerUp);
+    window.addEventListener('pointercancel', handlePointerUp);
+
+    // ----------------- NAVEGAÇÃO DE MENUS -----------------
+    document.querySelectorAll('.btn-exp').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        forceWakeUpAudio(); 
+        currentExpansion = e.target.getAttribute('data-exp');
+        
+        viewMenu.classList.remove('active');
+        viewPlayer.classList.add('active');
+        
+        buildWheel();
+        currentIndex = 0; 
+        
+        centerDisplay.classList.remove('wheel-open');
+        wheelContainer.classList.remove('visible');
+        centerDisplay.classList.remove('flash-image');
+        
+        // Exibe a rádio inicial no HUD
+        handleFastChange(0); 
+        
+        clearTimeout(pendingAudioTimeout);
+        applyAudio(currentIndex);
+      });
+    });
+
+    document.getElementById('btnBack').addEventListener('click', (e) => {
+      e.stopPropagation(); 
+      clearTimeout(holdTimer);
+      clearTimeout(flashImageTimeout);
+      clearTimeout(pendingAudioTimeout);
+      
+      isPointerDown = false;
+      isHoldingWheel = false;
+      
+      if(window.__RADIO && window.__RADIO.stopRadio) window.__RADIO.stopRadio();
+      currentlyPlayingKey = null; 
+      stopUIStatic(true); 
+
+      viewPlayer.classList.remove('active');
+      viewMenu.classList.add('active');
+    });
+
+    // Roda do Mouse (Scroll)
+    let lastWheelTime = 0;
+    viewPlayer.addEventListener('wheel', (e) => {
+      if (isHoldingWheel || e.target.closest('#logArea')) return; 
+      e.preventDefault(); 
+      const now = Date.now();
+      if (now - lastWheelTime < 250) return; 
+      lastWheelTime = now;
+      
+      forceWakeUpAudio();
+      
+      if (e.deltaY > 0) handleFastChange(1);
+      else handleFastChange(-1);
+
+    }, { passive: false });
+
+  </script>
+</body>
+</html>

@@ -143,7 +143,9 @@
       box-sizing: border-box;
       background: transparent;
       z-index: 10;
-      transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
+      
+      /* Alterado: removido o transition de opacity para corte seco */
+      transition: transform 0.1s, box-shadow 0.1s;
     }
     
     .wheel-item.active {
@@ -198,12 +200,14 @@
       text-align: center;
       font-weight: 400;
       letter-spacing: 0.5px;
+      
+      /* Alterado: Removida a sombra pesada para não dar impressão de mudança de estado */
       text-shadow:
         -1px -1px 0 #000,
          1px -1px 0 #000,
         -1px  1px 0 #000,
-         1px  1px 0 #000,
-         0px  4px 10px rgba(0,0,0,0.8);
+         1px  1px 0 #000;
+         
       display: block; 
     }
 
@@ -227,9 +231,7 @@
 
     /* Ajustes específicos de celular para a roda */
     @media (max-width: 768px) {
-      /* Tamanho reduzido e BORDA MAIS FINA (2px) */
       .wheel-item { width: 50px; height: 50px; margin-top: -25px; margin-left: -25px; border-width: 2px; }
-      /* TEXTO MAIOR no celular (1.35rem) */
       #radioNameText { font-size: 1.35rem; }
     }
   </style>
@@ -455,8 +457,6 @@
             
             const zoom = 2.0; 
             
-            // Fator agressivo (zoom - 0.4) empurra a rádio selecionada MUITO mais
-            // para o centro, eliminando completamente a chance de ficar cortada nas bordas.
             const panX = -x * (zoom - 0.4);
             const panY = -y * (zoom - 0.4);
             
@@ -473,16 +473,15 @@
       const N = radiosAtuais.length;
       const minDim = Math.min(window.innerWidth, window.innerHeight);
       
-      // Raio expandido no mobile (de 0.46 para 0.48) para afastar a roda do centro
+      // Alterado: Raio expandido no mobile de 0.48 para 0.55 para afastar bem os ícones
       const isMobile = window.innerWidth <= 768;
-      const radius = isMobile ? minDim * 0.48 : minDim * 0.39;
+      const radius = isMobile ? minDim * 0.55 : minDim * 0.39;
 
       radiosAtuais.forEach((r, index) => {
         const div = document.createElement('div');
         div.className = 'wheel-item';
         div.id = `wheel_item_${index}`;
         
-        // Adiciona a classe '.zoom-kult' na imagem se for a rádio Kult FM
         const isKult = r.key === 'radio_34_dlc_hei4_kult' ? 'zoom-kult' : '';
         div.innerHTML = `<img src="${r.imgBW}" draggable="false" class="${isKult}" onerror="this.src='capas/default.png'" />`;
         

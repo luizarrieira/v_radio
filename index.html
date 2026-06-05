@@ -7,6 +7,13 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
     
+    /* === VARIÁVEIS DE TEMA (Controladas pelo JS) === */
+    :root {
+      --accent-color: #65d671;
+      --accent-shadow: rgba(101, 214, 113, 0.5);
+      --bg-image: url('https://img.goodfon.com/original/1920x1080/b/6f/gta-5-proshlo-desyat-let.jpg');
+    }
+
     body {
       margin: 0;
       color: #eee;
@@ -34,7 +41,7 @@
       position: absolute;
       top: -10%; left: -10%; 
       width: 120%; height: 120%; 
-      background: url('https://img.goodfon.com/original/1920x1080/b/6f/gta-5-proshlo-desyat-let.jpg') center/cover;
+      background: var(--bg-image) center/cover;
       filter: blur(10px) brightness(0.75); 
       animation: cameraPan 40s linear infinite alternate;
       z-index: -1;
@@ -59,9 +66,9 @@
     /* === MENU INICIAL === */
     #menuTitle {
       font-size: 2rem;
-      color: #65d671;
+      color: var(--accent-color);
       margin-bottom: 40px;
-      text-shadow: 0 0 10px rgba(101, 214, 113, 0.5);
+      text-shadow: 0 0 10px var(--accent-shadow);
       text-transform: uppercase;
       letter-spacing: 2px;
       text-align: center;
@@ -76,8 +83,8 @@
       font-weight: 700;
     }
     .btn-exp:hover {
-      background: #65d671; color: #000; border-color: #65d671;
-      transform: scale(1.05); box-shadow: 0 0 15px rgba(101, 214, 113, 0.6);
+      background: var(--accent-color); color: #000; border-color: var(--accent-color);
+      transform: scale(1.05); box-shadow: 0 0 15px var(--accent-shadow);
     }
 
     /* === TELA DO PLAYER === */
@@ -144,15 +151,14 @@
       background: transparent;
       z-index: 10;
       
-      /* Alterado: removido o transition de opacity para corte seco */
       transition: transform 0.1s, box-shadow 0.1s;
     }
     
     .wheel-item.active {
       opacity: 1;
       z-index: 20; 
-      border-color: #65d671; 
-      box-shadow: 0 0 10px rgba(101, 214, 113, 0.4);
+      border-color: var(--accent-color); 
+      box-shadow: 0 0 10px var(--accent-shadow);
     }
 
     .wheel-item img {
@@ -163,7 +169,7 @@
       -webkit-user-drag: none;
     }
 
-    /* === FIX DAS RÁDIOS COM ZOOM (Aumenta a imagem cortando a borda preta) === */
+    /* === FIX DAS RÁDIOS COM ZOOM === */
     .zoom-radio {
       transform: scale(1.087);
       clip-path: circle(46% at 50% 50%);
@@ -192,9 +198,8 @@
       margin-bottom: 20px;
       display: none;
       box-sizing: border-box;
-      /* Traz a borda de seleção para a troca rápida (clique) */
-      border: 3px solid #65d671;
-      box-shadow: 0 0 10px rgba(101, 214, 113, 0.4);
+      border: 3px solid var(--accent-color);
+      box-shadow: 0 0 10px var(--accent-shadow);
       background: transparent;
     }
 
@@ -269,6 +274,40 @@
   
   <script>
     document.addEventListener('contextmenu', event => event.preventDefault());
+
+    // ----------------- SISTEMA DE TEMAS (F, M, T) -----------------
+    const temas = [
+      {
+        nome: 'F', // Franklin
+        cor: '#65d671', // Verde
+        sombra: 'rgba(101, 214, 113, 0.5)',
+        bg: "url('https://img.goodfon.com/original/1920x1080/b/6f/gta-5-proshlo-desyat-let.jpg')",
+        radiosIniciais: ['radio_03_hiphop_new', 'radio_09_hiphop_old', 'radio_20_thelab']
+      },
+      {
+        nome: 'M', // Michael
+        cor: '#55a1d6', // Azul claro
+        sombra: 'rgba(85, 161, 214, 0.5)',
+        bg: "url('https://static.wikia.nocookie.net/gtawiki/images/7/7b/RockfordDr-GTAV-CityHallView.jpg/revision/latest?cb=20140710225058')", // <-- ALTERAR AQUI
+        radiosIniciais: ['radio_01_class_rock']
+      },
+      {
+        nome: 'T', // Trevor
+        cor: '#d6692e', // Laranja
+        sombra: 'rgba(214, 105, 46, 0.5)',
+        bg: "url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/29a2b646-3fb1-45b4-8424-c1d7e0bd5929/dhaxmaw-82983509-5a34-465f-a0c0-253f8efda679.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi8yOWEyYjY0Ni0zZmIxLTQ1YjQtODQyNC1jMWQ3ZTBiZDU5MjkvZGhheG1hdy04Mjk4MzUwOS01YTM0LTQ2NWYtYTBjMC0yNTNmOGVmZGE2NzkuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.VlvKXKzh_ziob7ir4vYit7b1PPIGGKzsTR41mB9cbDY')", // <-- ALTERAR AQUI
+        radiosIniciais: ['radio_04_punk', 'radio_06_country']
+      }
+    ];
+
+    // Sorteia o tema ao carregar a página
+    const temaSorteado = temas[Math.floor(Math.random() * temas.length)];
+    
+    // Aplica as cores e background via variáveis CSS
+    document.documentElement.style.setProperty('--accent-color', temaSorteado.cor);
+    document.documentElement.style.setProperty('--accent-shadow', temaSorteado.sombra);
+    document.documentElement.style.setProperty('--bg-image', temaSorteado.bg);
+
 
     // ----------------- SONS DA INTERFACE -----------------
     const uiAudioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -347,13 +386,13 @@
       { key: 'radio', name: 'Still Slipping Los Santos', imgBW: 'capas/radio_station23.png', expansoes: ['v'] },
       { key: 'radio_01_class_rock', name: 'Los Santos Rock Radio', imgBW: 'capas/radio_station04.png', expansoes: ['v'] },
       { key: 'radio_02_pop', name: 'Non-Stop-Pop FM', imgBW: 'capas/radio_station05.png', expansoes: ['v'] },
-      { key: 'radio', name: 'Radio Los Santos', imgBW: 'capas/radio_station11.png', expansoes: ['v'] },
-      { key: 'radio', name: 'Channel X', imgBW: 'capas/radio_station03.png', expansoes: ['v'] },
+      { key: 'radio_03_hiphop_new', name: 'Radio Los Santos', imgBW: 'capas/radio_station11.png', expansoes: ['v'] },
+      { key: 'radio_04_punk', name: 'Channel X', imgBW: 'capas/radio_station03.png', expansoes: ['v'] },
       { key: 'radio', name: 'WCTR', imgBW: 'capas/radio_station17.png', expansoes: ['v'] },
-      { key: 'radio', name: 'Rebel Radio', imgBW: 'capas/radio_station01.png', expansoes: ['v'] },
+      { key: 'radio_06_country', name: 'Rebel Radio', imgBW: 'capas/radio_station01.png', expansoes: ['v'] },
       { key: 'radio', name: 'Soulwax FM', imgBW: 'capas/radio_station06.png', expansoes: ['v'] },
       { key: 'radio', name: 'East Los FM', imgBW: 'capas/radio_station02.png', expansoes: ['v'] },
-      { key: 'radio', name: 'West Coast Classics', imgBW: 'capas/radio_station09.png', expansoes: ['v'] },
+      { key: 'radio_09_hiphop_old', name: 'West Coast Classics', imgBW: 'capas/radio_station09.png', expansoes: ['v'] },
       { key: 'radio', name: 'Media Player', imgBW: 'capas/radio_station26.png', expansoes: ['v'] },
       { key: 'radio', name: 'Blaine County Radio', imgBW: 'capas/radio_station07.png', expansoes: ['v'] },
       { key: 'radio', name: 'MOTOMAMI Los Santos', imgBW: 'capas/radio_station24.png', expansoes: ['v'] },
@@ -362,7 +401,7 @@
       { key: 'radio', name: 'WorldWide FM', imgBW: 'capas/radio_station13.png', expansoes: ['v'] },
       { key: 'radio', name: 'FlyLo FM', imgBW: 'capas/radio_station14.png', expansoes: ['v'] },
       { key: 'radio_15_motown', name: 'The Lowdown 91.1', imgBW: 'capas/radio_station15.png', expansoes: ['v'] },
-      { key: 'radio', name: 'The Lab', imgBW: 'capas/radio_station18.png', expansoes: ['v'] },
+      { key: 'radio_20_thelab', name: 'The Lab', imgBW: 'capas/radio_station18.png', expansoes: ['v'] },
       { key: 'radio_16_silverlake', name: 'Radio Mirror Park', imgBW: 'capas/radio_station08.png', expansoes: ['v'] },
       { key: 'radio_34_dlc_hei4_kult', name: 'Kult FM 99.1', imgBW: 'capas/radio_station25.png', expansoes: ['v'] },
       { key: 'radio', name: 'Space 103.2', imgBW: 'capas/radio_station16.png', expansoes: ['v'] },
@@ -655,7 +694,17 @@
         viewPlayer.classList.add('active');
         
         buildWheel();
-        currentIndex = 0; 
+        
+        // --- SELEÇÃO DE RÁDIO INICIAL POR TEMA ---
+        // Sorteia uma das rádios pré-definidas no array radiosIniciais do tema sorteado
+        const chaveRadioSorteada = temaSorteado.radiosIniciais[Math.floor(Math.random() * temaSorteado.radiosIniciais.length)];
+        
+        // Acha o índice real dela na lista filtrada (radiosAtuais)
+        let indiceInicial = radiosAtuais.findIndex(r => r.key === chaveRadioSorteada);
+        if (indiceInicial === -1) indiceInicial = 0; // Prevenção de erro
+        
+        currentIndex = indiceInicial;
+        tempSelectedIndex = indiceInicial;
         
         centerDisplay.classList.remove('wheel-open');
         wheelContainer.classList.remove('visible');

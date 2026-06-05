@@ -117,8 +117,8 @@
       pointer-events: none;
       z-index: 10;
       
-      transition: transform 0.25s ease-out, transform-origin 0.25s ease-out;
-      will-change: transform, transform-origin;
+      transition: transform 0.25s ease-out; /* Removido transform-origin daqui, usamos translate agora */
+      will-change: transform;
       transform-origin: 0px 0px; 
     }
     
@@ -143,7 +143,6 @@
       box-sizing: border-box;
       background: transparent;
       z-index: 10;
-      /* Transição adicionada para o transform agir de forma fluida */
       transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
     }
     
@@ -152,7 +151,6 @@
       z-index: 20; 
       border-color: #65d671; 
       box-shadow: 0 0 10px rgba(101, 214, 113, 0.4);
-      /* O transform scale foi removido daqui para não sobrescrever o translate no JS */
     }
 
     .wheel-item img {
@@ -440,8 +438,17 @@
             const x = parseFloat(activeItem.dataset.baseX);
             const y = parseFloat(activeItem.dataset.baseY);
             
-            wheelContainer.style.transformOrigin = `${x}px ${y}px`;
-            wheelContainer.style.transform = `scale(1.7)`;
+            // Aumentei o zoom (de 1.7 para 2.0)
+            const zoom = 2.0; 
+            
+            // Aplica um translate inverso à posição da rádio.
+            // O fator (zoom - 0.9) puxa levemente as rádios das bordas para perto do centro,
+            // garantindo que elas nunca fiquem cortadas fora da tela.
+            const panX = -x * (zoom - 0.9);
+            const panY = -y * (zoom - 0.9);
+            
+            wheelContainer.style.transformOrigin = `0px 0px`;
+            wheelContainer.style.transform = `translate(${panX}px, ${panY}px) scale(${zoom})`;
         }
       }
     }
@@ -453,8 +460,8 @@
       const N = radiosAtuais.length;
       const minDim = Math.min(window.innerWidth, window.innerHeight);
       
-      const isMobile = window.innerWidth <= 768;
-      const radius = isMobile ? minDim * 0.42 : minDim * 0.39;
+      // Proporção padronizada (o media query fará as rádios ficarem proporcionais no celular)
+      const radius = minDim * 0.39;
 
       radiosAtuais.forEach((r, index) => {
         const div = document.createElement('div');
@@ -470,8 +477,7 @@
         div.dataset.baseX = x;
         div.dataset.baseY = y;
         
-        // Mantém a escala natural (1) no início
-        div.style.transform = `translate(${x}px, ${y}px) scale(1)`;
+        div.style.transform = `translate(${x}px, ${y}px)`;
 
         wheelContainer.appendChild(div);
       });
@@ -493,7 +499,6 @@
       return Math.round(angle / slice) % N;
     }
 
-    // Aqui atualizamos as classes e os transforms simultaneamente, sem quebrar o CSS!
     function updateWheelUI(index) {
       if (index === tempSelectedIndex) return;
       
@@ -507,12 +512,10 @@
         
         if (i === index) {
             el.classList.add('active');
-            // Mantém no lugar com translate, e ativa a escala
-            el.style.transform = `translate(${bx}px, ${by}px) scale(1.1)`;
+            el.style.transform = `translate(${bx}px, ${by}px)`; // Mantém a escala fixa em 1
         } else {
             el.classList.remove('active');
-            // Retorna ao tamanho original
-            el.style.transform = `translate(${bx}px, ${by}px) scale(1)`;
+            el.style.transform = `translate(${bx}px, ${by}px)`;
         }
       });
 
@@ -569,16 +572,15 @@
         wheelContainer.classList.add('visible');
         centerDisplay.classList.add('wheel-open');
 
-        // Garante a escala correta e classe logo ao abrir
         document.querySelectorAll('.wheel-item').forEach((el, i) => {
             const bx = el.dataset.baseX;
             const by = el.dataset.baseY;
             if (i === currentIndex) {
                 el.classList.add('active');
-                el.style.transform = `translate(${bx}px, ${by}px) scale(1.1)`;
+                el.style.transform = `translate(${bx}px, ${by}px)`;
             } else {
                 el.classList.remove('active');
-                el.style.transform = `translate(${bx}px, ${by}px) scale(1)`;
+                el.style.transform = `translate(${bx}px, ${by}px)`;
             }
         });
         

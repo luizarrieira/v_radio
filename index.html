@@ -377,49 +377,78 @@
     // ----------------- ESTADO GLOBAL E VARIÁVEIS -----------------
     let currentExpansion = null;
     let radiosAtuais = [];
-    let currentIndex = 0;
+    let currentIndex = 0; 
+    let tempSelectedIndex = 0; 
+    let currentlyPlayingKey = null; 
     
-    function buildWheel() {
-      radiosAtuais = todasAsRadios.filter(r => r.expansoes.includes(currentExpansion));
-      wheelContainer.innerHTML = '';
-      const N = radiosAtuais.length;
-      
-      // RAIO AUMENTADO: Afasta as rádios para eliminar a sobreposição sem diminuir as logos.
-      // 240px no mobile e 380px no desktop.
-      const isMobile = window.innerWidth <= 768;
-      const radius = isMobile ? 240 : 380;
+    let flashImageTimeout = null;
+    let pendingAudioTimeout = null; 
 
-      radiosAtuais.forEach((r, index) => {
-        const div = document.createElement('div');
-        div.className = 'wheel-item';
-        div.id = `wheel_item_${index}`;
-        div.innerHTML = `<img src="${r.imgBW}" />`;
-        
-        const angle = (index / N) * 2 * Math.PI - (Math.PI / 2);
-        const x = Math.cos(angle) * radius;
-        const y = Math.sin(angle) * radius;
-        div.dataset.baseX = x;
-        div.dataset.baseY = y;
-        div.style.transform = `translate(${x}px, ${y}px)`;
-        wheelContainer.appendChild(div);
-      });
+    const viewMenu = document.getElementById('viewMenu');
+    const viewPlayer = document.getElementById('viewPlayer');
+    const wheelContainer = document.getElementById('wheelContainer');
+    const centerDisplay = document.getElementById('centerDisplay');
+    const activeColorLogo = document.getElementById('activeColorLogo');
+    const radioNameText = document.getElementById('radioNameText');
+
+    let holdTimer = null;
+    let isHoldingWheel = false;
+    let isPointerDown = false;
+    
+    let clickOriginX = 0;
+    let clickOriginY = 0;
+
+    // ----------------- FUNÇÕES AUXILIARES -----------------
+    function updateVisuals(index) {
+        const rad = radiosAtuais[index];
+        activeColorLogo.src = rad.imgBW;
+        radioNameText.textContent = rad.name;
     }
 
+    function applyAudio(index) {
+        const rad = radiosAtuais[index];
+        if (currentlyPlayingKey !== rad.key) {
+            playUIStatic();
+
+            if(window.__RADIO && window.__RADIO.stopRadio) window.__RADIO.stopRadio();
+            
+            if(window.__RADIO && window.__RADIO.startRadio) {
+                currentlyPlayingKey = rad.key;
+                window.__RADIO.startRadio(currentExpansion, rad.key);
+                
+                const stopStaticHandler = () => {
+                    stopUIStatic(false);
+                    window.removeEventListener('radio-ready', stopStaticHandler);
+                    clearTimeout(safetyTimeout); 
+                };
+
+                window.addEventListener('radio-ready', stopStaticHandler);
+                const safetyTimeout = setTimeout(() => { stopStaticHandler(); }, 5000);
+            } else {
+                stopUIStatic(true);
+            }
+        }
+    }
+
+    // ----------------- LÓGICA DA RODA (WHEEL) E CÂMERA -----------------
+    
     function applyMobileWheelPan(index) {
       if (window.innerWidth <= 768) {
         const activeItem = document.getElementById(`wheel_item_${index}`);
-        if (!activeItem) return;
-        const x = parseFloat(activeItem.dataset.baseX);
-        const y = parseFloat(activeItem.dataset.baseY);
-        
-        // ZOOM CONTROLADO: O zoom de 1.15 garante que a logo selecionada 
-        // fique bem visível, enquanto o ajuste de pan (0.9) empurra o conjunto 
-        // para o centro, garantindo que rádios laterais não cortem.
-        const zoom = 1.15;
-        const panX = -x * 0.9;
-        const panY = -y * 0.9;
-        wheelContainer.style.transform = `translate(${panX}px, ${panY}px) scale(${zoom})`;
-      }
+        if (activeItem) {
+            const x = parseFloat(activeItem.dataset.baseX);
+            const y = parseFloat(activeItem.dataset.baseY);
+            
+            const zoom = 2.0; 
+            
+            // Fator agressivo (zoom - 0.4) empurra a rádio selecionada MUITO mais
+            // para o centro, eliminando completamente a chance de ficar cortada nas bordas.
+            const panX = -x * (zoom - 0.4);
+            const panY = -y * (zoom - 0.4);
+            
+            wheelContainer.style.transformOrigin = `0px 0px`;
+            wheelContainer.style.transform = `translate(${panX}px, ${panY}px) scale(${zoom})`;
+        }
       }
     }
 

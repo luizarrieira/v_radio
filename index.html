@@ -222,7 +222,7 @@
     /* Ajustes específicos de celular para a roda */
     @media (max-width: 768px) {
       /* Tamanho reduzido para evitar sobreposição */
-      .wheel-item { width: 90px; height: 90px; margin-top: -25px; margin-left: -25px; }
+      .wheel-item { width: 50px; height: 50px; margin-top: -25px; margin-left: -25px; }
       #radioNameText { font-size: 1.1rem; }
     }
   </style>
@@ -462,7 +462,7 @@
       // Raio expandido no mobile (0.46) para garantir que os itens espalhem mais
       // e não fiquem remontando quando juntos com a alteração do tamanho dos ícones.
       const isMobile = window.innerWidth <= 768;
-      const radius = isMobile ? minDim * 0.50 : minDim * 0.39;
+      const radius = isMobile ? minDim * 0.46 : minDim * 0.39;
 
       radiosAtuais.forEach((r, index) => {
         const div = document.createElement('div');

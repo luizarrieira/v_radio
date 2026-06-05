@@ -165,8 +165,8 @@
 
     /* === FIX DA KULT FM (Aumenta a imagem cortando a borda preta) === */
     .zoom-kult {
-      transform: scale(1.15);
-      clip-path: circle(43.5% at 50% 50%);
+      transform: scale(1.064);
+      clip-path: circle(47% at 50% 50%);
     }
 
     /* === DISPLAY CENTRAL === */
@@ -201,7 +201,6 @@
       font-weight: 400;
       letter-spacing: 0.5px;
       
-      /* Alterado: Removida a sombra pesada para não dar impressão de mudança de estado */
       text-shadow:
         -1px -1px 0 #000,
          1px -1px 0 #000,
@@ -233,6 +232,9 @@
     @media (max-width: 768px) {
       .wheel-item { width: 50px; height: 50px; margin-top: -25px; margin-left: -25px; border-width: 2px; }
       #radioNameText { font-size: 1.35rem; }
+      
+      /* OCULTA o texto no celular enquanto a roda está aberta */
+      #centerDisplay.wheel-open #radioNameText { display: none !important; }
     }
   </style>
 </head>
@@ -349,13 +351,13 @@
 
     // ----------------- CONFIGURAÇÃO DAS RÁDIOS (26 SLOTS) -----------------
     const todasAsRadios = [
-      { key: 'radio_01_class_rock', name: 'Los Santos Rock Radio', imgBW: 'capas/gtav_radio_stations_texture_512_04.png', expansoes: ['v'] },
-      { key: 'radio_16_silverlake', name: 'Radio Mirror Park', imgBW: 'capas/gtav_radio_stations_texture_512_08.png', expansoes: ['v'] },
-      { key: 'radio_18_90s_rock', name: 'Vinewood Boulevard Radio', imgBW: 'capas/gtav_radio_stations_texture_512_10.png', expansoes: ['v'] },
-      { key: 'radio_34_dlc_hei4_kult', name: 'Kult FM', imgBW: 'capas/gta_radio_stations_texture10_128.png', expansoes: ['v'] },
+      { key: 'radio_01_class_rock', name: 'Los Santos Rock Radio', imgBW: 'capas/radio_station04.png', expansoes: ['v'] },
+      { key: 'radio_16_silverlake', name: 'Radio Mirror Park', imgBW: 'capas/radio_station08.png', expansoes: ['v'] },
+      { key: 'radio_18_90s_rock', name: 'Vinewood Boulevard Radio', imgBW: 'capas/radio_station10.png', expansoes: ['v'] },
+      { key: 'radio_34_dlc_hei4_kult', name: 'Kult FM', imgBW: 'capas/radio_station25.png', expansoes: ['v'] },
       
-      { key: 'radio_15_motown', name: 'The Lowdown 91.1', imgBW: 'capas/gtav_radio_stations_texture_512_15.png', expansoes: ['v'] },
-      { key: 'radio_16_silverlake', name: 'Rádio 06 (Slot Livre)', imgBW: 'capas/radio_16_silverlake.png', expansoes: ['v'] },
+      { key: 'radio_15_motown', name: 'The Lowdown 91.1', imgBW: 'capas/radio_station15.png', expansoes: ['v'] },
+      { key: 'radio_02_pop', name: 'Non-Stop-Pop FM', imgBW: 'capas/radio_station05.png', expansoes: ['v'] },
       { key: 'radio_18_90s_rock', name: 'Rádio 07 (Slot Livre)', imgBW: 'capas/radio_18_90s_rock.png', expansoes: ['v'] },
       { key: 'radio_34_dlc_hei4_kult', name: 'Rádio 08 (Slot Livre)', imgBW: 'capas/radio_34_dlc_hei4_kult.png', expansoes: ['v'] },
       
@@ -473,9 +475,9 @@
       const N = radiosAtuais.length;
       const minDim = Math.min(window.innerWidth, window.innerHeight);
       
-      // Alterado: Raio expandido no mobile de 0.48 para 0.55 para afastar bem os ícones
+      // Raio expandido no mobile para 0.50 para afastar bem os ícones
       const isMobile = window.innerWidth <= 768;
-      const radius = isMobile ? minDim * 0.55 : minDim * 0.39;
+      const radius = isMobile ? minDim * 0.50 : minDim * 0.39;
 
       radiosAtuais.forEach((r, index) => {
         const div = document.createElement('div');

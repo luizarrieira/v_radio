@@ -540,10 +540,20 @@
         'radio_01_class_rock': obj_class_rock,
         'radio_16_silverlake': obj_silverlake,
         'radio_18_90s_rock': obj_90s_rock,
+        'radio_15_motown': obj_motown,
+        'radio_02_pop': obj_pop
+      },
+      'online': {
+        // Todas essas sofrerão mutação de NEWS para ADVs sem perder sincronia
+        'radio_01_class_rock': obj_class_rock,
+        'radio_16_silverlake': obj_silverlake,
+        'radio_18_90s_rock': obj_90s_rock,
         'radio_34_dlc_hei4_kult': obj_kult,
         'radio_15_motown': obj_motown,
         'radio_02_pop': obj_pop
+        // Se no futuro você colocar rádios exclusivas aqui, o gerador fará uma linha do tempo nova pra ela!
       }
     }
   };
+
 })();

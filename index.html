@@ -73,6 +73,7 @@
       letter-spacing: 2px;
       text-align: center;
       font-weight: 700;
+      transition: all 0.3s ease;
     }
     .menu-row { display: flex; gap: 20px; margin-bottom: 20px; flex-wrap: wrap; justify-content: center; }
     .btn-exp {
@@ -85,6 +86,12 @@
     .btn-exp:hover {
       background: var(--accent-color); color: #000; border-color: var(--accent-color);
       transform: scale(1.05); box-shadow: 0 0 15px var(--accent-shadow);
+    }
+    
+    /* Botão Online específico */
+    .btn-online:hover {
+      background: #00a2ff; color: #000; border-color: #00a2ff;
+      box-shadow: 0 0 15px rgba(0, 162, 255, 0.5);
     }
 
     /* === TELA DO PLAYER === */
@@ -240,6 +247,8 @@
       
       /* OCULTA o texto no celular enquanto a roda está aberta */
       #centerDisplay.wheel-open #radioNameText { display: none !important; }
+      
+      .menu-row { flex-direction: column; }
     }
   </style>
 </head>
@@ -249,6 +258,7 @@
     <div id="menuTitle">Selecione a Plataforma</div>
     <div class="menu-row">
       <button class="btn-exp" data-exp="v">Grand Theft Auto V</button>
+      <button class="btn-exp btn-online" data-exp="online">GTA Online</button>
     </div>
   </div>
 
@@ -275,7 +285,7 @@
   <script>
     document.addEventListener('contextmenu', event => event.preventDefault());
 
-    // ----------------- SISTEMA DE TEMAS (F, M, T) -----------------
+    // ----------------- SISTEMA DE TEMAS (F, M, T, ONLINE) -----------------
     const temas = [
       {
         nome: 'F', // Franklin
@@ -288,26 +298,35 @@
         nome: 'M', // Michael
         cor: '#55a1d6', // Azul claro
         sombra: 'rgba(85, 161, 214, 0.5)',
-        bg: "url('https://static.wikia.nocookie.net/gtawiki/images/7/7b/RockfordDr-GTAV-CityHallView.jpg/revision/latest?cb=20140710225058')", // <-- ALTERAR AQUI
+        bg: "url('https://static.wikia.nocookie.net/gtawiki/images/7/7b/RockfordDr-GTAV-CityHallView.jpg/revision/latest?cb=20140710225058')",
         radiosIniciais: ['radio_01_class_rock']
       },
       {
         nome: 'T', // Trevor
         cor: '#d6692e', // Laranja
         sombra: 'rgba(214, 105, 46, 0.5)',
-        bg: "url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/29a2b646-3fb1-45b4-8424-c1d7e0bd5929/dhaxmaw-82983509-5a34-465f-a0c0-253f8efda679.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi8yOWEyYjY0Ni0zZmIxLTQ1YjQtODQyNC1jMWQ3ZTBiZDU5MjkvZGhheG1hdy04Mjk4MzUwOS01YTM0LTQ2NWYtYTBjMC0yNTNmOGVmZGE2NzkuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.VlvKXKzh_ziob7ir4vYit7b1PPIGGKzsTR41mB9cbDY')", // <-- ALTERAR AQUI
+        bg: "url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/29a2b646-3fb1-45b4-8424-c1d7e0bd5929/dhaxmaw-82983509-5a34-465f-a0c0-253f8efda679.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi8yOWEyYjY0Ni0zZmIxLTQ1YjQtODQyNC1jMWQ3ZTBiZDU5MjkvZGhheG1hdy04Mjk4MzUwOS01YTM0LTQ2NWYtYTBjMC0yNTNmOGVmZGE2NzkuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.VlvKXKzh_ziob7ir4vYit7b1PPIGGKzsTR41mB9cbDY')",
         radiosIniciais: ['radio_04_punk', 'radio_06_country']
       }
     ];
 
-    // Sorteia o tema ao carregar a página
     const temaSorteado = temas[Math.floor(Math.random() * temas.length)];
     
-    // Aplica as cores e background via variáveis CSS
-    document.documentElement.style.setProperty('--accent-color', temaSorteado.cor);
-    document.documentElement.style.setProperty('--accent-shadow', temaSorteado.sombra);
-    document.documentElement.style.setProperty('--bg-image', temaSorteado.bg);
+    const temaOnline = {
+      nome: 'Online',
+      cor: '#00a2ff', // Azul GTA Online
+      sombra: 'rgba(0, 162, 255, 0.5)',
+      bg: temaSorteado.bg // Preserva o BG
+    };
 
+    function aplicarTemaUI(tema) {
+      document.documentElement.style.setProperty('--accent-color', tema.cor);
+      document.documentElement.style.setProperty('--accent-shadow', tema.sombra);
+      if(tema.bg) document.documentElement.style.setProperty('--bg-image', tema.bg);
+    }
+
+    // Aplica o tema sorteado inicialmente
+    aplicarTemaUI(temaSorteado);
 
     // ----------------- SONS DA INTERFACE -----------------
     const uiAudioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -378,34 +397,61 @@
         setTimeout(() => { try { srcToStop.stop(); } catch(e){} }, 1000);
     }
 
-    // ----------------- CONFIGURAÇÃO DAS RÁDIOS (26 SLOTS) -----------------
-    const todasAsRadios = [
-      { key: 'radio', name: 'blonded Los Santos 97.8 FM', imgBW: 'capas/radio_station19.png', expansoes: ['v'] },
-      { key: 'radio', name: 'Los Santos Underground Radio', imgBW: 'capas/radio_station20.png', expansoes: ['v'] },
-      { key: 'radio', name: 'iFruit Radio', imgBW: 'capas/radio_station21.png', expansoes: ['v'] },
-      { key: 'radio', name: 'Still Slipping Los Santos', imgBW: 'capas/radio_station23.png', expansoes: ['v'] },
-      { key: 'radio_01_class_rock', name: 'Los Santos Rock Radio', imgBW: 'capas/radio_station04.png', expansoes: ['v'] },
-      { key: 'radio_02_pop', name: 'Non-Stop-Pop FM', imgBW: 'capas/radio_station05.png', expansoes: ['v'] },
-      { key: 'radio_03_hiphop_new', name: 'Radio Los Santos', imgBW: 'capas/radio_station11.png', expansoes: ['v'] },
-      { key: 'radio_04_punk', name: 'Channel X', imgBW: 'capas/radio_station03.png', expansoes: ['v'] },
-      { key: 'radio', name: 'WCTR', imgBW: 'capas/radio_station17.png', expansoes: ['v'] },
-      { key: 'radio_06_country', name: 'Rebel Radio', imgBW: 'capas/radio_station01.png', expansoes: ['v'] },
-      { key: 'radio', name: 'Soulwax FM', imgBW: 'capas/radio_station06.png', expansoes: ['v'] },
-      { key: 'radio', name: 'East Los FM', imgBW: 'capas/radio_station02.png', expansoes: ['v'] },
-      { key: 'radio_09_hiphop_old', name: 'West Coast Classics', imgBW: 'capas/radio_station09.png', expansoes: ['v'] },
-      { key: 'radio', name: 'Media Player', imgBW: 'capas/radio_station26.png', expansoes: ['v'] },
-      { key: 'radio', name: 'Blaine County Radio', imgBW: 'capas/radio_station07.png', expansoes: ['v'] },
-      { key: 'radio', name: 'MOTOMAMI Los Santos', imgBW: 'capas/radio_station24.png', expansoes: ['v'] },
-      { key: 'radio', name: 'Music Locker Radio', imgBW: 'capas/radio_station22.png', expansoes: ['v'] },
-      { key: 'radio', name: 'The Blue Ark', imgBW: 'capas/radio_station12.png', expansoes: ['v'] },
-      { key: 'radio', name: 'WorldWide FM', imgBW: 'capas/radio_station13.png', expansoes: ['v'] },
-      { key: 'radio', name: 'FlyLo FM', imgBW: 'capas/radio_station14.png', expansoes: ['v'] },
-      { key: 'radio_15_motown', name: 'The Lowdown 91.1', imgBW: 'capas/radio_station15.png', expansoes: ['v'] },
-      { key: 'radio_20_thelab', name: 'The Lab', imgBW: 'capas/radio_station18.png', expansoes: ['v'] },
-      { key: 'radio_16_silverlake', name: 'Radio Mirror Park', imgBW: 'capas/radio_station08.png', expansoes: ['v'] },
-      { key: 'radio_34_dlc_hei4_kult', name: 'Kult FM 99.1', imgBW: 'capas/radio_station25.png', expansoes: ['v'] },
-      { key: 'radio', name: 'Space 103.2', imgBW: 'capas/radio_station16.png', expansoes: ['v'] },
-      { key: 'radio_18_90s_rock', name: 'Vinewood Boulevard Radio', imgBW: 'capas/radio_station10.png', expansoes: ['v'] }
+    // ----------------- CONFIGURAÇÃO DAS RÁDIOS -----------------
+    
+    // Lista 1: GTA ONLINE (Todas as rádios - Formação Inalterada)
+    const radiosOnline = [
+      { key: 'radio', name: 'blonded Los Santos 97.8 FM', imgBW: 'capas/radio_station19.png' },
+      { key: 'radio', name: 'Los Santos Underground Radio', imgBW: 'capas/radio_station20.png' },
+      { key: 'radio', name: 'iFruit Radio', imgBW: 'capas/radio_station21.png' },
+      { key: 'radio', name: 'Still Slipping Los Santos', imgBW: 'capas/radio_station23.png' },
+      { key: 'radio_01_class_rock', name: 'Los Santos Rock Radio', imgBW: 'capas/radio_station04.png' },
+      { key: 'radio_02_pop', name: 'Non-Stop-Pop FM', imgBW: 'capas/radio_station05.png' },
+      { key: 'radio_03_hiphop_new', name: 'Radio Los Santos', imgBW: 'capas/radio_station11.png' },
+      { key: 'radio_04_punk', name: 'Channel X', imgBW: 'capas/radio_station03.png' },
+      { key: 'radio', name: 'WCTR', imgBW: 'capas/radio_station17.png' },
+      { key: 'radio_06_country', name: 'Rebel Radio', imgBW: 'capas/radio_station01.png' },
+      { key: 'radio', name: 'Soulwax FM', imgBW: 'capas/radio_station06.png' },
+      { key: 'radio', name: 'East Los FM', imgBW: 'capas/radio_station02.png' },
+      { key: 'radio_09_hiphop_old', name: 'West Coast Classics', imgBW: 'capas/radio_station09.png' },
+      { key: 'radio', name: 'Media Player', imgBW: 'capas/radio_station26.png' },
+      { key: 'radio', name: 'Blaine County Radio', imgBW: 'capas/radio_station07.png' },
+      { key: 'radio', name: 'MOTOMAMI Los Santos', imgBW: 'capas/radio_station24.png' },
+      { key: 'radio', name: 'Music Locker Radio', imgBW: 'capas/radio_station22.png' },
+      { key: 'radio', name: 'The Blue Ark', imgBW: 'capas/radio_station12.png' },
+      { key: 'radio', name: 'WorldWide FM', imgBW: 'capas/radio_station13.png' },
+      { key: 'radio', name: 'FlyLo FM', imgBW: 'capas/radio_station14.png' },
+      { key: 'radio_15_motown', name: 'The Lowdown 91.1', imgBW: 'capas/radio_station15.png' },
+      { key: 'radio_20_thelab', name: 'The Lab', imgBW: 'capas/radio_station18.png' },
+      { key: 'radio_16_silverlake', name: 'Radio Mirror Park', imgBW: 'capas/radio_station08.png' },
+      { key: 'radio_34_dlc_hei4_kult', name: 'Kult FM 99.1', imgBW: 'capas/radio_station25.png' },
+      { key: 'radio', name: 'Space 103.2', imgBW: 'capas/radio_station16.png' },
+      { key: 'radio_18_90s_rock', name: 'Vinewood Boulevard Radio', imgBW: 'capas/radio_station10.png' }
+    ];
+
+    // Lista 2: OFFLINE (GTA V) - Reordenada conforme as instruções
+    const radiosOffline = [
+      { key: 'radio', name: 'Los Santos Underground Radio', imgBW: 'capas/radio_station20.png' },
+      { key: 'radio', name: 'iFruit Radio', imgBW: 'capas/radio_station21.png' },
+      { key: 'radio_01_class_rock', name: 'Los Santos Rock Radio', imgBW: 'capas/radio_station04.png' },
+      { key: 'radio_02_pop', name: 'Non-Stop-Pop FM', imgBW: 'capas/radio_station05.png' },
+      { key: 'radio_03_hiphop_new', name: 'Radio Los Santos', imgBW: 'capas/radio_station11.png' },
+      { key: 'radio_04_punk', name: 'Channel X', imgBW: 'capas/radio_station03.png' },
+      { key: 'radio', name: 'WCTR', imgBW: 'capas/radio_station17.png' },
+      { key: 'radio_06_country', name: 'Rebel Radio', imgBW: 'capas/radio_station01.png' },
+      { key: 'radio', name: 'Soulwax FM', imgBW: 'capas/radio_station06.png' },
+      { key: 'radio', name: 'East Los FM', imgBW: 'capas/radio_station02.png' },
+      { key: 'radio_09_hiphop_old', name: 'West Coast Classics', imgBW: 'capas/radio_station09.png' },
+      { key: 'radio', name: 'Blaine County Radio', imgBW: 'capas/radio_station07.png' },
+      { key: 'radio', name: 'The Blue Ark', imgBW: 'capas/radio_station12.png' },
+      { key: 'radio', name: 'WorldWide FM', imgBW: 'capas/radio_station13.png' },
+      { key: 'radio', name: 'FlyLo FM', imgBW: 'capas/radio_station14.png' },
+      { key: 'radio_15_motown', name: 'The Lowdown 91.1', imgBW: 'capas/radio_station15.png' },
+      { key: 'radio_20_thelab', name: 'The Lab', imgBW: 'capas/radio_station18.png' },
+      { key: 'radio_16_silverlake', name: 'Radio Mirror Park', imgBW: 'capas/radio_station08.png' },
+      { key: 'radio', name: 'Space 103.2', imgBW: 'capas/radio_station16.png' },
+      { key: 'radio_18_90s_rock', name: 'Vinewood Boulevard Radio', imgBW: 'capas/radio_station10.png' },
+      { key: 'radio', name: 'blonded Los Santos 97.8 FM', imgBW: 'capas/radio_station19.png' }
     ];
 
     const radiosComZoom = [
@@ -442,6 +488,7 @@
 
     // ----------------- FUNÇÕES AUXILIARES -----------------
     function updateVisuals(index) {
+        if (!radiosAtuais[index]) return;
         const rad = radiosAtuais[index];
         activeColorLogo.src = rad.imgBW;
         radioNameText.textContent = rad.name;
@@ -455,6 +502,7 @@
     }
 
     function applyAudio(index) {
+        if (!radiosAtuais[index]) return;
         const rad = radiosAtuais[index];
         if (currentlyPlayingKey !== rad.key) {
             playUIStatic();
@@ -500,15 +548,26 @@
     }
 
     function buildWheel() {
-      radiosAtuais = todasAsRadios.filter(r => r.expansoes.includes(currentExpansion));
+      // Define a lista correta baseado na expansão
+      if (currentExpansion === 'v') {
+          radiosAtuais = radiosOffline;
+      } else {
+          radiosAtuais = radiosOnline;
+      }
+
       wheelContainer.innerHTML = '';
       
       const N = radiosAtuais.length;
+      if (N === 0) return;
+
       const minDim = Math.min(window.innerWidth, window.innerHeight);
-      
-      // Raio expandido no mobile para 0.50 para afastar bem os ícones
       const isMobile = window.innerWidth <= 768;
-      const radius = isMobile ? minDim * 0.50 : minDim * 0.39;
+      
+      // Raio base
+      const baseRadius = isMobile ? minDim * 0.50 : minDim * 0.39;
+      
+      // Ajuste proporcional matemático da Roda
+      const radius = baseRadius * (N / 26); 
 
       radiosAtuais.forEach((r, index) => {
         const div = document.createElement('div');
@@ -690,17 +749,32 @@
         forceWakeUpAudio(); 
         currentExpansion = e.target.getAttribute('data-exp');
         
+        // --- GERENCIAMENTO DE TEMAS AO CLICAR NA PLATAFORMA ---
+        if (currentExpansion === 'online') {
+            aplicarTemaUI(temaOnline);
+        } else {
+            aplicarTemaUI(temaSorteado);
+        }
+        
         viewMenu.classList.remove('active');
         viewPlayer.classList.add('active');
         
         buildWheel();
         
-        // --- SELEÇÃO DE RÁDIO INICIAL POR TEMA ---
-        // Sorteia uma das rádios pré-definidas no array radiosIniciais do tema sorteado
-        const chaveRadioSorteada = temaSorteado.radiosIniciais[Math.floor(Math.random() * temaSorteado.radiosIniciais.length)];
+        // --- SELEÇÃO DE RÁDIO INICIAL ---
+        let indiceInicial = 0;
         
-        // Acha o índice real dela na lista filtrada (radiosAtuais)
-        let indiceInicial = radiosAtuais.findIndex(r => r.key === chaveRadioSorteada);
+        if (currentExpansion === 'v') {
+            // Continua usando a lógica do tema do personagem para o offline
+            const chaveRadioSorteada = temaSorteado.radiosIniciais[Math.floor(Math.random() * temaSorteado.radiosIniciais.length)];
+            indiceInicial = radiosAtuais.findIndex(r => r.key === chaveRadioSorteada);
+        } else {
+            // Inicia aleatoriamente APENAS entre a Kult FM e Vinewood no online
+            const radiosIniciaisOnline = ['radio_34_dlc_hei4_kult', 'radio_18_90s_rock'];
+            const chaveRadioSorteada = radiosIniciaisOnline[Math.floor(Math.random() * radiosIniciaisOnline.length)];
+            indiceInicial = radiosAtuais.findIndex(r => r.key === chaveRadioSorteada);
+        }
+        
         if (indiceInicial === -1) indiceInicial = 0; // Prevenção de erro
         
         currentIndex = indiceInicial;
@@ -729,6 +803,9 @@
       if(window.__RADIO && window.__RADIO.stopRadio) window.__RADIO.stopRadio();
       currentlyPlayingKey = null; 
       stopUIStatic(true); 
+
+      // Retorna para as cores originais da interface offline
+      aplicarTemaUI(temaSorteado);
 
       viewPlayer.classList.remove('active');
       viewMenu.classList.add('active');

@@ -531,6 +531,180 @@
   };
 
   /* ================================================================================= */
+  /* ================================= 7. SPACE 103.2 (FUNK) ========================= */
+  /* ================================================================================= */
+
+  const bpFunk = 'RADIO_17_FUNK';
+  
+  const obj_funk = {
+    chanceLocucao: 0.9,
+    musicasList: [
+      { id: 'back_and_forth', name: 'BACK_AND_FORTH', arquivo: `${bpFunk}/musicas/BACK_AND_FORTH.ogg`, introStart: 253952, introEnd: 1265664, finalStart: 9195520, finalEnd: 10294555 },
+      { id: 'cant_hold_back', name: 'CANT_HOLD_BACK', arquivo: `${bpFunk}/musicas/CANT_HOLD_BACK.ogg`, introStart: 282977, introEnd: 835328, finalStart: 9224192, finalEnd: 10705408 },
+      { id: 'cutie_pie', name: 'CUTIE_PIE', arquivo: `${bpFunk}/musicas/CUTIE_PIE.ogg`, introStart: 417792, introEnd: 1574400, finalStart: 7352320, finalEnd: 9196032 },
+      { id: 'do_it_roger', name: 'DO_IT_ROGER', arquivo: `${bpFunk}/musicas/DO_IT_ROGER.ogg`, introStart: 249856, introEnd: 1446846, finalStart: 13253632, finalEnd: 14251008 },
+      { id: 'flashback', name: 'FLASHBACK', arquivo: `${bpFunk}/musicas/FLASHBACK.ogg`, introStart: 198208, introEnd: 411200, finalStart: 10769984, finalEnd: 11717777 },
+      { id: 'flashlight', name: 'FLASHLIGHT', arquivo: `${bpFunk}/musicas/FLASHLIGHT.ogg`, introStart: 262192, introEnd: 852047, finalStart: 10756144, finalEnd: 11888126 },
+      { id: 'funkasize_you', name: 'FUNKASIZE_YOU', arquivo: `${bpFunk}/musicas/FUNKASIZE_YOU.ogg`, introStart: 487040, introEnd: 955264, finalStart: 5838848, finalEnd: 6979584 },
+      { id: 'give_it_to_me_baby', name: 'GIVE_IT_TO_ME_BABY', arquivo: `${bpFunk}/musicas/GIVE_IT_TO_ME_BABY.ogg`, introStart: 303424, introEnd: 1124454, finalStart: 10002752, finalEnd: 10873152 },
+      { id: 'gotta_get_my_hands_on_some_money', name: 'GOTTA_GET_MY_HANDS_ON_SOME_MONEY', arquivo: `${bpFunk}/musicas/GOTTA_GET_MY_HANDS_ON_SOME_MONEY.ogg`, introStart: 243328, introEnd: 779904, finalStart: 10077824, finalEnd: 11167360 },
+      { id: 'haboglabotribin', name: 'HABOGLABOTRIBIN', arquivo: `${bpFunk}/musicas/HABOGLABOTRIBIN.ogg`, introStart: 260628, introEnd: 1445888, finalStart: 8785920, finalEnd: 10442752 },
+      { id: 'heartbreaker', name: 'HEARTBREAKER', arquivo: `${bpFunk}/musicas/HEARTBREAKER.ogg`, introStart: 372736, introEnd: 976384, finalStart: 10256384, finalEnd: 11151360 },
+      { id: 'heart_beat', name: 'HEART_BEAT', arquivo: `${bpFunk}/musicas/HEART_BEAT.ogg`, introStart: 259288, introEnd: 1949184, finalStart: 9027584, finalEnd: 10293248 },
+      { id: 'id_rather_be_with_you', name: 'ID_RATHER_BE_WITH_YOU', arquivo: `${bpFunk}/musicas/ID_RATHER_BE_WITH_YOU.ogg`, introStart: 409600, introEnd: 1209344, finalStart: 9224192, finalEnd: 10076160 },
+      { id: 'im_in_love', name: 'IM_IN_LOVE', arquivo: `${bpFunk}/musicas/IM_IN_LOVE.ogg`, introStart: 267157, introEnd: 1675264, finalStart: 10436608, finalEnd: 11468800 },
+      { id: 'joystick', name: 'JOYSTICK', arquivo: `${bpFunk}/musicas/JOYSTICK.ogg`, introStart: 252364, introEnd: 2091468, finalStart: 8309196, finalEnd: 9382348 },
+      { id: 'mothership_connection', name: 'MOTHERSHIP_CONNECTION', arquivo: `${bpFunk}/musicas/MOTHERSHIP_CONNECTION.ogg`, introStart: 278266, introEnd: 1429242, finalStart: 10829562, finalEnd: 11947671 },
+      { id: 'nights_feel_like', name: 'NIGHTS_FEEL_LIKE', arquivo: `${bpFunk}/musicas/NIGHTS_FEEL_LIKE.ogg`, finalStart: 11767296, finalEnd: 12754944 },
+      { id: 'party_all_the_time', name: 'PARTY_ALL_THE_TIME', arquivo: `${bpFunk}/musicas/PARTY_ALL_THE_TIME.ogg`, introStart: 752256, introEnd: 2248448, finalStart: 8604672, finalEnd: 9603072 },
+      { id: 'skeletons', name: 'SKELETONS', arquivo: `${bpFunk}/musicas/SKELETONS.ogg`, introStart: 661120, introEnd: 1854080, finalStart: 9407232, finalEnd: 10656512 },
+      { id: 'tonight', name: 'TONIGHT', arquivo: `${bpFunk}/musicas/TONIGHT.ogg`, introStart: 442368, introEnd: 1360896, finalStart: 8998912, finalEnd: 10034176 },
+      { id: 'walking_into_sunshine', name: 'WALKING_INTO_SUNSHINE', arquivo: `${bpFunk}/musicas/WALKING_INTO_SUNSHINE.ogg`, introStart: 249856, introEnd: 740726, finalStart: 10149376, finalEnd: 11569664 },
+      { id: 'youre_the_one_for_me', name: 'YOURE_THE_ONE_FOR_ME', arquivo: `${bpFunk}/musicas/YOURE_THE_ONE_FOR_ME.ogg`, finalStart: 10586112, finalEnd: 11841536 }
+    ],
+    grupoID: genList(bpFunk, 'narracoes', padArr('ID', 1, 14)),
+    grupoDJSolo: genList(bpFunk, 'narracoes', padArr('MONO_SOLO', 1, 13)),
+    narracoesGeneral: genList(bpFunk, 'narracoes', padArr('GENERAL', 1, 27)),
+    timePools: {
+      morning: genList(bpFunk, 'narracoes', padArr('MORNING', 1, 4)),
+      evening: genList(bpFunk, 'narracoes', padArr('EVENING', 1, 4))
+    },
+    endto: {
+      toad: genList(bpFunk, 'narracoes', padArr('TO_AD', 1, 5)),
+      tonews: genList(bpFunk, 'narracoes', padArr('TO_NEWS', 1, 5))
+    },
+    grupoAdv: G.adv.gtav || [],
+    grupoWeazelNews: G.news.gtav || [],
+    musicIntroNarrations: {
+      'BACK_AND_FORTH': genList(bpFunk, 'narracoes', ['BACK_AND_FORTH_01', 'BACK_AND_FORTH_02']),
+      'CANT_HOLD_BACK': genList(bpFunk, 'narracoes', ['CANT_HOLD_BACK_YOUR_LOVIN_01', 'CANT_HOLD_BACK_YOUR_LOVIN_02']),
+      'CUTIE_PIE': genList(bpFunk, 'narracoes', ['CUTIE_PIE_01', 'CUTIE_PIE_02']),
+      'DO_IT_ROGER': genList(bpFunk, 'narracoes', ['DO_IT_ROGER_01', 'DO_IT_ROGER_02']),
+      'GIVE_IT_TO_ME_BABY': genList(bpFunk, 'narracoes', ['GIVE_IT_TO_ME_BABY_01', 'GIVE_IT_TO_ME_BABY_02']),
+      'GOTTA_GET_MY_HANDS_ON_SOME_MONEY': genList(bpFunk, 'narracoes', ['GOTTA_GET_MY_HANDS_ON_SOME_MONEY_01', 'GOTTA_GET_MY_HANDS_ON_SOME_MONEY_02']),
+      'HEART_BEAT': genList(bpFunk, 'narracoes', ['HEARTBEAT_01', 'HEARTBEAT_02']),
+      'ID_RATHER_BE_WITH_YOU': genList(bpFunk, 'narracoes', ['ID_RATHER_BE_WITH_YOU_01', 'ID_RATHER_BE_WITH_YOU_02']),
+      'IM_IN_LOVE': genList(bpFunk, 'narracoes', ['IM_IN_LOVE_01', 'IM_IN_LOVE_02']),
+      'JOYSTICK': genList(bpFunk, 'narracoes', ['JOYSTICK_01', 'JOYSTICK_02']),
+      'SKELETONS': genList(bpFunk, 'narracoes', ['SKELETONS_01', 'SKELETONS_02']),
+      'YOURE_THE_ONE_FOR_ME': genList(bpFunk, 'narracoes', ['YOURE_THE_ONE_FOR_ME_01', 'YOURE_THE_ONE_FOR_ME_02'])
+    }
+  };
+
+  /* ================================================================================= */
+  /* ===================== 8. RADIO LOS SANTOS (RADIO_03_HIPHOP_NEW) ================= */
+  /* ================================================================================= */
+
+  const bpHipHopNew = 'RADIO_03_HIPHOP_NEW';
+  
+  const obj_hiphop_new = {
+    chanceLocucao: 0.9,
+    musicasList: [
+      { id: 'adhd', name: 'ADHD', arquivo: `${bpHipHopNew}/musicas/ADHD.ogg`, finalStart: 7233536, finalEnd: 9030656 },
+      { id: 'ali_bomaye', name: 'ALI_BOMAYE', arquivo: `${bpHipHopNew}/musicas/ALI_BOMAYE.ogg`, finalStart: 11010048, finalEnd: 12494848 },
+      { id: 'bad_news', name: 'BAD_NEWS', arquivo: `${bpHipHopNew}/musicas/BAD_NEWS.ogg`, introStart: 235520, introEnd: 557056, finalStart: 5555456, finalEnd: 6085632 },
+      { id: 'bassheads', name: 'BASSHEADS', arquivo: `${bpHipHopNew}/musicas/BASSHEADS.ogg`, introStart: 291151, introEnd: 785088, finalStart: 6108416, finalEnd: 7166208 },
+      { id: 'bugatti', name: 'BUGATTI', arquivo: `${bpHipHopNew}/musicas/BUGATTI.ogg`, introStart: 264124, introEnd: 612284, finalStart: 11536316, finalEnd: 12481536 },
+      { id: 'collard_greens', name: 'COLLARD_GREENS', arquivo: `${bpHipHopNew}/musicas/COLLARD_GREENS.ogg`, introStart: 244868, introEnd: 593028, finalStart: 11726848, finalEnd: 12570624 },
+      { id: 'do_it_big', name: 'DO_IT_BIG', arquivo: `${bpHipHopNew}/musicas/DO_IT_BIG.ogg`, introStart: 236840, introEnd: 437544, finalStart: 8494376, finalEnd: 9448744 },
+      { id: 'easily', name: 'EASILY', arquivo: `${bpHipHopNew}/musicas/EASILY.ogg`, finalStart: 11670916, finalEnd: 12709329 },
+      { id: 'everyday', name: 'EVERYDAY', arquivo: `${bpHipHopNew}/musicas/EVERYDAY.ogg`, introStart: 253337, introEnd: 1351065, finalStart: 7077273, finalEnd: 8097731 },
+      { id: 'hold_up', name: 'HOLD_UP', arquivo: `${bpHipHopNew}/musicas/HOLD_UP.ogg`, introStart: 257817, introEnd: 1138688, finalStart: 8396800, finalEnd: 9751552 },
+      { id: 'hood_gone_love_it', name: 'HOOD_GONE_LOVE_IT', arquivo: `${bpHipHopNew}/musicas/HOOD_GONE_LOVE_IT.ogg`, introStart: 271940, introEnd: 732800, finalStart: 9508864, finalEnd: 10541056 },
+      { id: 'how_it_was', name: 'HOW_IT_WAS', arquivo: `${bpHipHopNew}/musicas/HOW_IT_WAS.ogg`, introStart: 292444, introEnd: 695424, finalStart: 9200256, finalEnd: 10188800 },
+      { id: 'hunnid_stax', name: 'HUNNID_STAX', arquivo: `${bpHipHopNew}/musicas/HUNNID_STAX.ogg`, introStart: 265564, introEnd: 666972, finalStart: 7527424, finalEnd: 8572928 },
+      { id: 'illuminate', name: 'ILLUMINATE', arquivo: `${bpHipHopNew}/musicas/ILLUMINATE.ogg`, introStart: 279552, introEnd: 704512, finalStart: 11497472, finalEnd: 12470784 },
+      { id: 'im_a_real_one', name: 'IM_A_REAL_ONE', arquivo: `${bpHipHopNew}/musicas/IM_A_REAL_ONE.ogg`, finalStart: 5619712, finalEnd: 7596032 },
+      { id: 'i_cant_wait_scooter', name: 'I_CANT_WAIT_SCOOTER', arquivo: `${bpHipHopNew}/musicas/I_CANT_WAIT_SCOOTER.ogg`, introStart: 247808, introEnd: 613799, finalStart: 7186432, finalEnd: 8213696 },
+      { id: 'kush_coma', name: 'KUSH_COMA', arquivo: `${bpHipHopNew}/musicas/KUSH_COMA.ogg`, finalStart: 10027008, finalEnd: 11144192 },
+      { id: 'life_of_a_mack', name: 'LIFE_OF_A_MACK', arquivo: `${bpHipHopNew}/musicas/LIFE_OF_A_MACK.ogg`, introStart: 287336, introEnd: 1223424, finalStart: 7108864, finalEnd: 8195072 },
+      { id: 'millions', name: 'MILLIONS', arquivo: `${bpHipHopNew}/musicas/MILLIONS.ogg`, introStart: 220608, introEnd: 830912, finalStart: 9825792, finalEnd: 11003904 },
+      { id: 'relaxin', name: 'RELAXIN', arquivo: `${bpHipHopNew}/musicas/RELAXIN.ogg`, finalStart: 6977808, finalEnd: 8186851 },
+      { id: 'r_cali', name: 'R_CALI', arquivo: `${bpHipHopNew}/musicas/R_CALI.ogg`, introStart: 248279, introEnd: 615680 },
+      { id: 'say_that_then', name: 'SAY_THAT_THEN', arquivo: `${bpHipHopNew}/musicas/SAY_THAT_THEN.ogg`, finalStart: 6437248, finalEnd: 7541120 },
+      { id: 'sellin_dope', name: 'SELLIN_DOPE', arquivo: `${bpHipHopNew}/musicas/SELLIN_DOPE.ogg`, introStart: 223232, introEnd: 628736 },
+      { id: 'slow_down', name: 'SLOW_DOWN', arquivo: `${bpHipHopNew}/musicas/SLOW_DOWN.ogg`, introStart: 273740, introEnd: 1162112, finalStart: 7942784, finalEnd: 9147008 },
+      { id: 'smokin_and_ridin', name: 'SMOKIN_AND_RIDIN', arquivo: `${bpHipHopNew}/musicas/SMOKIN_AND_RIDIN.ogg`, finalStart: 7766016, finalEnd: 9319104 },
+      { id: 'still_livin', name: 'STILL_LIVIN', arquivo: `${bpHipHopNew}/musicas/STILL_LIVIN.ogg`, introStart: 255053, introEnd: 1338368, finalStart: 7663616, finalEnd: 8899584 },
+      { id: 'swimming_pools', name: 'SWIMMING_POOLS', arquivo: `${bpHipHopNew}/musicas/SWIMMING_POOLS.ogg`, introStart: 279264, introEnd: 1204960, finalStart: 9183232, finalEnd: 10031103 },
+      { id: 'too_hood', name: 'TOO_HOOD', arquivo: `${bpHipHopNew}/musicas/TOO_HOOD.ogg`, introStart: 258834, introEnd: 1617408, finalStart: 7307264, finalEnd: 9451520 },
+      { id: 'upper_echelon', name: 'UPPER_ECHELON', arquivo: `${bpHipHopNew}/musicas/UPPER_ECHELON.ogg`, introStart: 262144, introEnd: 712182, finalStart: 6838272, finalEnd: 7933952 },
+      { id: 'work_ferg', name: 'WORK_FERG', arquivo: `${bpHipHopNew}/musicas/WORK_FERG.ogg`, introStart: 244490, introEnd: 617226, finalStart: 6591488, finalEnd: 7667712 },
+      { id: 'work_young_scooter', name: 'WORK_YOUNG_SCOOTER', arquivo: `${bpHipHopNew}/musicas/WORK_YOUNG_SCOOTER.ogg`, introStart: 258048, introEnd: 1363968, finalStart: 11803136, finalEnd: 13000704 }
+    ],
+    grupoID: genList(bpHipHopNew, 'narracoes', padArr('ID', 1, 14)),
+    grupoDJSolo: genList(bpHipHopNew, 'narracoes', padArr('MONO_SOLO', 1, 21)),
+    narracoesGeneral: genList(bpHipHopNew, 'narracoes', padArr('GENERAL', 1, 45)),
+    timePools: {
+      morning: genList(bpHipHopNew, 'narracoes', padArr('MORNING', 1, 5)),
+      evening: genList(bpHipHopNew, 'narracoes', padArr('EVENING', 1, 6))
+    },
+    endto: {
+      toad: genList(bpHipHopNew, 'narracoes', padArr('TO_AD', 1, 6)),
+      tonews: genList(bpHipHopNew, 'narracoes', padArr('TO_NEWS', 1, 6))
+    },
+    grupoAdv: G.adv.gtav || [],
+    grupoWeazelNews: G.news.gtav || [],
+    musicIntroNarrations: {
+      'ADHD': genList(bpHipHopNew, 'narracoes', ['ADHD_01', 'ADHD_02']),
+      'ALI_BOMAYE': genList(bpHipHopNew, 'narracoes', ['ALI_BOMAYE_01', 'ALI_BOMAYE_02']),
+      'BAD_NEWS': genList(bpHipHopNew, 'narracoes', ['BAD_NEWS_01', 'BAD_NEWS_02']),
+      'BASSHEADS': genList(bpHipHopNew, 'narracoes', ['BASSHEADS_01', 'BASSHEADS_02']),
+      'BUGATTI': genList(bpHipHopNew, 'narracoes', ['BUGATTI_01', 'BUGATTI_02']),
+      'COLLARD_GREENS': genList(bpHipHopNew, 'narracoes', ['COLLARD_GREENS_01', 'COLLARD_GREENS_02']),
+      'DO_IT_BIG': genList(bpHipHopNew, 'narracoes', ['DO_IT_BIG_01', 'DO_IT_BIG_02']),
+      'EASILY': genList(bpHipHopNew, 'narracoes', ['EASILY_01', 'EASILY_02']),
+      'EVERYDAY': genList(bpHipHopNew, 'narracoes', ['EVERYDAY_01', 'EVERYDAY_02']),
+      'HOOD_GONE_LOVE_IT': genList(bpHipHopNew, 'narracoes', ['HOOD_GONE_LOVE_IT_01', 'HOOD_GONE_LOVE_IT_02']),
+      'HOW_IT_WAS': genList(bpHipHopNew, 'narracoes', ['HOW_IT_WAS_01', 'HOW_IT_WAS_02']),
+      'HUNNID_STAX': genList(bpHipHopNew, 'narracoes', ['HUNNID_STAX_01', 'HUNNID_STAX_02']),
+      'ILLUMINATE': genList(bpHipHopNew, 'narracoes', ['ILLUMINATE_01', 'ILLUMINATE_02']),
+      'IM_A_REAL_ONE': genList(bpHipHopNew, 'narracoes', ['IM_A_REAL_ONE_01', 'IM_A_REAL_ONE_02']),
+      'I_CANT_WAIT_SCOOTER': genList(bpHipHopNew, 'narracoes', ['I_CANT_WAIT_SCOOTER_01', 'I_CANT_WAIT_SCOOTER_02']),
+      'KUSH_COMA': genList(bpHipHopNew, 'narracoes', ['KUSH_COMA_01', 'KUSH_COMA_02']),
+      'LIFE_OF_A_MACK': genList(bpHipHopNew, 'narracoes', ['LIFE_OF_A_MACK_01', 'LIFE_OF_A_MACK_02', 'LIFE_OF_A_MACK_03']),
+      'MILLIONS': genList(bpHipHopNew, 'narracoes', ['MILLIONS_01', 'MILLIONS_02']),
+      'RELAXIN': genList(bpHipHopNew, 'narracoes', ['RELAXIN_01', 'RELAXIN_02']),
+      'R_CALI': genList(bpHipHopNew, 'narracoes', ['R_CALI_01', 'R_CALI_02', 'R_CALI_03']),
+      'SAY_THAT_THEN': genList(bpHipHopNew, 'narracoes', ['SAY_THAT_THEN_01', 'SAY_THAT_THEN_02']),
+      'SLOW_DOWN': genList(bpHipHopNew, 'narracoes', ['SLOW_DOWN_01', 'SLOW_DOWN_02']),
+      'SMOKIN_AND_RIDIN': genList(bpHipHopNew, 'narracoes', ['SMOKIN_AND_RIDIN_01', 'SMOKIN_AND_RIDIN_02', 'SMOKIN_AND_RIDIN_03']),
+      'STILL_LIVIN': genList(bpHipHopNew, 'narracoes', ['STILL_LIVIN_01', 'STILL_LIVIN_02']),
+      'SWIMMING_POOLS': genList(bpHipHopNew, 'narracoes', ['SWIMMING_POOLS_01', 'SWIMMING_POOLS_02']),
+      'TOO_HOOD': genList(bpHipHopNew, 'narracoes', ['TOO_HOOD_01', 'TOO_HOOD_02']),
+      'UPPER_ECHELON': genList(bpHipHopNew, 'narracoes', ['UPPER_ECHELON_01', 'UPPER_ECHELON_02']),
+      'WORK_FERG': genList(bpHipHopNew, 'narracoes', ['WORK_FERG_01']),
+      'WORK_YOUNG_SCOOTER': genList(bpHipHopNew, 'narracoes', ['WORK_YOUNG_SCOOTER_01', 'WORK_YOUNG_SCOOTER_02'])
+    }
+  };
+
+  /* ================================================================================= */
+  /* ================================= 9. SOULWAX FM ================================= */
+  /* ================================================================================= */
+
+  const bpSoulwax = 'RADIO_07_DANCE_01';
+  
+  const obj_soulwax = {
+    chanceLocucao: 0,
+    musicasList: [
+      { 
+        id: 'soulwax_mix', 
+        name: 'SOULWAX_MIX', 
+        arquivo: `${bpSoulwax}/SOULWAX_FM_FINAL_MIX_32K/playlist.m3u8`, 
+        durationMs: 2566625 // Tempo absoluto inserido manualmente
+      }
+    ],
+    grupoID: [],
+    grupoDJSolo: [],
+    narracoesGeneral: [],
+    timePools: null,
+    endto: null,
+    grupoAdv: [],
+    grupoWeazelNews: [],
+    musicIntroNarrations: {}
+  };
+
+  /* ================================================================================= */
   /* =========================== EXPORTAÇÃO GLOBAL (GTA V) =========================== */
   /* ================================================================================= */
   
@@ -541,7 +715,10 @@
         'radio_16_silverlake': obj_silverlake,
         'radio_18_90s_rock': obj_90s_rock,
         'radio_15_motown': obj_motown,
-        'radio_02_pop': obj_pop
+        'radio_02_pop': obj_pop,
+        'radio_17_funk': obj_funk,
+        'radio_03_hiphop_new': obj_hiphop_new,
+        'radio_07_dance_01': obj_soulwax
       },
       'online': {
         // Todas essas sofrerão mutação de NEWS para ADVs sem perder sincronia
@@ -550,8 +727,10 @@
         'radio_18_90s_rock': obj_90s_rock,
         'radio_34_dlc_hei4_kult': obj_kult,
         'radio_15_motown': obj_motown,
-        'radio_02_pop': obj_pop
-        // Se no futuro você colocar rádios exclusivas aqui, o gerador fará uma linha do tempo nova pra ela!
+        'radio_02_pop': obj_pop,
+        'radio_17_funk': obj_funk,
+        'radio_03_hiphop_new': obj_hiphop_new,
+        'radio_07_dance_01': obj_soulwax
       }
     }
   };

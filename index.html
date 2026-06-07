@@ -158,15 +158,7 @@
       background: transparent;
       z-index: 10;
       
-      transition: transform 0.1s, box-shadow 0.1s, width 0.3s, height 0.3s, margin 0.3s;
-    }
-
-    /* Ajuste para o tamanho Offline */
-    .wheel-item.offline-mode {
-      width: 110px;
-      height: 110px;
-      margin-top: -55px;
-      margin-left: -55px;
+      transition: transform 0.1s, box-shadow 0.1s;
     }
     
     .wheel-item.active {
@@ -251,10 +243,6 @@
     /* Ajustes específicos de celular para a roda */
     @media (max-width: 768px) {
       .wheel-item { width: 50px; height: 50px; margin-top: -25px; margin-left: -25px; border-width: 2px; }
-      
-      /* Ajuste de tamanho Offline para o mobile */
-      .wheel-item.offline-mode { width: 65px; height: 65px; margin-top: -32.5px; margin-left: -32.5px; }
-
       #radioNameText { font-size: 1.35rem; }
       
       /* OCULTA o texto no celular enquanto a roda está aberta */
@@ -351,7 +339,7 @@
         if (uiAudioCtx.state !== 'running') uiAudioCtx.resume();
         const osc = uiAudioCtx.createOscillator();
         const gain = uiAudioCtx.createGain();
-        gain.gain.value = 0; 
+        gain.gain.value = 0;
         osc.connect(gain);
         gain.connect(uiAudioCtx.destination);
         osc.start();
@@ -368,7 +356,7 @@
         const src = uiAudioCtx.createBufferSource();
         src.buffer = clickBuffer;
         const gain = uiAudioCtx.createGain();
-        gain.gain.value = 3.0; 
+        gain.gain.value = 4.0; 
         src.connect(gain);
         gain.connect(uiAudioCtx.destination);
         src.start();
@@ -402,12 +390,11 @@
             try { srcToStop.stop(); } catch(e){}
             return;
         }
-
         const now = uiAudioCtx.currentTime;
         gainToFade.gain.cancelScheduledValues(now);
         gainToFade.gain.setValueAtTime(gainToFade.gain.value, now);
-        gainToFade.gain.linearRampToValueAtTime(0.001, now + 0.4); 
-        setTimeout(() => { try { srcToStop.stop(); } catch(e){} }, 400);
+        gainToFade.gain.linearRampToValueAtTime(0.001, now + 1.0); 
+        setTimeout(() => { try { srcToStop.stop(); } catch(e){} }, 1000);
     }
 
     // ----------------- CONFIGURAÇÃO DAS RÁDIOS -----------------
@@ -532,7 +519,6 @@
                     clearTimeout(safetyTimeout); 
                 };
 
-                // A estática ficará tocando em loop até o 'radio-ready' disparar
                 window.addEventListener('radio-ready', stopStaticHandler);
                 const safetyTimeout = setTimeout(() => { stopStaticHandler(); }, 5000);
             } else {
@@ -563,9 +549,7 @@
 
     function buildWheel() {
       // Define a lista correta baseado na expansão
-      const isOffline = (currentExpansion === 'v');
-
-      if (isOffline) {
+      if (currentExpansion === 'v') {
           radiosAtuais = radiosOffline;
       } else {
           radiosAtuais = radiosOnline;
@@ -582,18 +566,15 @@
       // Raio base
       const baseRadius = isMobile ? minDim * 0.50 : minDim * 0.39;
       
-      // Ajuste proporcional matemático da Roda (espaço extra no offline por conta das logos maiores)
-      const radiusMultiplier = isOffline ? (N / 22) : (N / 26);
-      const radius = baseRadius * radiusMultiplier; 
+      // Ajuste proporcional de Fluidez: 
+      // Ao invés de encolher a roda baseada na quantidade (N/26), mantemos um raio 
+      // quase igual para o Offline. Isso garante que os 21 itens fiquem mais espaçados, 
+      // facilitando muito a seleção.
+      const radius = currentExpansion === 'v' ? baseRadius * 0.81 : baseRadius; 
 
       radiosAtuais.forEach((r, index) => {
         const div = document.createElement('div');
         div.className = 'wheel-item';
-        // Se estiver no Offline, adiciona a classe de tamanho maior
-        if (isOffline) {
-            div.classList.add('offline-mode');
-        }
-
         div.id = `wheel_item_${index}`;
         
         const isZoom = radiosComZoom.includes(r.name) ? 'zoom-radio' : '';
@@ -619,10 +600,9 @@
       const dx = clientX - clickOriginX;
       const dy = clientY - clickOriginY;
       
-      // Zona morta (deadzone) levemente maior no offline (menos sensível)
-      const deadzone = currentExpansion === 'v' ? 30 : 15;
-      
-      if (Math.abs(dx) < deadzone && Math.abs(dy) < deadzone) return tempSelectedIndex;
+      // Zona Morta Circular: Melhora a resposta de arrastar o mouse/dedo a partir do centro
+      const distance = Math.sqrt(dx * dx + dy * dy); 
+      if (distance < 25) return tempSelectedIndex; 
 
       let angle = Math.atan2(dy, dx) + Math.PI / 2;
       if (angle < 0) angle += 2 * Math.PI;

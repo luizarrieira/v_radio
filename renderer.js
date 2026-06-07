@@ -5,7 +5,12 @@ const AudioContextClass = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContextClass();
 
 const DUCK_DOWN_TIME = 0.1; 
-const DUCK_UP_TIME = 0.5;   
+const DUCK_UP_TIME = 0.1;   
+
+/* =================== Helper de Identificação HLS =================== */
+function isStreamEvent(ev) {
+    return ev.type === 'stream' || (ev.path && ev.path.endsWith('.m3u8'));
+}
 
 /* =================== Gerador de Silêncio Real (iOS Hack) =================== */
 function gerarSilencio10Segundos() {
@@ -173,14 +178,15 @@ async function getAudioBuffer(filePath, limparDaMemoria = false) {
 
 /* =================== Execução Fina (O Coração) =================== */
 async function preloadEvent(ev) {
-    if (ev.path && ev.type !== 'stream') await getAudioBuffer(ev.path);
+    // Evita tentar decodificar .m3u8 no AudioContext
+    if (ev.path && !isStreamEvent(ev)) await getAudioBuffer(ev.path);
 }
 
 async function executeEvent(ev, mySession, forcedSyncTime = null, forcedNowMs = null) {
     if (!started || currentSessionId !== mySession) return;
 
     // --- LÓGICA DE STREAMING (HLS & NATIVO) ---
-    if (ev.type === 'stream') {
+    if (isStreamEvent(ev)) {
         currentStreamEvent = ev;
         const offset = (getCurrentMonthMs() - ev.startMs) / 1000;
         isSystemSeeking = true;
@@ -204,7 +210,7 @@ async function executeEvent(ev, mySession, forcedSyncTime = null, forcedNowMs = 
                     .catch(e => log('Autoplay HLS bloqueado:', e.message));
             });
         } else {
-            log(`🍏 Iniciando Stream Nativo: ${ev.path}`);
+            log(`🍏 Iniciando Stream Nativo (ou Fallback): ${ev.path}`);
             streamAudioElement.src = ev.path;
             streamAudioElement.muted = false; 
             streamAudioElement.loop = false;
@@ -290,7 +296,9 @@ async function radioLoop(mySession) {
     for (let i = 0; i < currentTimeline.length; i++) {
         const ev = currentTimeline[i];
         if (ev.startMs <= nowMs && ev.endMs > nowMs) hotSwapEvents.push(ev); 
-        else if (ev.startMs > nowMs && ev.startMs - nowMs <= 2000) if (ev.type !== 'stream') hotSwapEvents.push(ev);
+        else if (ev.startMs > nowMs && ev.startMs - nowMs <= 2000) {
+            if (!isStreamEvent(ev)) hotSwapEvents.push(ev);
+        }
         if (ev.startMs > nowMs + 2000 && eventIndex === 0) eventIndex = i;
     }
     if (eventIndex === 0) eventIndex = currentTimeline.findIndex(ev => ev.startMs > nowMs + 2000);
@@ -312,7 +320,7 @@ async function radioLoop(mySession) {
 
         // Limpeza de HLS (Guilhotina)
         if (currentStreamEvent && currentStreamEvent.endMs <= nowMs) {
-            const nextEvent = currentTimeline.find(ev => ev.type === 'stream' && ev.startMs <= nowMs && ev.endMs > nowMs);
+            const nextEvent = currentTimeline.find(ev => isStreamEvent(ev) && ev.startMs <= nowMs && ev.endMs > nowMs);
             if (!nextEvent) {
                 log(`🛑 Guilhotina: Encerrando stream.`);
                 streamAudioElement.pause();
@@ -339,7 +347,7 @@ async function radioLoop(mySession) {
             const timeUntilStart = ev.startMs - nowMs;
             
             if (timeUntilStart > 15000) break;
-            if (ev.type === 'stream' && timeUntilStart > 0) break; 
+            if (isStreamEvent(ev) && timeUntilStart > 0) break; 
             
             if (ev.endMs > nowMs) executeEvent(ev, mySession);
             preloadedEvents.delete(eventIndex); 

@@ -563,14 +563,18 @@
       const minDim = Math.min(window.innerWidth, window.innerHeight);
       const isMobile = window.innerWidth <= 768;
       
-      // Raio base
+      // Raio base original (intacto para não alterar o modo Online)
       const baseRadius = isMobile ? minDim * 0.50 : minDim * 0.39;
       
-      // Ajuste proporcional de Fluidez: 
-      // Ao invés de encolher a roda baseada na quantidade (N/26), mantemos um raio 
-      // quase igual para o Offline. Isso garante que os 21 itens fiquem mais espaçados, 
-      // facilitando muito a seleção.
-      const radius = currentExpansion === 'v' ? baseRadius * 0.81 : baseRadius; 
+      // Ajuste fino separado para PC e Celular
+      let radius;
+      if (currentExpansion === 'v') {
+          // Modo Offline: Reduzimos 0.01 (de 0.81 para 0.80) APENAS no celular
+          radius = isMobile ? baseRadius * 0.80 : baseRadius * 0.81; 
+      } else {
+          // Modo Online: Fica exatamente como estava
+          radius = baseRadius;
+      } 
 
       radiosAtuais.forEach((r, index) => {
         const div = document.createElement('div');

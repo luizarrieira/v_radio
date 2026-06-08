@@ -9,6 +9,7 @@
   const genList = (base, folder, names) => names.map(n => `${base}/${folder}/${n}.ogg`);
   const range = (start, end) => Array.from({ length: (end - start + 1) }, (_, i) => start + i);
   const padArr = (prefix, start, end) => range(start, end).map(i => `${prefix}_${pad(i, 2)}`);
+  const genListFlat = (base, names, ext = 'ogg') => names.map(n => `${base}/${n}.${ext}`);
 
   /* ================================================================================= */
   /* ===================== 1. LOS SANTOS ROCK RADIO (CLASS ROCK) ===================== */
@@ -705,6 +706,145 @@
   };
 
   /* ================================================================================= */
+  /* ================================= 10. CHANNEL X (PUNK) ========================== */
+  /* ================================================================================= */
+
+  const bpPunk = 'RADIO_04_PUNK';
+  
+  const obj_punk = {
+    chanceLocucao: 0.9,
+    musicasList: [
+      { id: 'amoeba', name: 'AMOEBA', arquivo: `${bpPunk}/musicas/AMOEBA.ogg`, introStart: 297136, introEnd: 970496, finalStart: 7423744, finalEnd: 8528384 },
+      { id: 'blown_away', name: 'BLOWN_AWAY', arquivo: `${bpPunk}/musicas/BLOWN_AWAY.ogg`, introStart: 258686, introEnd: 701952, finalStart: 6625280, finalEnd: 7575552 },
+      { id: 'bored_of_you', name: 'BORED_OF_YOU', arquivo: `${bpPunk}/musicas/BORED_OF_YOU.ogg`, introStart: 281019, introEnd: 464384, finalStart: 3204608, finalEnd: 4688838 },
+      { id: 'dont_need_society', name: 'DONT_NEED_SOCIETY', arquivo: `${bpPunk}/musicas/DONT_NEED_SOCIETY.ogg`, introStart: 245760, introEnd: 570651, finalStart: 3174400, finalEnd: 4000768 },
+      { id: 'dont_push_me_around', name: 'DONT_PUSH_ME_AROUND', arquivo: `${bpPunk}/musicas/DONT_PUSH_ME_AROUND.ogg`, introStart: 255785, introEnd: 577543, finalStart: 5279744, finalEnd: 6504448 },
+      { id: 'john_wayne', name: 'JOHN_WAYNE', arquivo: `${bpPunk}/musicas/JOHN_WAYNE.ogg`, introStart: 233472, introEnd: 700416, finalStart: 4337664, finalEnd: 5484544 },
+      { id: 'lexicon_devil', name: 'LEXICON_DEVIL', arquivo: `${bpPunk}/musicas/LEXICON_DEVIL.ogg`, introStart: 232384, introEnd: 436352, finalStart: 4515896, finalEnd: 5681280 },
+      { id: 'life_of_crime', name: 'LIFE_OF_CRIME', arquivo: `${bpPunk}/musicas/LIFE_OF_CRIME.ogg`, introStart: 286135, introEnd: 712064, finalStart: 4951424, finalEnd: 5975424 },
+      { id: 'linda_blair', name: 'LINDA_BLAIR', arquivo: `${bpPunk}/musicas/LINDA_BLAIR.ogg`, introStart: 256567, introEnd: 892928, finalStart: 4517888, finalEnd: 5581312 },
+      { id: 'los_angeles', name: 'LOS_ANGELES', arquivo: `${bpPunk}/musicas/LOS_ANGELES.ogg`, introStart: 257236, introEnd: 467968, finalStart: 5398528, finalEnd: 6414336 },
+      { id: 'my_war', name: 'MY_WAR', arquivo: `${bpPunk}/musicas/MY_WAR.ogg`, introStart: 386688, introEnd: 1437824, finalStart: 9436800, finalEnd: 10337920 },
+      { id: 'pervert', name: 'PERVERT', arquivo: `${bpPunk}/musicas/PERVERT.ogg`, finalStart: 3567744, finalEnd: 4796544 },
+      { id: 'rock_house', name: 'ROCK_HOUSE', arquivo: `${bpPunk}/musicas/ROCK_HOUSE.ogg`, introStart: 317440, introEnd: 823680, finalStart: 5700608, finalEnd: 6710272 },
+      { id: 'silent_majority', name: 'SILENT_MAJORITY', arquivo: `${bpPunk}/musicas/SILENT_MAJORITY.ogg`, introStart: 218496, introEnd: 472448, finalStart: 4491232, finalEnd: 5449600 },
+      { id: 'subliminal', name: 'SUBLIMINAL', arquivo: `${bpPunk}/musicas/SUBLIMINAL.ogg`, introStart: 276992, introEnd: 551424, finalStart: 7396864, finalEnd: 8244736 },
+      { id: 'the_enemy', name: 'THE_ENEMY', arquivo: `${bpPunk}/musicas/THE_ENEMY.ogg`, introStart: 252652, introEnd: 744172, finalStart: 6888172, finalEnd: 7784286 },
+      { id: 'the_mouth_dont_stop', name: 'THE_MOUTH_DONT_STOP', arquivo: `${bpPunk}/musicas/THE_MOUTH_DONT_STOP.ogg`, introStart: 270336, introEnd: 512000, finalStart: 5092025, finalEnd: 5848769 },
+      { id: 'whats_next', name: 'WHATS_NEXT', arquivo: `${bpPunk}/musicas/WHATS_NEXT.ogg`, finalStart: 4440192, finalEnd: 5828776 }
+    ],
+    grupoID: genList(bpPunk, 'narracoes', padArr('ID', 1, 10)),
+    grupoDJSolo: genList(bpPunk, 'narracoes', padArr('MONO_SOLO', 1, 12)),
+    narracoesGeneral: genList(bpPunk, 'narracoes', padArr('GENERAL', 1, 13)),
+    timePools: {
+      morning: genList(bpPunk, 'narracoes', padArr('MORNING', 1, 4)),
+      evening: genList(bpPunk, 'narracoes', padArr('EVENING', 1, 3))
+    },
+    endto: {
+      toad: genList(bpPunk, 'narracoes', padArr('TO_AD', 1, 5)),
+      tonews: genList(bpPunk, 'narracoes', padArr('TO_NEWS', 1, 4))
+    },
+    grupoAdv: G.adv.gtav || [],
+    grupoWeazelNews: G.news.gtav || [],
+    musicIntroNarrations: {
+      'AMOEBA': genList(bpPunk, 'narracoes', ['AMOEBA_01', 'AMOEBA_02']),
+      'BLOWN_AWAY': genList(bpPunk, 'narracoes', ['BLOWN_AWAY_01', 'BLOWN_AWAY_02']),
+      'BORED_OF_YOU': genList(bpPunk, 'narracoes', ['BORED_OF_YOU_01', 'BORED_OF_YOU_02']),
+      'DONT_NEED_SOCIETY': genList(bpPunk, 'narracoes', ['DONT_NEED_SOCIETY_01', 'DONT_NEED_SOCIETY_02']),
+      'DONT_PUSH_ME_AROUND': genList(bpPunk, 'narracoes', ['DONT_PUSH_ME_AROUND_01', 'DONT_PUSH_ME_AROUND_02']),
+      'JOHN_WAYNE': genList(bpPunk, 'narracoes', ['JOHN_WAYNE_01', 'JOHN_WAYNE_02']),
+      'LEXICON_DEVIL': genList(bpPunk, 'narracoes', ['LEXICON_DEVIL_01', 'LEXICON_DEVIL_02']),
+      'LINDA_BLAIR': genList(bpPunk, 'narracoes', ['LINDA_BLAIR_01', 'LINDA_BLAIR_02']),
+      'LOS_ANGELES': genList(bpPunk, 'narracoes', ['LOS_ANGELES_01', 'LOS_ANGELES_02']),
+      'MY_WAR': genList(bpPunk, 'narracoes', ['MY_WAR_01', 'MY_WAR_02']),
+      'SUBLIMINAL': genList(bpPunk, 'narracoes', ['SUBLIMINAL_01', 'SUBLIMINAL_02']),
+      'THE_ENEMY': genList(bpPunk, 'narracoes', ['THE_ENEMY_01', 'THE_ENEMY_02']),
+      'THE_MOUTH_DONT_STOP': genList(bpPunk, 'narracoes', ['THE_MOUTH_DONT_STOP_01', 'THE_MOUTH_DONT_STOP_02']),
+      'WHATS_NEXT': genList(bpPunk, 'narracoes', ['WHATS_NEXT_01', 'WHATS_NEXT_02', 'WHATS_NEXT_03'])
+    }
+  };
+
+  /* ================================================================================= */
+  /* =========================== 11. WCTR (TALK) ===================================== */
+  /* ================================================================================= */
+
+  const bpTalk = 'RADIO_05_TALK_01';
+  
+  const obj_talk = {
+    chanceLocucao: 0, // Desativa voz por cima do stream
+    isTalkRadio: true, // Tag que avisa o gerador para usar a regra 70/30
+    musicasList: [
+      { id: 'mono_chakra_attack_part_1', name: 'MONO_CHAKRA_ATTACK_PART_1', arquivo: `${bpTalk}/MONO_CHAKRA_ATTACK_PART_1/playlist.m3u8`, durationMs: 1818124 },
+      { id: 'mono_chattersphere', name: 'MONO_CHATTERSPHERE', arquivo: `${bpTalk}/MONO_CHATTERSPHERE/playlist.m3u8`, durationMs: 1330113 },
+      { id: 'mono_dchakra_attack_part_2', name: 'MONO_DCHAKRA_ATTACK_PART_2', arquivo: `${bpTalk}/MONO_DCHAKRA_ATTACK_PART_2/playlist.m3u8`, durationMs: 1326733 },
+      { id: 'mono_fernando_show_1', name: 'MONO_FERNANDO_SHOW_1', arquivo: `${bpTalk}/MONO_FERNANDO_SHOW_1/playlist.m3u8`, durationMs: 1069509 }
+    ],
+    grupoID: genListFlat(bpTalk, padArr('ID', 1, 11), 'ogg'),
+    grupoDJSolo: [],
+    narracoesGeneral: [],
+    timePools: null,
+    endto: null,
+    grupoAdv: G.adv.gtav || [],
+    grupoWeazelNews: G.news.gtav || [],
+    musicIntroNarrations: {}
+  };
+
+  /* ================================================================================= */
+  /* ================================= 12. REBEL RADIO (COUNTRY) ===================== */
+  /* ================================================================================= */
+
+  const bpCountry = 'RADIO_06_COUNTRY';
+  
+  const obj_country = {
+    chanceLocucao: 0.9,
+    musicasList: [
+      { id: 'are_you_sure_hank', name: 'ARE_YOU_SURE_HANK', arquivo: `${bpCountry}/musicas/ARE_YOU_SURE_HANK.ogg`, introStart: 243712, introEnd: 800256, finalStart: 6049792, finalEnd: 7008256 },
+      { id: 'cant_hardly_stand', name: 'CANT_HARDLY_STAND', arquivo: `${bpCountry}/musicas/CANT_HARDLY_STAND.ogg`, introStart: 179130, introEnd: 420864, finalStart: 6250496, finalEnd: 7174144 },
+      { id: 'convoy', name: 'CONVOY', arquivo: `${bpCountry}/musicas/CONVOY.ogg`, introStart: 256368, introEnd: 1286144, finalStart: 7618560, finalEnd: 9674752 },
+      { id: 'crazy_arms', name: 'CRAZY_ARMS', arquivo: `${bpCountry}/musicas/CRAZY_ARMS.ogg`, finalStart: 5613568, finalEnd: 6648320 },
+      { id: 'dippin_snuff', name: 'DIPPIN_SNUFF', arquivo: `${bpCountry}/musicas/DIPPIN_SNUFF.ogg`, finalStart: 5984318, finalEnd: 7128644 },
+      { id: 'divorce', name: 'DIVORCE', arquivo: `${bpCountry}/musicas/DIVORCE.ogg`, introStart: 215658, introEnd: 532743, finalStart: 6349824, finalEnd: 7794688 },
+      { id: 'get_outta_my_car', name: 'GET_OUTTA_MY_CAR', arquivo: `${bpCountry}/musicas/GET_OUTTA_MY_CAR.ogg`, finalStart: 9127232, finalEnd: 9896960 },
+      { id: 'get_with_it', name: 'GET_WITH_IT', arquivo: `${bpCountry}/musicas/GET_WITH_IT.ogg`, finalStart: 4384188, finalEnd: 5247548 },
+      { id: 'highway_man', name: 'HIGHWAY_MAN', arquivo: `${bpCountry}/musicas/HIGHWAY_MAN.ogg`, introStart: 243296, introEnd: 435808, finalStart: 7007744, finalEnd: 8167424 },
+      { id: 'if_want_to_get_heaven', name: 'IF_WANT_TO_GET_HEAVEN', arquivo: `${bpCountry}/musicas/IF_WANT_TO_GET_HEAVEN.ogg`, introStart: 581632, introEnd: 1470208, finalStart: 7141093, finalEnd: 8419758 },
+      { id: 'it_dont_hurt_anymore', name: 'IT_DONT_HURT_ANYMORE', arquivo: `${bpCountry}/musicas/IT_DONT_HURT_ANYMORE.ogg`, introStart: 227328, introEnd: 455680, finalStart: 6201344, finalEnd: 7487488 },
+      { id: 'it_wont_be_long_hating_you', name: 'IT_WONT_BE_LONG_HATING_YOU', arquivo: `${bpCountry}/musicas/IT_WONT_BE_LONG_HATING_YOU.ogg`, finalStart: 5152768, finalEnd: 6444032 },
+      { id: 'i_aint_living_long_like_this', name: 'I_AINT_LIVING_LONG_LIKE_THIS', arquivo: `${bpCountry}/musicas/I_AINT_LIVING_LONG_LIKE_THIS.ogg`, introStart: 203776, introEnd: 501248, finalStart: 8396800, finalEnd: 9540608 },
+      { id: 'she_made_toothpicks_out_of_me', name: 'SHE_MADE_TOOTHPICKS_OUT_OF_ME', arquivo: `${bpCountry}/musicas/SHE_MADE_TOOTHPICKS_OUT_OF_ME.ogg`, finalStart: 4881946, finalEnd: 5957347 },
+      { id: 'the_general_lee', name: 'THE_GENERAL_LEE', arquivo: `${bpCountry}/musicas/THE_GENERAL_LEE.ogg`, finalStart: 6482560, finalEnd: 7219840 },
+      { id: 'whiskey_river', name: 'WHISKEY_RIVER', arquivo: `${bpCountry}/musicas/WHISKEY_RIVER.ogg`, finalStart: 9298048, finalEnd: 10037248 },
+      { id: 'you_took_all_the_ramblin_out', name: 'YOU_TOOK_ALL_THE_RAMBLIN_OUT', arquivo: `${bpCountry}/musicas/YOU_TOOK_ALL_THE_RAMBLIN_OUT.ogg`, finalStart: 4882432, finalEnd: 5668864 }
+    ],
+    grupoID: genList(bpCountry, 'narracoes', padArr('ID', 1, 13)),
+    grupoDJSolo: genList(bpCountry, 'narracoes', padArr('MONO_SOLO', 1, 21)),
+    narracoesGeneral: genList(bpCountry, 'narracoes', padArr('GENERAL', 1, 23)),
+    timePools: {
+      morning: genList(bpCountry, 'narracoes', padArr('MORNING', 1, 4)),
+      evening: genList(bpCountry, 'narracoes', padArr('EVENING', 1, 4))
+    },
+    endto: {
+      toad: genList(bpCountry, 'narracoes', padArr('TO_AD', 1, 4)),
+      tonews: genList(bpCountry, 'narracoes', padArr('TO_NEWS', 1, 4))
+    },
+    grupoAdv: G.adv.gtav || [],
+    grupoWeazelNews: G.news.gtav || [],
+    musicIntroNarrations: {
+      'ARE_YOU_SURE_HANK': genList(bpCountry, 'narracoes', ['ARE_YOU_SURE_HANK_01']),
+      'CANT_HARDLY_STAND': genList(bpCountry, 'narracoes', ['CANT_HARDLY_STAND_01', 'CANT_HARDLY_STAND_02']),
+      'CONVOY': genList(bpCountry, 'narracoes', ['CONVOY_01', 'CONVOY_02', 'CONVOY_03']),
+      'GET_OUTTA_MY_CAR': genList(bpCountry, 'narracoes', ['GET_OUTTA_MY_CAR_01', 'GET_OUTTA_MY_CAR_02', 'GET_OUTTA_MY_CAR_03']),
+      'IF_WANT_TO_GET_HEAVEN': genList(bpCountry, 'narracoes', ['IF_WANT_TO_GET_HEAVEN_01', 'IF_WANT_TO_GET_HEAVEN_02']),
+      'IT_DONT_HURT_ANYMORE': genList(bpCountry, 'narracoes', ['IT_DONT_HURT_ANYMORE_01', 'IT_DONT_HURT_ANYMORE_02']),
+      'IT_WONT_BE_LONG_HATING_YOU': genList(bpCountry, 'narracoes', ['IT_WONT_BE_LONG_HATING_YOU_01', 'IT_WONT_BE_LONG_HATING_YOU_02']),
+      'I_AINT_LIVING_LONG_LIKE_THIS': genList(bpCountry, 'narracoes', ['I_AINT_LIVING_LONG_LIKE_THIS_01']),
+      'THE_GENERAL_LEE': genList(bpCountry, 'narracoes', ['THE_GENERAL_LEE_01', 'THE_GENERAL_LEE_02']),
+      'WHISKEY_RIVER': genList(bpCountry, 'narracoes', ['WHISKEY_RIVER_01', 'WHISKEY_RIVER_02']),
+      'YOU_TOOK_ALL_THE_RAMBLIN_OUT': genList(bpCountry, 'narracoes', ['YOU_TOOK_ALL_THE_RAMBLIN_OUT_01', 'YOU_TOOK_ALL_THE_RAMBLIN_OUT_02'])
+    }
+  };
+
+  /* ================================================================================= */
   /* =========================== EXPORTAÇÃO GLOBAL (GTA V) =========================== */
   /* ================================================================================= */
   
@@ -718,7 +858,10 @@
         'radio_02_pop': obj_pop,
         'radio_17_funk': obj_funk,
         'radio_03_hiphop_new': obj_hiphop_new,
-        'radio_07_dance_01': obj_soulwax
+        'radio_07_dance_01': obj_soulwax,
+        'radio_04_punk': obj_punk,
+        'radio_05_talk_01': obj_talk,
+        'radio_06_country': obj_country
       },
       'online': {
         // Todas essas sofrerão mutação de NEWS para ADVs sem perder sincronia
@@ -730,7 +873,10 @@
         'radio_02_pop': obj_pop,
         'radio_17_funk': obj_funk,
         'radio_03_hiphop_new': obj_hiphop_new,
-        'radio_07_dance_01': obj_soulwax
+        'radio_07_dance_01': obj_soulwax,
+        'radio_04_punk': obj_punk,
+        'radio_05_talk_01': obj_talk,
+        'radio_06_country': obj_country
       }
     }
   };

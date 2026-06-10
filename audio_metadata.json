@@ -11128,5 +11128,2081 @@
     "sampleRate": 48000,
     "fusionStartType": "possible",
     "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/musicas/AFRO_PUFFS.ogg": {
+    "duration": 276588,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_09_HIPHOP_OLD/musicas/AMBITIONZ_AZ_A_RIDAH.ogg": {
+    "duration": 271927,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "fade-out"
+  },
+  "RADIO_09_HIPHOP_OLD/musicas/APPETITE_FOR_DESTRUCTION.ogg": {
+    "duration": 181913,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_09_HIPHOP_OLD/musicas/BALLAD_OF_A_MENACE.ogg": {
+    "duration": 259988,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_09_HIPHOP_OLD/musicas/BOW_DOWN.ogg": {
+    "duration": 206751,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_09_HIPHOP_OLD/musicas/CAPTAIN_SAVE_A_HOE.ogg": {
+    "duration": 231873,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_09_HIPHOP_OLD/musicas/C_WALK.ogg": {
+    "duration": 221271,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "fade-out"
+  },
+  "RADIO_09_HIPHOP_OLD/musicas/DOLLAZ_AND_SENSE.ogg": {
+    "duration": 236049,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_09_HIPHOP_OLD/musicas/FIRST_OF_THE_MONTH.ogg": {
+    "duration": 282839,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "fade-out"
+  },
+  "RADIO_09_HIPHOP_OLD/musicas/GANGSTA_GANGSTA.ogg": {
+    "duration": 224055,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "fade-out"
+  },
+  "RADIO_09_HIPHOP_OLD/musicas/GIN_AND_JUICE.ogg": {
+    "duration": 203847,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_09_HIPHOP_OLD/musicas/I_GOT_FIVE_ON_IT.ogg": {
+    "duration": 243649,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_09_HIPHOP_OLD/musicas/LATE_NIGHT_HYPE.ogg": {
+    "duration": 245668,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_09_HIPHOP_OLD/musicas/LIKE_A_PIANO.ogg": {
+    "duration": 221857,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_09_HIPHOP_OLD/musicas/MIND_PLAYING_TRICKS.ogg": {
+    "duration": 278561,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "fade-out"
+  },
+  "RADIO_09_HIPHOP_OLD/musicas/NOTHIN_BUT_THE_CAVI_HIT.ogg": {
+    "duration": 201388,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_09_HIPHOP_OLD/musicas/NO_MORE_QUESTIONS.ogg": {
+    "duration": 226143,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_09_HIPHOP_OLD/musicas/SERVIN_EM_HEAT.ogg": {
+    "duration": 252743,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "fade-out"
+  },
+  "RADIO_09_HIPHOP_OLD/musicas/SHERM_STICK.ogg": {
+    "duration": 180585,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_09_HIPHOP_OLD/musicas/SO_YOU_WANT_TO_BE_A_GANGSTER.ogg": {
+    "duration": 191556,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_09_HIPHOP_OLD/musicas/STILL_D_R_E.ogg": {
+    "duration": 238231,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "fade-out"
+  },
+  "RADIO_09_HIPHOP_OLD/musicas/STRAIGHT_UP_MENACE.ogg": {
+    "duration": 219591,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "fade-out"
+  },
+  "RADIO_09_HIPHOP_OLD/musicas/THE_MURDA_SHOW.ogg": {
+    "duration": 227177,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_09_HIPHOP_OLD/musicas/THE_NEXT_EPISODE.ogg": {
+    "duration": 160724,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "fade-out"
+  },
+  "RADIO_09_HIPHOP_OLD/musicas/THIS_DJ.ogg": {
+    "duration": 192423,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_09_HIPHOP_OLD/musicas/WE_ROLL_DEEP.ogg": {
+    "duration": 216751,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "fade-out"
+  },
+  "RADIO_09_HIPHOP_OLD/musicas/WHAT_WOULD_YOU_DO.ogg": {
+    "duration": 203932,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_09_HIPHOP_OLD/musicas/WHAT_YOU_WANNA_DO.ogg": {
+    "duration": 228188,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "fade-out"
+  },
+  "RADIO_09_HIPHOP_OLD/musicas/YOU_KNOW_HOW_WE_DO.ogg": {
+    "duration": 207308,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/AFRO_PUFFS_01.ogg": {
+    "duration": 5247,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/AFRO_PUFFS_02.ogg": {
+    "duration": 5377,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/AMBITIONZ_AZ_A_RIDAH_01.ogg": {
+    "duration": 7116,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/AMBITIONZ_AZ_A_RIDAH_02.ogg": {
+    "duration": 7545,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/APPETITE_FOR_DESTRUCTION_01.ogg": {
+    "duration": 4689,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/APPETITE_FOR_DESTRUCTION_02.ogg": {
+    "duration": 5236,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/BALLAD_OF_A_MENACE_01.ogg": {
+    "duration": 5313,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/BALLAD_OF_A_MENACE_02.ogg": {
+    "duration": 3708,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/BALLAD_OF_A_MENACE_03.ogg": {
+    "duration": 6687,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/BOW_DOWN_01.ogg": {
+    "duration": 8404,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/BOW_DOWN_02.ogg": {
+    "duration": 4225,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/CAPTAIN_SAVE_A_HOE_01.ogg": {
+    "duration": 4897,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/CAPTAIN_SAVE_A_HOE_02.ogg": {
+    "duration": 4143,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/C_WALK_01.ogg": {
+    "duration": 4687,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/C_WALK_02.ogg": {
+    "duration": 3663,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/EVENING_01.ogg": {
+    "duration": 2489,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/EVENING_02.ogg": {
+    "duration": 3815,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/EVENING_03.ogg": {
+    "duration": 3012,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/EVENING_04.ogg": {
+    "duration": 7167,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/EVENING_05.ogg": {
+    "duration": 3820,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/EVENING_06.ogg": {
+    "duration": 1799,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/EVENING_07.ogg": {
+    "duration": 4831,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/FIRST_OF_THE_MONTH_01.ogg": {
+    "duration": 10641,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/FIRST_OF_THE_MONTH_02.ogg": {
+    "duration": 5447,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GANGSTA_GANGSTA_01.ogg": {
+    "duration": 3868,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GANGSTA_GANGSTA_02.ogg": {
+    "duration": 4652,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_01.ogg": {
+    "duration": 4548,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_02.ogg": {
+    "duration": 6060,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_03.ogg": {
+    "duration": 4009,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_04.ogg": {
+    "duration": 4708,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_05.ogg": {
+    "duration": 6481,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_06.ogg": {
+    "duration": 6396,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_07.ogg": {
+    "duration": 5980,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_08.ogg": {
+    "duration": 3577,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_09.ogg": {
+    "duration": 6609,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_10.ogg": {
+    "duration": 5199,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_11.ogg": {
+    "duration": 7105,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_12.ogg": {
+    "duration": 5975,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_13.ogg": {
+    "duration": 6812,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_14.ogg": {
+    "duration": 6537,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_15.ogg": {
+    "duration": 7663,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_16.ogg": {
+    "duration": 5969,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_17.ogg": {
+    "duration": 6327,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_18.ogg": {
+    "duration": 5516,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_19.ogg": {
+    "duration": 4631,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_20.ogg": {
+    "duration": 6967,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_21.ogg": {
+    "duration": 5388,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_22.ogg": {
+    "duration": 9631,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_23.ogg": {
+    "duration": 9713,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_24.ogg": {
+    "duration": 7745,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_25.ogg": {
+    "duration": 3767,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_26.ogg": {
+    "duration": 6639,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_27.ogg": {
+    "duration": 6489,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_28.ogg": {
+    "duration": 4799,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_29.ogg": {
+    "duration": 2921,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_30.ogg": {
+    "duration": 4585,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_31.ogg": {
+    "duration": 4404,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_32.ogg": {
+    "duration": 4167,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_33.ogg": {
+    "duration": 5231,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_34.ogg": {
+    "duration": 6335,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_35.ogg": {
+    "duration": 5532,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_36.ogg": {
+    "duration": 5073,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_37.ogg": {
+    "duration": 5623,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_38.ogg": {
+    "duration": 7105,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_39.ogg": {
+    "duration": 9103,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_40.ogg": {
+    "duration": 5532,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_41.ogg": {
+    "duration": 7292,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_42.ogg": {
+    "duration": 4833,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_43.ogg": {
+    "duration": 8199,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_44.ogg": {
+    "duration": 4420,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_45.ogg": {
+    "duration": 8929,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_46.ogg": {
+    "duration": 7092,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_47.ogg": {
+    "duration": 6503,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_48.ogg": {
+    "duration": 6513,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_49.ogg": {
+    "duration": 6796,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GENERAL_50.ogg": {
+    "duration": 7492,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GIN_AND_JUICE_01.ogg": {
+    "duration": 5436,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/GIN_AND_JUICE_02.ogg": {
+    "duration": 4457,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/ID_01.ogg": {
+    "duration": 6927,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/ID_02.ogg": {
+    "duration": 6348,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/ID_03.ogg": {
+    "duration": 6300,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/ID_04.ogg": {
+    "duration": 6492,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/ID_05.ogg": {
+    "duration": 4975,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/ID_06.ogg": {
+    "duration": 5895,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/ID_07.ogg": {
+    "duration": 4908,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/ID_08.ogg": {
+    "duration": 6420,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/ID_09.ogg": {
+    "duration": 7532,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/ID_10.ogg": {
+    "duration": 6916,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/ID_11.ogg": {
+    "duration": 5369,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/ID_12.ogg": {
+    "duration": 8988,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/ID_13.ogg": {
+    "duration": 11471,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/ID_14.ogg": {
+    "duration": 8127,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/ID_15.ogg": {
+    "duration": 9311,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/ID_16.ogg": {
+    "duration": 5372,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/ID_17.ogg": {
+    "duration": 3008,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/ID_18.ogg": {
+    "duration": 6895,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/LATE_NIGHT_HYPE_01.ogg": {
+    "duration": 8875,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/LATE_NIGHT_HYPE_02.ogg": {
+    "duration": 3337,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MIND_PLAYING_TRICKS_01.ogg": {
+    "duration": 7008,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MIND_PLAYING_TRICKS_02.ogg": {
+    "duration": 9020,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MONO_SOLO_01.ogg": {
+    "duration": 11961,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MONO_SOLO_02.ogg": {
+    "duration": 6180,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MONO_SOLO_03.ogg": {
+    "duration": 8865,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MONO_SOLO_04.ogg": {
+    "duration": 9500,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MONO_SOLO_05.ogg": {
+    "duration": 5396,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MONO_SOLO_06.ogg": {
+    "duration": 10820,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MONO_SOLO_07.ogg": {
+    "duration": 6623,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MONO_SOLO_08.ogg": {
+    "duration": 13865,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MONO_SOLO_09.ogg": {
+    "duration": 10836,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MONO_SOLO_10.ogg": {
+    "duration": 7012,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MONO_SOLO_11.ogg": {
+    "duration": 10223,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MONO_SOLO_12.ogg": {
+    "duration": 13164,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MONO_SOLO_13.ogg": {
+    "duration": 13143,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MONO_SOLO_14.ogg": {
+    "duration": 7908,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MONO_SOLO_15.ogg": {
+    "duration": 10063,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MONO_SOLO_16.ogg": {
+    "duration": 7703,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MONO_SOLO_17.ogg": {
+    "duration": 6887,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MONO_SOLO_18.ogg": {
+    "duration": 15300,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MONO_SOLO_19.ogg": {
+    "duration": 13865,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MONO_SOLO_20.ogg": {
+    "duration": 16801,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MONO_SOLO_21.ogg": {
+    "duration": 14076,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MONO_SOLO_22.ogg": {
+    "duration": 13668,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MONO_SOLO_23.ogg": {
+    "duration": 20204,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MONO_SOLO_24.ogg": {
+    "duration": 10025,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MONO_SOLO_25.ogg": {
+    "duration": 7119,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MONO_SOLO_26.ogg": {
+    "duration": 22505,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MONO_SOLO_27.ogg": {
+    "duration": 15551,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MONO_SOLO_28.ogg": {
+    "duration": 19961,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MONO_SOLO_29.ogg": {
+    "duration": 16743,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MONO_SOLO_30.ogg": {
+    "duration": 16121,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MORNING_01.ogg": {
+    "duration": 8540,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MORNING_02.ogg": {
+    "duration": 4276,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MORNING_03.ogg": {
+    "duration": 5329,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MORNING_04.ogg": {
+    "duration": 5415,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MORNING_05.ogg": {
+    "duration": 2657,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MORNING_06.ogg": {
+    "duration": 5060,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MORNING_07.ogg": {
+    "duration": 4975,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/MORNING_08.ogg": {
+    "duration": 5337,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/NOTHIN_BUT_THE_CAVI_HIT_01.ogg": {
+    "duration": 3169,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/NOTHIN_BUT_THE_CAVI_HIT_02.ogg": {
+    "duration": 5809,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/NO_MORE_QUESTIONS_01.ogg": {
+    "duration": 3860,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/NO_MORE_QUESTIONS_02.ogg": {
+    "duration": 4148,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/SERVIN_EM_HEAT_01.ogg": {
+    "duration": 5273,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/SERVIN_EM_HEAT_02.ogg": {
+    "duration": 4356,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/SHERM_STICK_01.ogg": {
+    "duration": 7345,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/SHERM_STICK_02.ogg": {
+    "duration": 6412,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/SO_YOU_WANT_TO_BE_A_GANGSTER_01.ogg": {
+    "duration": 4188,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/SO_YOU_WANT_TO_BE_A_GANGSTER_02.ogg": {
+    "duration": 2833,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/STILL_D_R_E_01.ogg": {
+    "duration": 8345,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/STILL_D_R_E_02.ogg": {
+    "duration": 10044,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/STRAIGHT_UP_MENACE_01.ogg": {
+    "duration": 4641,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/STRAIGHT_UP_MENACE_02.ogg": {
+    "duration": 3260,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/THE_MURDA_SHOW_01.ogg": {
+    "duration": 5013,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/THE_MURDA_SHOW_02.ogg": {
+    "duration": 3969,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/THE_MURDA_SHOW_03.ogg": {
+    "duration": 7143,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/THE_MURDA_SHOW_04.ogg": {
+    "duration": 5681,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/THE_NEXT_EPISODE_01.ogg": {
+    "duration": 5761,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/THE_NEXT_EPISODE_02.ogg": {
+    "duration": 5460,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/THIS_DJ_01.ogg": {
+    "duration": 3356,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/THIS_DJ_02.ogg": {
+    "duration": 5097,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/TO_AD_01.ogg": {
+    "duration": 2847,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/TO_AD_02.ogg": {
+    "duration": 5009,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/TO_AD_03.ogg": {
+    "duration": 3764,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/TO_AD_04.ogg": {
+    "duration": 3097,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/TO_AD_05.ogg": {
+    "duration": 3391,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/TO_AD_06.ogg": {
+    "duration": 4708,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/TO_AD_07.ogg": {
+    "duration": 3329,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/TO_NEWS_01.ogg": {
+    "duration": 2103,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/TO_NEWS_02.ogg": {
+    "duration": 4791,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/TO_NEWS_03.ogg": {
+    "duration": 3396,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/TO_NEWS_04.ogg": {
+    "duration": 3791,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/TO_NEWS_05.ogg": {
+    "duration": 6745,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/TO_NEWS_06.ogg": {
+    "duration": 4268,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/WE_ROLL_DEEP_01.ogg": {
+    "duration": 4108,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/WE_ROLL_DEEP_02.ogg": {
+    "duration": 4252,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/WHAT_WOULD_YOU_DO_01.ogg": {
+    "duration": 3916,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/WHAT_WOULD_YOU_DO_02.ogg": {
+    "duration": 2807,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/WHAT_YOU_WANNA_DO_01.ogg": {
+    "duration": 6591,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/WHAT_YOU_WANNA_DO_02.ogg": {
+    "duration": 3796,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/YOU_KNOW_HOW_WE_DO_01.ogg": {
+    "duration": 10372,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_09_HIPHOP_OLD/narracoes/YOU_KNOW_HOW_WE_DO_02.ogg": {
+    "duration": 7465,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_11_TALK_02/ID_01.ogg": {
+    "duration": 12551,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_11_TALK_02/ID_02.ogg": {
+    "duration": 14327,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_11_TALK_02/ID_03.ogg": {
+    "duration": 29913,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_11_TALK_02/ID_04.ogg": {
+    "duration": 11321,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_11_TALK_02/ID_05.ogg": {
+    "duration": 8188,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_11_TALK_02/ID_06.ogg": {
+    "duration": 13121,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_11_TALK_02/ID_07.ogg": {
+    "duration": 14063,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "normal"
+  },
+  "RADIO_11_TALK_02/ID_08.ogg": {
+    "duration": 11129,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_11_TALK_02/ID_09.ogg": {
+    "duration": 15865,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_11_TALK_02/ID_10.ogg": {
+    "duration": 18897,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "normal"
+  },
+  "RADIO_11_TALK_02/ID_11.ogg": {
+    "duration": 11521,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_12_REGGAE/musicas/ADDI_TRUTH.ogg": {
+    "duration": 180585,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_12_REGGAE/musicas/CHAPTER3.ogg": {
+    "duration": 202321,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_12_REGGAE/musicas/CRAZY_GIRL.ogg": {
+    "duration": 191185,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_12_REGGAE/musicas/DISCO_DEVIL.ogg": {
+    "duration": 275009,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_12_REGGAE/musicas/GRUMBLIN_DUB.ogg": {
+    "duration": 201697,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "fade-out"
+  },
+  "RADIO_12_REGGAE/musicas/GUN_SHOT_A_FIRE.ogg": {
+    "duration": 196639,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_12_REGGAE/musicas/I_AM_A_MADMAN.ogg": {
+    "duration": 239881,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_12_REGGAE/musicas/KINGSTON_BE_WISE.ogg": {
+    "duration": 216076,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_12_REGGAE/musicas/KINGSTON_TOWN.ogg": {
+    "duration": 196703,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_12_REGGAE/musicas/LOYALS.ogg": {
+    "duration": 145497,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_12_REGGAE/musicas/MONEY_COME_MONEY_GO.ogg": {
+    "duration": 263401,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_12_REGGAE/musicas/MONEY_IN_MY_POCKET.ogg": {
+    "duration": 206119,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_12_REGGAE/musicas/MR_MONEY_MAN.ogg": {
+    "duration": 204284,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_12_REGGAE/musicas/NIGHT_NURSE.ogg": {
+    "duration": 205425,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_12_REGGAE/musicas/NOBODY_MOVE_GET_HURT.ogg": {
+    "duration": 202473,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_12_REGGAE/musicas/ODD_RAS.ogg": {
+    "duration": 172889,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_12_REGGAE/musicas/PSYCHO.ogg": {
+    "duration": 136652,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_12_REGGAE/musicas/ROAST_FISH_AND_CORNBREAD.ogg": {
+    "duration": 220001,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_12_REGGAE/musicas/SONS_OF_SLAVES.ogg": {
+    "duration": 264612,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_12_REGGAE/musicas/TOPIC_OF_THE_DAY.ogg": {
+    "duration": 189247,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_12_REGGAE/musicas/WE_NEVER_FEAR_DEM.ogg": {
+    "duration": 166777,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_12_REGGAE/narracoes/CHAPTER3_01.ogg": {
+    "duration": 2593,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/CHAPTER3_02.ogg": {
+    "duration": 5999,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/CRAZY_GIRL_01.ogg": {
+    "duration": 5769,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/CRAZY_GIRL_02.ogg": {
+    "duration": 3396,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/DISCO_DEVIL_01.ogg": {
+    "duration": 3132,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/DISCO_DEVIL_02.ogg": {
+    "duration": 8135,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/EVENING_01.ogg": {
+    "duration": 4753,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "none"
+  },
+  "RADIO_12_REGGAE/narracoes/EVENING_02.ogg": {
+    "duration": 2647,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/EVENING_03.ogg": {
+    "duration": 4673,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_01.ogg": {
+    "duration": 12436,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_02.ogg": {
+    "duration": 13391,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_03.ogg": {
+    "duration": 6484,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_04.ogg": {
+    "duration": 9212,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_05.ogg": {
+    "duration": 5948,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_06.ogg": {
+    "duration": 8276,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_07.ogg": {
+    "duration": 9863,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_08.ogg": {
+    "duration": 11527,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_09.ogg": {
+    "duration": 8271,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_10.ogg": {
+    "duration": 8793,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_11.ogg": {
+    "duration": 7521,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_12.ogg": {
+    "duration": 8865,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_13.ogg": {
+    "duration": 6791,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_14.ogg": {
+    "duration": 9764,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_15.ogg": {
+    "duration": 5580,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_16.ogg": {
+    "duration": 9497,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_17.ogg": {
+    "duration": 9105,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_18.ogg": {
+    "duration": 6031,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_19.ogg": {
+    "duration": 8196,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_20.ogg": {
+    "duration": 4169,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_21.ogg": {
+    "duration": 7436,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_22.ogg": {
+    "duration": 11788,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_23.ogg": {
+    "duration": 7292,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_24.ogg": {
+    "duration": 8412,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_25.ogg": {
+    "duration": 7783,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_26.ogg": {
+    "duration": 2313,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_27.ogg": {
+    "duration": 7567,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_28.ogg": {
+    "duration": 3831,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_29.ogg": {
+    "duration": 1489,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_30.ogg": {
+    "duration": 1751,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_31.ogg": {
+    "duration": 2441,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_32.ogg": {
+    "duration": 2689,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_33.ogg": {
+    "duration": 1580,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_34.ogg": {
+    "duration": 3583,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_35.ogg": {
+    "duration": 3087,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GENERAL_36.ogg": {
+    "duration": 2623,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GRUMBLIN_DUB_01.ogg": {
+    "duration": 5252,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/GRUMBLIN_DUB_02.ogg": {
+    "duration": 9471,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/ID_01.ogg": {
+    "duration": 8359,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_12_REGGAE/narracoes/ID_02.ogg": {
+    "duration": 8655,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_12_REGGAE/narracoes/ID_03.ogg": {
+    "duration": 7836,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/ID_04.ogg": {
+    "duration": 9527,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/ID_05.ogg": {
+    "duration": 10665,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/ID_06.ogg": {
+    "duration": 8420,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_12_REGGAE/narracoes/ID_07.ogg": {
+    "duration": 9023,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_12_REGGAE/narracoes/ID_08.ogg": {
+    "duration": 11353,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_12_REGGAE/narracoes/ID_09.ogg": {
+    "duration": 9241,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_12_REGGAE/narracoes/ID_10.ogg": {
+    "duration": 10311,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/ID_11.ogg": {
+    "duration": 7457,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_12_REGGAE/narracoes/ID_12.ogg": {
+    "duration": 12263,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/ID_13.ogg": {
+    "duration": 9356,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/ID_14.ogg": {
+    "duration": 6897,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/ID_15.ogg": {
+    "duration": 8116,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "normal"
+  },
+  "RADIO_12_REGGAE/narracoes/ID_16.ogg": {
+    "duration": 5404,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/I_AM_A_MADMAN_01.ogg": {
+    "duration": 11684,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/I_AM_A_MADMAN_02.ogg": {
+    "duration": 11823,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/KINGSTON_TOWN_01.ogg": {
+    "duration": 4049,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/KINGSTON_TOWN_02.ogg": {
+    "duration": 4335,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/MONEY_COME_MONEY_GO_01.ogg": {
+    "duration": 7441,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/MONEY_COME_MONEY_GO_02.ogg": {
+    "duration": 7815,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/MONO_SOLO_01.ogg": {
+    "duration": 35511,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_12_REGGAE/narracoes/MONO_SOLO_02.ogg": {
+    "duration": 28804,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_12_REGGAE/narracoes/MONO_SOLO_03.ogg": {
+    "duration": 23143,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_12_REGGAE/narracoes/MONO_SOLO_04.ogg": {
+    "duration": 18031,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_12_REGGAE/narracoes/MONO_SOLO_05.ogg": {
+    "duration": 30457,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_12_REGGAE/narracoes/MONO_SOLO_06.ogg": {
+    "duration": 22991,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "normal"
+  },
+  "RADIO_12_REGGAE/narracoes/MONO_SOLO_07.ogg": {
+    "duration": 23980,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "normal"
+  },
+  "RADIO_12_REGGAE/narracoes/MONO_SOLO_08.ogg": {
+    "duration": 21415,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_12_REGGAE/narracoes/MONO_SOLO_09.ogg": {
+    "duration": 26633,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_12_REGGAE/narracoes/MONO_SOLO_10.ogg": {
+    "duration": 46324,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_12_REGGAE/narracoes/MONO_SOLO_11.ogg": {
+    "duration": 32775,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_12_REGGAE/narracoes/MONO_SOLO_12.ogg": {
+    "duration": 35457,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "normal"
+  },
+  "RADIO_12_REGGAE/narracoes/MONO_SOLO_13.ogg": {
+    "duration": 39972,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_12_REGGAE/narracoes/MORNING_01.ogg": {
+    "duration": 3481,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "none"
+  },
+  "RADIO_12_REGGAE/narracoes/MORNING_02.ogg": {
+    "duration": 3777,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/MORNING_03.ogg": {
+    "duration": 2625,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "none"
+  },
+  "RADIO_12_REGGAE/narracoes/MORNING_04.ogg": {
+    "duration": 5361,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/MORNING_05.ogg": {
+    "duration": 7756,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "none"
+  },
+  "RADIO_12_REGGAE/narracoes/MR_MONEY_MAN_01.ogg": {
+    "duration": 9655,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/MR_MONEY_MAN_02.ogg": {
+    "duration": 10801,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/NIGHT_NURSE_01.ogg": {
+    "duration": 10689,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/NIGHT_NURSE_02.ogg": {
+    "duration": 8137,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/NOBODY_MOVE_GET_HURT_01.ogg": {
+    "duration": 6287,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/NOBODY_MOVE_GET_HURT_02.ogg": {
+    "duration": 3823,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/SONS_OF_SLAVES_01.ogg": {
+    "duration": 9321,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/SONS_OF_SLAVES_02.ogg": {
+    "duration": 11559,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/TO_AD_01.ogg": {
+    "duration": 2431,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/TO_AD_02.ogg": {
+    "duration": 9103,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/TO_AD_03.ogg": {
+    "duration": 4385,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/TO_AD_04.ogg": {
+    "duration": 4532,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "none"
+  },
+  "RADIO_12_REGGAE/narracoes/TO_AD_05.ogg": {
+    "duration": 2544,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/TO_NEWS_01.ogg": {
+    "duration": 3375,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/TO_NEWS_02.ogg": {
+    "duration": 7065,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/TO_NEWS_03.ogg": {
+    "duration": 5241,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_12_REGGAE/narracoes/TO_NEWS_04.ogg": {
+    "duration": 2601,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "possible"
   }
 }

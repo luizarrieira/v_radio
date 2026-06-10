@@ -845,6 +845,198 @@
   };
 
   /* ================================================================================= */
+  /* =========================== 13. WEST COAST CLASSICS (HIP HOP OLD) =============== */
+  /* ================================================================================= */
+
+  const bpHipHopOld = 'RADIO_09_HIPHOP_OLD';
+  
+  const obj_hiphop_old = {
+    chanceLocucao: 0.9,
+    musicasList: [
+      { id: 'afro_puffs', name: 'AFRO_PUFFS', arquivo: `${bpHipHopOld}/musicas/AFRO_PUFFS.ogg`, introStart: 173912, introEnd: 477016, finalStart: 12025856, finalEnd: 13016064 },
+      { id: 'ambitionz_az_a_ridah', name: 'AMBITIONZ_AZ_A_RIDAH', arquivo: `${bpHipHopOld}/musicas/AMBITIONZ_AZ_A_RIDAH.ogg`, introStart: 406528, introEnd: 2006528, finalStart: 11395072, finalEnd: 12566528 },
+      { id: 'appetite_for_destruction', name: 'APPETITE_FOR_DESTRUCTION', arquivo: `${bpHipHopOld}/musicas/APPETITE_FOR_DESTRUCTION.ogg`, finalStart: 6668288, finalEnd: 8402944 },
+      { id: 'ballad_of_a_menace', name: 'BALLAD_OF_A_MENACE', arquivo: `${bpHipHopOld}/musicas/BALLAD_OF_A_MENACE.ogg`, introStart: 241664, introEnd: 1024000, finalStart: 11046912, finalEnd: 12234752 },
+      { id: 'bow_down', name: 'BOW_DOWN', arquivo: `${bpHipHopOld}/musicas/BOW_DOWN.ogg`, finalStart: 8697812, finalEnd: 9647060 },
+      { id: 'captain_save_a_hoe', name: 'CAPTAIN_SAVE_A_HOE', arquivo: `${bpHipHopOld}/musicas/CAPTAIN_SAVE_A_HOE.ogg`, introStart: 248832, introEnd: 1072128, finalStart: 9807872, finalEnd: 10877952 },
+      { id: 'c_walk', name: 'C_WALK', arquivo: `${bpHipHopOld}/musicas/C_WALK.ogg`, introStart: 442368, introEnd: 965979, finalStart: 9103360, finalEnd: 10135552 },
+      { id: 'dollaz_and_sense', name: 'DOLLAZ_AND_SENSE', arquivo: `${bpHipHopOld}/musicas/DOLLAZ_AND_SENSE.ogg`, introStart: 260088, introEnd: 671744, finalStart: 9674752, finalEnd: 10874880 },
+      { id: 'first_of_the_month', name: 'FIRST_OF_THE_MONTH', arquivo: `${bpHipHopOld}/musicas/FIRST_OF_THE_MONTH.ogg`, introStart: 610304, introEnd: 1088071, finalStart: 12275712, finalEnd: 13402112 },
+      { id: 'gangsta_gangsta', name: 'GANGSTA_GANGSTA', arquivo: `${bpHipHopOld}/musicas/GANGSTA_GANGSTA.ogg`, introStart: 252032, introEnd: 462336, finalStart: 9355264, finalEnd: 10319872 },
+      { id: 'gin_and_juice', name: 'GIN_AND_JUICE', arquivo: `${bpHipHopOld}/musicas/GIN_AND_JUICE.ogg`, introStart: 90012, introEnd: 968704, finalStart: 8252544, finalEnd: 9500672 },
+      { id: 'i_got_five_on_it', name: 'I_GOT_FIVE_ON_IT', arquivo: `${bpHipHopOld}/musicas/I_GOT_FIVE_ON_IT.ogg`, introStart: 245760, introEnd: 1019904, finalStart: 10459136, finalEnd: 11449088 },
+      { id: 'late_night_hype', name: 'LATE_NIGHT_HYPE', arquivo: `${bpHipHopOld}/musicas/LATE_NIGHT_HYPE.ogg`, introStart: 425984, introEnd: 956928, finalStart: 10190848, finalEnd: 11462656 },
+      { id: 'like_a_piano', name: 'LIKE_A_PIANO', arquivo: `${bpHipHopOld}/musicas/LIKE_A_PIANO.ogg`, introStart: 256535, introEnd: 1016832, finalStart: 8314880, finalEnd: 10175488 },
+      { id: 'mind_playing_tricks', name: 'MIND_PLAYING_TRICKS', arquivo: `${bpHipHopOld}/musicas/MIND_PLAYING_TRICKS.ogg`, introStart: 277976, introEnd: 495744, finalStart: 11454464, finalEnd: 12771328 },
+      { id: 'nothin_but_the_cavi_hit', name: 'NOTHIN_BUT_THE_CAVI_HIT', arquivo: `${bpHipHopOld}/musicas/NOTHIN_BUT_THE_CAVI_HIT.ogg`, introStart: 427008, introEnd: 1059328, finalStart: 8378368, finalEnd: 9246720 },
+      { id: 'no_more_questions', name: 'NO_MORE_QUESTIONS', arquivo: `${bpHipHopOld}/musicas/NO_MORE_QUESTIONS.ogg`, finalStart: 9355264, finalEnd: 10605056 },
+      { id: 'servin_em_heat', name: 'SERVIN_EM_HEAT', arquivo: `${bpHipHopOld}/musicas/SERVIN_EM_HEAT.ogg`, introStart: 252208, introEnd: 604464, finalStart: 10944513, finalEnd: 11990190 },
+      { id: 'sherm_stick', name: 'SHERM_STICK', arquivo: `${bpHipHopOld}/musicas/SHERM_STICK.ogg`, introStart: 217088, introEnd: 513957, finalStart: 7445022, finalEnd: 8397634 },
+      { id: 'so_you_want_to_be_a_gangster', name: 'SO_YOU_WANT_TO_BE_A_GANGSTER', arquivo: `${bpHipHopOld}/musicas/SO_YOU_WANT_TO_BE_A_GANGSTER.ogg`, finalStart: 7196800, finalEnd: 8840320 },
+      { id: 'still_d_r_e', name: 'STILL_D_R_E', arquivo: `${bpHipHopOld}/musicas/STILL_D_R_E.ogg`, finalStart: 10098432, finalEnd: 11141888 },
+      { id: 'straight_up_menace', name: 'STRAIGHT_UP_MENACE', arquivo: `${bpHipHopOld}/musicas/STRAIGHT_UP_MENACE.ogg`, introStart: 475264, introEnd: 1101312, finalStart: 9072768, finalEnd: 10079360 },
+      { id: 'the_murda_show', name: 'THE_MURDA_SHOW', arquivo: `${bpHipHopOld}/musicas/THE_MURDA_SHOW.ogg`, introStart: 382468, introEnd: 1078788, finalStart: 9289220, finalEnd: 10622468 },
+      { id: 'the_next_episode', name: 'THE_NEXT_EPISODE', arquivo: `${bpHipHopOld}/musicas/THE_NEXT_EPISODE.ogg`, introStart: 254208, introEnd: 483840, finalStart: 6398366, finalEnd: 7542784 },
+      { id: 'this_dj', name: 'THIS_DJ', arquivo: `${bpHipHopOld}/musicas/THIS_DJ.ogg`, introStart: 241664, introEnd: 946708, finalStart: 8043520, finalEnd: 9009152 },
+      { id: 'we_roll_deep', name: 'WE_ROLL_DEEP', arquivo: `${bpHipHopOld}/musicas/WE_ROLL_DEEP.ogg`, introStart: 232976, introEnd: 572944, finalStart: 9116437, finalEnd: 10181632 },
+      { id: 'what_would_you_do', name: 'WHAT_WOULD_YOU_DO', arquivo: `${bpHipHopOld}/musicas/WHAT_WOULD_YOU_DO.ogg`, introStart: 312320, introEnd: 1289728, finalStart: 8419328, finalEnd: 9324544 },
+      { id: 'what_you_wanna_do', name: 'WHAT_YOU_WANNA_DO', arquivo: `${bpHipHopOld}/musicas/WHAT_YOU_WANNA_DO.ogg`, introStart: 432128, introEnd: 888576, finalStart: 9248768, finalEnd: 10452992 },
+      { id: 'you_know_how_we_do', name: 'YOU_KNOW_HOW_WE_DO', arquivo: `${bpHipHopOld}/musicas/YOU_KNOW_HOW_WE_DO.ogg`, introStart: 401408, introEnd: 978944, finalStart: 7856128, finalEnd: 9245696 }
+    ],
+    grupoID: genList(bpHipHopOld, 'narracoes', padArr('ID', 1, 18)),
+    grupoDJSolo: genList(bpHipHopOld, 'narracoes', padArr('MONO_SOLO', 1, 30)),
+    narracoesGeneral: genList(bpHipHopOld, 'narracoes', padArr('GENERAL', 1, 50)),
+    timePools: {
+      morning: genList(bpHipHopOld, 'narracoes', padArr('MORNING', 1, 8)),
+      evening: genList(bpHipHopOld, 'narracoes', padArr('EVENING', 1, 7))
+    },
+    endto: {
+      toad: genList(bpHipHopOld, 'narracoes', padArr('TO_AD', 1, 7)),
+      tonews: genList(bpHipHopOld, 'narracoes', padArr('TO_NEWS', 1, 6))
+    },
+    grupoAdv: G.adv.gtav || [],
+    grupoWeazelNews: G.news.gtav || [],
+    musicIntroNarrations: {
+      'AFRO_PUFFS': genList(bpHipHopOld, 'narracoes', ['AFRO_PUFFS_01', 'AFRO_PUFFS_02']),
+      'AMBITIONZ_AZ_A_RIDAH': genList(bpHipHopOld, 'narracoes', ['AMBITIONZ_AZ_A_RIDAH_01', 'AMBITIONZ_AZ_A_RIDAH_02']),
+      'APPETITE_FOR_DESTRUCTION': genList(bpHipHopOld, 'narracoes', ['APPETITE_FOR_DESTRUCTION_01', 'APPETITE_FOR_DESTRUCTION_02']),
+      'BALLAD_OF_A_MENACE': genList(bpHipHopOld, 'narracoes', ['BALLAD_OF_A_MENACE_01', 'BALLAD_OF_A_MENACE_02', 'BALLAD_OF_A_MENACE_03']),
+      'BOW_DOWN': genList(bpHipHopOld, 'narracoes', ['BOW_DOWN_01', 'BOW_DOWN_02']),
+      'CAPTAIN_SAVE_A_HOE': genList(bpHipHopOld, 'narracoes', ['CAPTAIN_SAVE_A_HOE_01', 'CAPTAIN_SAVE_A_HOE_02']),
+      'C_WALK': genList(bpHipHopOld, 'narracoes', ['C_WALK_01', 'C_WALK_02']),
+      'FIRST_OF_THE_MONTH': genList(bpHipHopOld, 'narracoes', ['FIRST_OF_THE_MONTH_01', 'FIRST_OF_THE_MONTH_02']),
+      'GANGSTA_GANGSTA': genList(bpHipHopOld, 'narracoes', ['GANGSTA_GANGSTA_01', 'GANGSTA_GANGSTA_02']),
+      'GIN_AND_JUICE': genList(bpHipHopOld, 'narracoes', ['GIN_AND_JUICE_01', 'GIN_AND_JUICE_02']),
+      'LATE_NIGHT_HYPE': genList(bpHipHopOld, 'narracoes', ['LATE_NIGHT_HYPE_01', 'LATE_NIGHT_HYPE_02']),
+      'MIND_PLAYING_TRICKS': genList(bpHipHopOld, 'narracoes', ['MIND_PLAYING_TRICKS_01', 'MIND_PLAYING_TRICKS_02']),
+      'NOTHIN_BUT_THE_CAVI_HIT': genList(bpHipHopOld, 'narracoes', ['NOTHIN_BUT_THE_CAVI_HIT_01', 'NOTHIN_BUT_THE_CAVI_HIT_02']),
+      'NO_MORE_QUESTIONS': genList(bpHipHopOld, 'narracoes', ['NO_MORE_QUESTIONS_01', 'NO_MORE_QUESTIONS_02']),
+      'SERVIN_EM_HEAT': genList(bpHipHopOld, 'narracoes', ['SERVIN_EM_HEAT_01', 'SERVIN_EM_HEAT_02']),
+      'SHERM_STICK': genList(bpHipHopOld, 'narracoes', ['SHERM_STICK_01', 'SHERM_STICK_02']),
+      'SO_YOU_WANT_TO_BE_A_GANGSTER': genList(bpHipHopOld, 'narracoes', ['SO_YOU_WANT_TO_BE_A_GANGSTER_01', 'SO_YOU_WANT_TO_BE_A_GANGSTER_02']),
+      'STILL_D_R_E': genList(bpHipHopOld, 'narracoes', ['STILL_D_R_E_01', 'STILL_D_R_E_02']),
+      'STRAIGHT_UP_MENACE': genList(bpHipHopOld, 'narracoes', ['STRAIGHT_UP_MENACE_01', 'STRAIGHT_UP_MENACE_02']),
+      'THE_MURDA_SHOW': genList(bpHipHopOld, 'narracoes', ['THE_MURDA_SHOW_01', 'THE_MURDA_SHOW_02', 'THE_MURDA_SHOW_03', 'THE_MURDA_SHOW_04']),
+      'THE_NEXT_EPISODE': genList(bpHipHopOld, 'narracoes', ['THE_NEXT_EPISODE_01', 'THE_NEXT_EPISODE_02']),
+      'THIS_DJ': genList(bpHipHopOld, 'narracoes', ['THIS_DJ_01', 'THIS_DJ_02']),
+      'WE_ROLL_DEEP': genList(bpHipHopOld, 'narracoes', ['WE_ROLL_DEEP_01', 'WE_ROLL_DEEP_02']),
+      'WHAT_WOULD_YOU_DO': genList(bpHipHopOld, 'narracoes', ['WHAT_WOULD_YOU_DO_01', 'WHAT_WOULD_YOU_DO_02']),
+      'WHAT_YOU_WANNA_DO': genList(bpHipHopOld, 'narracoes', ['WHAT_YOU_WANNA_DO_01', 'WHAT_YOU_WANNA_DO_02']),
+      'YOU_KNOW_HOW_WE_DO': genList(bpHipHopOld, 'narracoes', ['YOU_KNOW_HOW_WE_DO_01', 'YOU_KNOW_HOW_WE_DO_02'])
+    }
+  };
+
+  /* ================================================================================= */
+  /* ================================= 14. THE BLUE ARK (REGGAE) ===================== */
+  /* ================================================================================= */
+
+  const bpReggae = 'RADIO_12_REGGAE';
+  
+  const obj_reggae = {
+    chanceLocucao: 0.9,
+    musicasList: [
+      { id: 'addi_truth', name: 'ADDI_TRUTH', arquivo: `${bpReggae}/musicas/ADDI_TRUTH.ogg`, introStart: 237568, introEnd: 430080, finalStart: 7267328, finalEnd: 8404992 },
+      { id: 'chapter3', name: 'CHAPTER3', arquivo: `${bpReggae}/musicas/CHAPTER3.ogg`, introStart: 706688, introEnd: 1504384, finalStart: 8464512, finalEnd: 9334912 },
+      { id: 'crazy_girl', name: 'CRAZY_GIRL', arquivo: `${bpReggae}/musicas/CRAZY_GIRL.ogg`, finalStart: 7721088, finalEnd: 8835712 },
+      { id: 'disco_devil', name: 'DISCO_DEVIL', arquivo: `${bpReggae}/musicas/DISCO_DEVIL.ogg`, introStart: 409600, introEnd: 962560, finalStart: 11878400, finalEnd: 12869632 },
+      { id: 'grumblin_dub', name: 'GRUMBLIN_DUB', arquivo: `${bpReggae}/musicas/GRUMBLIN_DUB.ogg`, introStart: 258753, introEnd: 1095680, finalStart: 8093696, finalEnd: 9315328 },
+      { id: 'gun_shot_a_fire', name: 'GUN_SHOT_A_FIRE', arquivo: `${bpReggae}/musicas/GUN_SHOT_A_FIRE.ogg`, introStart: 277504, introEnd: 953344, finalStart: 7700480, finalEnd: 9030656 },
+      { id: 'i_am_a_madman', name: 'I_AM_A_MADMAN', arquivo: `${bpReggae}/musicas/I_AM_A_MADMAN.ogg`, introStart: 272896, introEnd: 808192, finalStart: 10383360, finalEnd: 11271168 },
+      { id: 'kingston_be_wise', name: 'KINGSTON_BE_WISE', arquivo: `${bpReggae}/musicas/KINGSTON_BE_WISE.ogg`, introStart: 256491, introEnd: 753664, finalStart: 8912896, finalEnd: 9994240 },
+      { id: 'kingston_town', name: 'KINGSTON_TOWN', arquivo: `${bpReggae}/musicas/KINGSTON_TOWN.ogg`, introStart: 248639, introEnd: 557056, finalStart: 8077824, finalEnd: 9164288 },
+      { id: 'loyals', name: 'LOYALS', arquivo: `${bpReggae}/musicas/LOYALS.ogg`, finalStart: 5804032, finalEnd: 6725632 },
+      { id: 'money_come_money_go', name: 'MONEY_COME_MONEY_GO', arquivo: `${bpReggae}/musicas/MONEY_COME_MONEY_GO.ogg`, finalStart: 11352064, finalEnd: 12378112 },
+      { id: 'money_in_my_pocket', name: 'MONEY_IN_MY_POCKET', arquivo: `${bpReggae}/musicas/MONEY_IN_MY_POCKET.ogg`, introStart: 256774, introEnd: 756736, finalStart: 8511488, finalEnd: 9586688 },
+      { id: 'mr_money_man', name: 'MR_MONEY_MAN', arquivo: `${bpReggae}/musicas/MR_MONEY_MAN.ogg`, introStart: 191352, introEnd: 739904, finalStart: 8542208, finalEnd: 9555968 },
+      { id: 'night_nurse', name: 'NIGHT_NURSE', arquivo: `${bpReggae}/musicas/NIGHT_NURSE.ogg`, introStart: 233723, introEnd: 669229, finalStart: 8396800, finalEnd: 9340928 },
+      { id: 'nobody_move_get_hurt', name: 'NOBODY_MOVE_GET_HURT', arquivo: `${bpReggae}/musicas/NOBODY_MOVE_GET_HURT.ogg`, introStart: 240640, introEnd: 704512, finalStart: 8157184, finalEnd: 9244672 },
+      { id: 'odd_ras', name: 'ODD_RAS', arquivo: `${bpReggae}/musicas/ODD_RAS.ogg`, finalStart: 6979712, finalEnd: 7986304 },
+      { id: 'psycho', name: 'PSYCHO', arquivo: `${bpReggae}/musicas/PSYCHO.ogg`, introStart: 256458, introEnd: 851968, finalStart: 5152768, finalEnd: 6209536 },
+      { id: 'roast_fish_and_cornbread', name: 'ROAST_FISH_AND_CORNBREAD', arquivo: `${bpReggae}/musicas/ROAST_FISH_AND_CORNBREAD.ogg`, introStart: 249856, introEnd: 802816, finalStart: 9230336, finalEnd: 10326016 },
+      { id: 'sons_of_slaves', name: 'SONS_OF_SLAVES', arquivo: `${bpReggae}/musicas/SONS_OF_SLAVES.ogg`, introStart: 268288, introEnd: 776960, finalStart: 10485760, finalEnd: 12079104 },
+      { id: 'topic_of_the_day', name: 'TOPIC_OF_THE_DAY', arquivo: `${bpReggae}/musicas/TOPIC_OF_THE_DAY.ogg`, finalStart: 7909270, finalEnd: 8976278 },
+      { id: 'we_never_fear_dem', name: 'WE_NEVER_FEAR_DEM', arquivo: `${bpReggae}/musicas/WE_NEVER_FEAR_DEM.ogg`, finalStart: 6387072, finalEnd: 7509376 }
+    ],
+    grupoID: genList(bpReggae, 'narracoes', padArr('ID', 1, 16)),
+    grupoDJSolo: genList(bpReggae, 'narracoes', padArr('MONO_SOLO', 1, 13)),
+    narracoesGeneral: genList(bpReggae, 'narracoes', padArr('GENERAL', 1, 36)),
+    timePools: {
+      morning: genList(bpReggae, 'narracoes', padArr('MORNING', 1, 5)),
+      evening: genList(bpReggae, 'narracoes', padArr('EVENING', 1, 3))
+    },
+    endto: {
+      toad: genList(bpReggae, 'narracoes', padArr('TO_AD', 1, 5)),
+      tonews: genList(bpReggae, 'narracoes', padArr('TO_NEWS', 1, 4))
+    },
+    grupoAdv: G.adv.gtav || [],
+    grupoWeazelNews: G.news.gtav || [],
+    musicIntroNarrations: {
+      'CHAPTER3': genList(bpReggae, 'narracoes', ['CHAPTER3_01', 'CHAPTER3_02']),
+      'CRAZY_GIRL': genList(bpReggae, 'narracoes', ['CRAZY_GIRL_01', 'CRAZY_GIRL_02']),
+      'DISCO_DEVIL': genList(bpReggae, 'narracoes', ['DISCO_DEVIL_01', 'DISCO_DEVIL_02']),
+      'GRUMBLIN_DUB': genList(bpReggae, 'narracoes', ['GRUMBLIN_DUB_01', 'GRUMBLIN_DUB_02']),
+      'I_AM_A_MADMAN': genList(bpReggae, 'narracoes', ['I_AM_A_MADMAN_01', 'I_AM_A_MADMAN_02']),
+      'KINGSTON_TOWN': genList(bpReggae, 'narracoes', ['KINGSTON_TOWN_01', 'KINGSTON_TOWN_02']),
+      'MONEY_COME_MONEY_GO': genList(bpReggae, 'narracoes', ['MONEY_COME_MONEY_GO_01', 'MONEY_COME_MONEY_GO_02']),
+      'MR_MONEY_MAN': genList(bpReggae, 'narracoes', ['MR_MONEY_MAN_01', 'MR_MONEY_MAN_02']),
+      'NIGHT_NURSE': genList(bpReggae, 'narracoes', ['NIGHT_NURSE_01', 'NIGHT_NURSE_02']),
+      'NOBODY_MOVE_GET_HURT': genList(bpReggae, 'narracoes', ['NOBODY_MOVE_GET_HURT_01', 'NOBODY_MOVE_GET_HURT_02']),
+      'SONS_OF_SLAVES': genList(bpReggae, 'narracoes', ['SONS_OF_SLAVES_01', 'SONS_OF_SLAVES_02'])
+    }
+  };
+
+  /* ================================================================================= */
+  /* ================================= 15. EAST LOS FM (MEXICAN) ===================== */
+  /* ================================================================================= */
+
+  const bpMexican = 'RADIO_08_MEXICAN';
+  
+  const obj_mexican = {
+    chanceLocucao: 0, // Mix contínuo, sem locução sobreposta
+    musicasList: [
+      { 
+        id: 'mex_final_mix_32', 
+        name: 'MEX_FINAL_MIX_32', 
+        arquivo: `${bpMexican}/MEX_FINAL_MIX_32/playlist.m3u8`, 
+        durationMs: 2465130 
+      }
+    ],
+    grupoID: [],
+    grupoDJSolo: [],
+    narracoesGeneral: [],
+    timePools: null,
+    endto: null,
+    grupoAdv: [],
+    grupoWeazelNews: [],
+    musicIntroNarrations: {}
+  };
+
+  /* ================================================================================= */
+  /* ================================= 16. BLAINE COUNTY (TALK 02) =================== */
+  /* ================================================================================= */
+
+  const bpTalk02 = 'RADIO_11_TALK_02';
+  
+  const obj_talk_02 = {
+    chanceLocucao: 0, // Desativa voz por cima do stream
+    isTalkRadio: true, // Aciona a regra 70% ADV / 30% News no gerador
+    musicasList: [
+      { id: 'mono_bcr_community_hour', name: 'MONO_BCR_COMMUNITY_HOUR', arquivo: `${bpTalk02}/MONO_BCR_COMMUNITY_HOUR/playlist.m3u8`, durationMs: 1196451 },
+      { id: 'mono_beyond_insemination', name: 'MONO_BEYOND_INSEMINATION', arquivo: `${bpTalk02}/MONO_BEYOND_INSEMINATION/playlist.m3u8`, durationMs: 871228 },
+      { id: 'mono_bless_your_heart', name: 'MONO_BLESS_YOUR_HEART', arquivo: `${bpTalk02}/MONO_BLESS_YOUR_HEART/playlist.m3u8`, durationMs: 1748036 },
+      { id: 'mono_zbeyond_insemination_part_2', name: 'MONO_ZBEYOND_INSEMINATION_PART_2', arquivo: `${bpTalk02}/MONO_ZBEYOND_INSEMINATION_PART_2/playlist.m3u8`, durationMs: 918405 }
+    ],
+    grupoID: genListFlat(bpTalk02, padArr('ID', 1, 11), 'ogg'),
+    grupoDJSolo: [],
+    narracoesGeneral: [],
+    timePools: null,
+    endto: null,
+    grupoAdv: G.adv.gtav || [],
+    grupoWeazelNews: G.news.gtav || [],
+    musicIntroNarrations: {}
+  };
+
+  /* ================================================================================= */
   /* =========================== EXPORTAÇÃO GLOBAL (GTA V) =========================== */
   /* ================================================================================= */
   
@@ -861,7 +1053,11 @@
         'radio_07_dance_01': obj_soulwax,
         'radio_04_punk': obj_punk,
         'radio_05_talk_01': obj_talk,
-        'radio_06_country': obj_country
+        'radio_06_country': obj_country,
+        'radio_09_hiphop_old': obj_hiphop_old,
+        'radio_12_reggae': obj_reggae,
+        'radio_08_mexican': obj_mexican,
+        'radio_11_talk_02': obj_talk_02
       },
       'online': {
         // Todas essas sofrerão mutação de NEWS para ADVs sem perder sincronia
@@ -876,7 +1072,11 @@
         'radio_07_dance_01': obj_soulwax,
         'radio_04_punk': obj_punk,
         'radio_05_talk_01': obj_talk,
-        'radio_06_country': obj_country
+        'radio_06_country': obj_country,
+        'radio_09_hiphop_old': obj_hiphop_old,
+        'radio_12_reggae': obj_reggae,
+        'radio_08_mexican': obj_mexican,
+        'radio_11_talk_02': obj_talk_02
       }
     }
   };

@@ -1037,6 +1037,54 @@
   };
 
   /* ================================================================================= */
+  /* ================================= 17. WORLDWIDE FM (JAZZ) ======================= */
+  /* ================================================================================= */
+
+  const bpJazz = 'RADIO_13_JAZZ';
+  
+  const obj_jazz = {
+    chanceLocucao: 0,
+    isSequential: true, // Avisa o gerador para NÃO embaralhar as partes
+    musicasList: [
+      { id: 'wwfm_p1', name: 'WWFM_P1', arquivo: `${bpJazz}/wwfm_p1/playlist.m3u8`, durationMs: 1600572 },
+      { id: 'wwfm_p2', name: 'WWFM_P2', arquivo: `${bpJazz}/wwfm_p2/playlist.m3u8`, durationMs: 1484878 },
+      { id: 'wwfm_p3', name: 'WWFM_P3', arquivo: `${bpJazz}/wwfm_p3/playlist.m3u8`, durationMs: 2137466 },
+      { id: 'wwfm_p4', name: 'WWFM_P4', arquivo: `${bpJazz}/wwfm_p4/playlist.m3u8`, durationMs: 2009915 }
+    ],
+    grupoID: [],
+    grupoDJSolo: [],
+    narracoesGeneral: [],
+    timePools: null,
+    endto: null,
+    grupoAdv: [],
+    grupoWeazelNews: [],
+    musicIntroNarrations: {}
+  };
+
+  /* ================================================================================= */
+  /* ================================= 18. FLYLO FM (DANCE 02) ======================= */
+  /* ================================================================================= */
+
+  const bpDance02 = 'RADIO_14_DANCE_02';
+  
+  const obj_dance_02 = {
+    chanceLocucao: 0,
+    isSequential: true, // Avisa o gerador para NÃO embaralhar as partes
+    musicasList: [
+      { id: 'flylo_part1', name: 'FLYLO_PART1', arquivo: `${bpDance02}/flylo_part1/playlist.m3u8`, durationMs: 2607173 },
+      { id: 'flylo_part2', name: 'FLYLO_PART2', arquivo: `${bpDance02}/flylo_part2/playlist.m3u8`, durationMs: 1691113 }
+    ],
+    grupoID: [],
+    grupoDJSolo: [],
+    narracoesGeneral: [],
+    timePools: null,
+    endto: null,
+    grupoAdv: [],
+    grupoWeazelNews: [],
+    musicIntroNarrations: {}
+  };
+
+  /* ================================================================================= */
   /* =========================== EXPORTAÇÃO GLOBAL (GTA V) =========================== */
   /* ================================================================================= */
   
@@ -1057,7 +1105,9 @@
         'radio_09_hiphop_old': obj_hiphop_old,
         'radio_12_reggae': obj_reggae,
         'radio_08_mexican': obj_mexican,
-        'radio_11_talk_02': obj_talk_02
+        'radio_11_talk_02': obj_talk_02,
+        'radio_13_jazz': obj_jazz,
+        'radio_14_dance_02': obj_dance_02
       },
       'online': {
         // Todas essas sofrerão mutação de NEWS para ADVs sem perder sincronia
@@ -1076,7 +1126,9 @@
         'radio_09_hiphop_old': obj_hiphop_old,
         'radio_12_reggae': obj_reggae,
         'radio_08_mexican': obj_mexican,
-        'radio_11_talk_02': obj_talk_02
+        'radio_11_talk_02': obj_talk_02,
+        'radio_13_jazz': obj_jazz,
+        'radio_14_dance_02': obj_dance_02
       }
     }
   };

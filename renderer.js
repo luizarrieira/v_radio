@@ -1,11 +1,11 @@
-// renderer.js — Motor AAA Híbrido: Sincronia Estrita + HLS + Anti-Sleep (iOS)
+// renderer.js — Motor AAA Híbrido: Sincronia Estrita + HLS Ping-Pong + Anti-Sleep
 
 /* =================== AudioContext / Constantes =================== */
 const AudioContextClass = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContextClass();
 
 const DUCK_DOWN_TIME = 0.1; 
-const DUCK_UP_TIME = 0.1;   
+const DUCK_UP_TIME = 0.5;   
 
 /* =================== Helper de Identificação HLS =================== */
 function isStreamEvent(ev) {
@@ -42,13 +42,29 @@ const silentTrack = gerarSilencio10Segundos();
 const musicGain = audioCtx.createGain(); musicGain.gain.value = 1.0; musicGain.connect(audioCtx.destination);
 const narrationGain = audioCtx.createGain(); narrationGain.connect(audioCtx.destination);
 
-const streamAudioElement = new Audio();
-streamAudioElement.crossOrigin = "anonymous";
-streamAudioElement.setAttribute('playsinline', ''); 
-streamAudioElement.setAttribute('webkit-playsinline', '');
-streamAudioElement.src = silentTrack; 
-streamAudioElement.style.display = 'none';
-document.body.appendChild(streamAudioElement);
+// --- NOVO SISTEMA PING-PONG (PLAYER A / PLAYER B) ---
+const streamAudioA = new Audio();
+streamAudioA.crossOrigin = "anonymous";
+streamAudioA.setAttribute('playsinline', ''); 
+streamAudioA.setAttribute('webkit-playsinline', '');
+streamAudioA.src = silentTrack; 
+streamAudioA.style.display = 'none';
+document.body.appendChild(streamAudioA);
+
+const streamAudioB = new Audio();
+streamAudioB.crossOrigin = "anonymous";
+streamAudioB.setAttribute('playsinline', ''); 
+streamAudioB.setAttribute('webkit-playsinline', '');
+streamAudioB.src = silentTrack; 
+streamAudioB.style.display = 'none';
+document.body.appendChild(streamAudioB);
+
+// Controladores dos dois players
+const streamPlayers = [
+    { el: streamAudioA, hls: null },
+    { el: streamAudioB, hls: null }
+];
+let currentStreamIdx = 0; // Alterna entre 0 (A) e 1 (B)
 
 /* =================== Gerenciamento de Estado =================== */
 const audioBufferCache = new Map();
@@ -65,7 +81,6 @@ let currentTimeline = [];
 let currentStreamEvent = null; 
 let isSystemSeeking = false; 
 let iosUnlocked = false;
-let hlsInstance = null; // Instância HLS.js
 
 /* =================== Utils & Relógio Mestre =================== */
 function log(...args){ console.log('[RADIO]', ...args); }
@@ -98,7 +113,6 @@ function onNarrationStart(scheduledTime = null){
     activeNarrationsCount++;
     const triggerTime = scheduledTime !== null ? Math.max(audioCtx.currentTime, scheduledTime) : audioCtx.currentTime;
     
-    // Regra da Kult FM (Abaixa menos o som da música)
     const isKult = activeRadioKey.includes('kult');
     const DUCK_TARGET = isKult ? 0.5 : 0.4;
     
@@ -115,26 +129,31 @@ function onNarrationEnd(scheduledTime = null){
 }
 
 /* =================== O Segurança (Anti-Seek Guard) =================== */
-streamAudioElement.addEventListener('seeked', () => {
-    if (isSystemSeeking) { isSystemSeeking = false; return; }
-    if (currentStreamEvent && !streamAudioElement.src.startsWith('data:')) {
-        const correctOffset = (getCurrentMonthMs() - currentStreamEvent.startMs) / 1000;
-        isSystemSeeking = true;
-        streamAudioElement.currentTime = Math.max(0, correctOffset);
-    }
+streamPlayers.forEach(p => {
+    p.el.addEventListener('seeked', () => {
+        if (isSystemSeeking) { isSystemSeeking = false; return; }
+        if (currentStreamEvent && !p.el.src.startsWith('data:')) {
+            const correctOffset = (getCurrentMonthMs() - currentStreamEvent.startMs) / 1000;
+            isSystemSeeking = true;
+            p.el.currentTime = Math.max(0, correctOffset);
+        }
+    });
 });
 
 /* =================== Desbloqueador iOS =================== */
 function unlockAudioForiOS() {
     if (iosUnlocked) return;
     if (audioCtx.state !== 'running') audioCtx.resume().catch(()=>{});
-    if (!streamAudioElement.src.startsWith('data:')) streamAudioElement.src = silentTrack;
-    streamAudioElement.muted = false; 
-    streamAudioElement.loop = true;
-    streamAudioElement.play().then(() => { 
-        iosUnlocked = true; 
-        log("🍏 iOS Audio Desbloqueado com sucesso (Widget Ativo)!");
-    }).catch(e => {});
+    
+    streamPlayers.forEach(p => {
+        if (!p.el.src.startsWith('data:')) p.el.src = silentTrack;
+        p.el.muted = false; 
+        p.el.loop = true;
+        p.el.play().catch(e => {});
+    });
+
+    iosUnlocked = true; 
+    log("🍏 iOS Audio Desbloqueado com sucesso (Widget Ativo)!");
     ['touchstart', 'touchend', 'click'].forEach(evt => document.removeEventListener(evt, unlockAudioForiOS));
 }
 ['touchstart', 'touchend', 'click'].forEach(evt => document.addEventListener(evt, unlockAudioForiOS, { once: true }));
@@ -178,45 +197,66 @@ async function getAudioBuffer(filePath, limparDaMemoria = false) {
 
 /* =================== Execução Fina (O Coração) =================== */
 async function preloadEvent(ev) {
-    // Evita tentar decodificar .m3u8 no AudioContext
     if (ev.path && !isStreamEvent(ev)) await getAudioBuffer(ev.path);
 }
 
 async function executeEvent(ev, mySession, forcedSyncTime = null, forcedNowMs = null) {
     if (!started || currentSessionId !== mySession) return;
 
-    // --- LÓGICA DE STREAMING (HLS & NATIVO) ---
+    // --- LÓGICA DE STREAMING HLS COM PING-PONG (SEAMLESS MIX) ---
     if (isStreamEvent(ev)) {
         currentStreamEvent = ev;
         const offset = (getCurrentMonthMs() - ev.startMs) / 1000;
         isSystemSeeking = true;
 
-        if (hlsInstance) {
-            hlsInstance.destroy();
-            hlsInstance = null;
+        // Alterna para o próximo player (A -> B -> A)
+        const prevIdx = currentStreamIdx;
+        currentStreamIdx = 1 - currentStreamIdx; 
+        const nextPlayer = streamPlayers[currentStreamIdx];
+        const prevPlayer = streamPlayers[prevIdx];
+
+        // Limpa resíduos do player que vai assumir agora
+        if (nextPlayer.hls) {
+            nextPlayer.hls.destroy();
+            nextPlayer.hls = null;
         }
 
         if (ev.path.endsWith('.m3u8') && window.Hls && window.Hls.isSupported()) {
-            log(`🌐 Iniciando HLS Stream: ${ev.path}`);
-            hlsInstance = new window.Hls({ startPosition: Math.max(0, offset) });
-            hlsInstance.loadSource(ev.path);
-            hlsInstance.attachMedia(streamAudioElement);
+            log(`🌐 HLS Mix (Player ${currentStreamIdx === 0 ? 'A' : 'B'}): ${ev.path}`);
+            nextPlayer.hls = new window.Hls({ startPosition: Math.max(0, offset) });
+            nextPlayer.hls.loadSource(ev.path);
+            nextPlayer.hls.attachMedia(nextPlayer.el);
 
-            hlsInstance.on(window.Hls.Events.MANIFEST_PARSED, function() {
-                streamAudioElement.muted = false;
-                streamAudioElement.loop = false;
-                streamAudioElement.play()
-                    .then(() => { window.dispatchEvent(new CustomEvent('radio-ready')); }) 
+            nextPlayer.hls.on(window.Hls.Events.MANIFEST_PARSED, function() {
+                nextPlayer.el.muted = false;
+                nextPlayer.el.loop = false;
+                nextPlayer.el.play()
+                    .then(() => { 
+                        window.dispatchEvent(new CustomEvent('radio-ready')); 
+                        
+                        // MÁGICA: O player antigo ganha 1.5s de sobrevida para esvaziar o buffer!
+                        setTimeout(() => {
+                            if (prevPlayer.hls) { prevPlayer.hls.destroy(); prevPlayer.hls = null; }
+                            prevPlayer.el.pause();
+                        }, 1500);
+                    }) 
                     .catch(e => log('Autoplay HLS bloqueado:', e.message));
             });
         } else {
-            log(`🍏 Iniciando Stream Nativo (ou Fallback): ${ev.path}`);
-            streamAudioElement.src = ev.path;
-            streamAudioElement.muted = false; 
-            streamAudioElement.loop = false;
-            streamAudioElement.currentTime = Math.max(0, offset);
-            streamAudioElement.play()
-                .then(() => { window.dispatchEvent(new CustomEvent('radio-ready')); }) 
+            log(`🍏 Fallback Mix (Player ${currentStreamIdx === 0 ? 'A' : 'B'}): ${ev.path}`);
+            nextPlayer.el.src = ev.path;
+            nextPlayer.el.muted = false; 
+            nextPlayer.el.loop = false;
+            nextPlayer.el.currentTime = Math.max(0, offset);
+            nextPlayer.el.play()
+                .then(() => { 
+                    window.dispatchEvent(new CustomEvent('radio-ready')); 
+                    
+                    setTimeout(() => {
+                        if (prevPlayer.hls) { prevPlayer.hls.destroy(); prevPlayer.hls = null; }
+                        prevPlayer.el.pause();
+                    }, 1500);
+                }) 
                 .catch(e => log('Autoplay stream bloqueado:', e.message));
         }
 
@@ -226,11 +266,12 @@ async function executeEvent(ev, mySession, forcedSyncTime = null, forcedNowMs = 
 
     // --- ATIVAÇÃO DO SILENT TRACK SE NADA ESTIVER NO STREAM ---
     if (!currentStreamEvent) {
-        if (streamAudioElement.paused || !streamAudioElement.src.startsWith('data:')) {
-            streamAudioElement.src = silentTrack; 
-            streamAudioElement.muted = false; 
-            streamAudioElement.loop = true;
-            streamAudioElement.play().catch(e => {});
+        const activePlayer = streamPlayers[currentStreamIdx];
+        if (activePlayer.el.paused || !activePlayer.el.src.startsWith('data:')) {
+            activePlayer.el.src = silentTrack; 
+            activePlayer.el.muted = false; 
+            activePlayer.el.loop = true;
+            activePlayer.el.play().catch(e => {});
             updateChromeMediaHub(activeRadioKey.replace('radio_', '').toUpperCase().replace(/_/g, ' '));
         }
     }
@@ -277,7 +318,6 @@ async function executeEvent(ev, mySession, forcedSyncTime = null, forcedNowMs = 
 
     s.start(scheduledTime, startOffset);
     
-    // AVISA O INDEX QUE O ÁUDIO COMEÇOU PARA DESLIGAR A ESTÁTICA
     window.dispatchEvent(new CustomEvent('radio-ready')); 
     
     if (startOffset > 0) log(`🔄 HOT-SWAP: ${ev.path} (Avançado: ${startOffset.toFixed(2)}s)`);
@@ -318,16 +358,18 @@ async function radioLoop(mySession) {
         if (audioCtx.state !== 'running') audioCtx.resume().catch(()=>{});
         nowMs = getCurrentMonthMs();
 
-        // Limpeza de HLS (Guilhotina)
+        // Limpeza de HLS (A Guilhotina Suave)
         if (currentStreamEvent && currentStreamEvent.endMs <= nowMs) {
             const nextEvent = currentTimeline.find(ev => isStreamEvent(ev) && ev.startMs <= nowMs && ev.endMs > nowMs);
             if (!nextEvent) {
-                log(`🛑 Guilhotina: Encerrando stream.`);
-                streamAudioElement.pause();
-                if (hlsInstance) {
-                    hlsInstance.destroy();
-                    hlsInstance = null;
-                }
+                log(`🛑 Guilhotina: Encerrando streams definitivamente.`);
+                streamPlayers.forEach(p => {
+                    p.el.pause();
+                    if (p.hls) {
+                        p.hls.destroy();
+                        p.hls = null;
+                    }
+                });
             }
             currentStreamEvent = null;
         }
@@ -357,12 +399,12 @@ async function radioLoop(mySession) {
         if (eventIndex >= currentTimeline.length) { eventIndex = 0; preloadedEvents.clear(); }
     }
 
-    streamAudioElement.addEventListener('timeupdate', radarTick);
+    streamPlayers.forEach(p => p.el.addEventListener('timeupdate', radarTick));
 
     const pcInterval = setInterval(() => {
         if (!started || currentSessionId !== mySession) { 
             clearInterval(pcInterval); 
-            streamAudioElement.removeEventListener('timeupdate', radarTick);
+            streamPlayers.forEach(p => p.el.removeEventListener('timeupdate', radarTick));
             return; 
         }
         radarTick();
@@ -397,14 +439,16 @@ function stopRadio() {
     activeAudioSources = [];
     preloadedEvents.clear();
 
-    streamAudioElement.pause();
-    if (hlsInstance) {
-        hlsInstance.destroy();
-        hlsInstance = null;
-    }
-    if (!streamAudioElement.src.startsWith('data:')) {
-        streamAudioElement.src = silentTrack; 
-    }
+    streamPlayers.forEach(p => {
+        p.el.pause();
+        if (p.hls) {
+            p.hls.destroy();
+            p.hls = null;
+        }
+        if (!p.el.src.startsWith('data:')) {
+            p.el.src = silentTrack; 
+        }
+    });
     currentStreamEvent = null;
 
     const now = audioCtx.currentTime;

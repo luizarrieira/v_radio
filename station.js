@@ -1085,6 +1085,39 @@
   };
 
   /* ================================================================================= */
+  /* ====================== 19. LOS SANTOS UNDERGROUND RADIO (LSUR) ================== */
+  /* ================================================================================= */
+
+  const bpLsur = 'RADIO_22_DLC_BATTLE_MIX1_RADIO';
+  
+  const obj_lsur = {
+    chanceLocucao: 0,
+    isSequential: true, // Garante que o motor toque da parte 1 à 12 em loop contínuo
+    musicasList: [
+      { id: 'battle_mix1_radio_01', name: 'BATTLE_MIX1_RADIO_01', arquivo: `${bpLsur}/BATTLE_MIX1_RADIO_01/playlist.m3u8`, durationMs: 1704526 },
+      { id: 'battle_mix1_radio_02', name: 'BATTLE_MIX1_RADIO_02', arquivo: `${bpLsur}/BATTLE_MIX1_RADIO_02/playlist.m3u8`, durationMs: 2308447 },
+      { id: 'battle_mix1_radio_03', name: 'BATTLE_MIX1_RADIO_03', arquivo: `${bpLsur}/BATTLE_MIX1_RADIO_03/playlist.m3u8`, durationMs: 1211157 },
+      { id: 'battle_mix2_radio_01', name: 'BATTLE_MIX2_RADIO_01', arquivo: `${bpLsur}/BATTLE_MIX2_RADIO_01/playlist.m3u8`, durationMs: 1006471 },
+      { id: 'battle_mix2_radio_02', name: 'BATTLE_MIX2_RADIO_02', arquivo: `${bpLsur}/BATTLE_MIX2_RADIO_02/playlist.m3u8`, durationMs: 1350033 },
+      { id: 'battle_mix2_radio_03', name: 'BATTLE_MIX2_RADIO_03', arquivo: `${bpLsur}/BATTLE_MIX2_RADIO_03/playlist.m3u8`, durationMs: 1223075 },
+      { id: 'battle_mix3_radio_01', name: 'BATTLE_MIX3_RADIO_01', arquivo: `${bpLsur}/BATTLE_MIX3_RADIO_01/playlist.m3u8`, durationMs: 1173841 },
+      { id: 'battle_mix3_radio_02', name: 'BATTLE_MIX3_RADIO_02', arquivo: `${bpLsur}/BATTLE_MIX3_RADIO_02/playlist.m3u8`, durationMs: 1391812 },
+      { id: 'battle_mix3_radio_03', name: 'BATTLE_MIX3_RADIO_03', arquivo: `${bpLsur}/BATTLE_MIX3_RADIO_03/playlist.m3u8`, durationMs: 1260626 },
+      { id: 'battle_mix4_radio_01', name: 'BATTLE_MIX4_RADIO_01', arquivo: `${bpLsur}/BATTLE_MIX4_RADIO_01/playlist.m3u8`, durationMs: 923497 },
+      { id: 'battle_mix4_radio_02', name: 'BATTLE_MIX4_RADIO_02', arquivo: `${bpLsur}/BATTLE_MIX4_RADIO_02/playlist.m3u8`, durationMs: 1772747 },
+      { id: 'battle_mix4_radio_03', name: 'BATTLE_MIX4_RADIO_03', arquivo: `${bpLsur}/BATTLE_MIX4_RADIO_03/playlist.m3u8`, durationMs: 1407923 }
+    ],
+    grupoID: [],
+    grupoDJSolo: [],
+    narracoesGeneral: [],
+    timePools: null,
+    endto: null,
+    grupoAdv: [],
+    grupoWeazelNews: [],
+    musicIntroNarrations: {}
+  };
+
+  /* ================================================================================= */
   /* =========================== EXPORTAÇÃO GLOBAL (GTA V) =========================== */
   /* ================================================================================= */
   
@@ -1107,7 +1140,8 @@
         'radio_08_mexican': obj_mexican,
         'radio_11_talk_02': obj_talk_02,
         'radio_13_jazz': obj_jazz,
-        'radio_14_dance_02': obj_dance_02
+        'radio_14_dance_02': obj_dance_02,
+        'radio_22_dlc_battle_mix1_radio': obj_lsur
       },
       'online': {
         // Todas essas sofrerão mutação de NEWS para ADVs sem perder sincronia
@@ -1128,7 +1162,8 @@
         'radio_08_mexican': obj_mexican,
         'radio_11_talk_02': obj_talk_02,
         'radio_13_jazz': obj_jazz,
-        'radio_14_dance_02': obj_dance_02
+        'radio_14_dance_02': obj_dance_02,
+        'radio_22_dlc_battle_mix1_radio': obj_lsur
       }
     }
   };

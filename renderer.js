@@ -5,7 +5,7 @@ const AudioContextClass = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContextClass();
 
 const DUCK_DOWN_TIME = 0.1; 
-const DUCK_UP_TIME = 0.5;   
+const DUCK_UP_TIME = 0.1;   
 
 /* =================== Helper de Identificação HLS =================== */
 function isStreamEvent(ev) {

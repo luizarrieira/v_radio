@@ -1118,6 +1118,53 @@
   };
 
   /* ================================================================================= */
+  /* ================================= 20. THE LAB =================================== */
+  /* ================================================================================= */
+
+  const bpTheLab = 'RADIO_20_THELAB';
+  
+  const obj_thelab = {
+    chanceLocucao: 0,
+    isSequential: true, // Toca as partes sequencialmente e reinicia o loop
+    musicasList: [
+      { id: 'lab_p1', name: 'LAB_P1', arquivo: `${bpTheLab}/LAB_P1/playlist.m3u8`, durationMs: 2157909 },
+      { id: 'lab_p2', name: 'LAB_P2', arquivo: `${bpTheLab}/LAB_P2/playlist.m3u8`, durationMs: 1298067 }
+    ],
+    grupoID: [],
+    grupoDJSolo: [],
+    narracoesGeneral: [],
+    timePools: null,
+    endto: null,
+    grupoAdv: [],
+    grupoWeazelNews: [],
+    musicIntroNarrations: {}
+  };
+
+  /* ================================================================================= */
+  /* ================================= 21. BLONDED LOS SANTOS 97.8 FM ================ */
+  /* ================================================================================= */
+
+  const bpXm17 = 'RADIO_21_DLC_XM17';
+  
+  const obj_xm17 = {
+    chanceLocucao: 0,
+    isSequential: true, // Toca as partes sequencialmente e reinicia o loop
+    musicasList: [
+      { id: 'radio_xm17_p1', name: 'RADIO_XM17_P1', arquivo: `${bpXm17}/RADIO_XM17_P1/playlist.m3u8`, durationMs: 1863693 },
+      { id: 'radio_xm17_p2', name: 'RADIO_XM17_P2', arquivo: `${bpXm17}/RADIO_XM17_P2/playlist.m3u8`, durationMs: 2356933 },
+      { id: 'radio_xm17_p3', name: 'RADIO_XM17_P3', arquivo: `${bpXm17}/RADIO_XM17_P3/playlist.m3u8`, durationMs: 1919238 }
+    ],
+    grupoID: [],
+    grupoDJSolo: [],
+    narracoesGeneral: [],
+    timePools: null,
+    endto: null,
+    grupoAdv: [],
+    grupoWeazelNews: [],
+    musicIntroNarrations: {}
+  };
+
+  /* ================================================================================= */
   /* =========================== EXPORTAÇÃO GLOBAL (GTA V) =========================== */
   /* ================================================================================= */
   
@@ -1141,7 +1188,9 @@
         'radio_11_talk_02': obj_talk_02,
         'radio_13_jazz': obj_jazz,
         'radio_14_dance_02': obj_dance_02,
-        'radio_22_dlc_battle_mix1_radio': obj_lsur
+        'radio_22_dlc_battle_mix1_radio': obj_lsur,
+        'radio_20_thelab': obj_thelab,
+        'radio_21_dlc_xm17': obj_xm17
       },
       'online': {
         // Todas essas sofrerão mutação de NEWS para ADVs sem perder sincronia
@@ -1163,7 +1212,9 @@
         'radio_11_talk_02': obj_talk_02,
         'radio_13_jazz': obj_jazz,
         'radio_14_dance_02': obj_dance_02,
-        'radio_22_dlc_battle_mix1_radio': obj_lsur
+        'radio_22_dlc_battle_mix1_radio': obj_lsur,
+        'radio_20_thelab': obj_thelab,
+        'radio_21_dlc_xm17': obj_xm17
       }
     }
   };

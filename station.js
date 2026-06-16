@@ -1042,7 +1042,7 @@
 
   const bpJazz = 'RADIO_13_JAZZ';
   
-  const obj_jazz = {
+  const obj_jazz_v = {
     chanceLocucao: 0,
     isSequential: true, // Avisa o gerador para NÃO embaralhar as partes
     musicasList: [
@@ -1067,7 +1067,7 @@
 
   const bpDance02 = 'RADIO_14_DANCE_02';
   
-  const obj_dance_02 = {
+  const obj_dance_02_v = {
     chanceLocucao: 0,
     isSequential: true, // Avisa o gerador para NÃO embaralhar as partes
     musicasList: [
@@ -1165,6 +1165,145 @@
   };
 
   /* ================================================================================= */
+  /* ================================= 22. iFRUIT RADIO (TAKEOVER) =================== */
+  /* ================================================================================= */
+
+  const bpIfruit = 'RADIO_23_DLC_XM19_RADIO';
+  
+  const obj_ifruit = {
+    chanceLocucao: 0.9,
+    isTakeoverRadio: true, // Aciona o motor de dupla personalidade
+    
+    // --- MÚSICAS E LOCUÇÕES: MODO NORMAL ---
+    musicasList: [
+      { id: 'act_up', name: 'ACT_UP', arquivo: `${bpIfruit}/musicas/ACT_UP.ogg`, introStart: 193731, introEnd: 473536 },
+      { id: 'aliens', name: 'ALIENS', arquivo: `${bpIfruit}/musicas/ALIENS.ogg`, introStart: 190933, introEnd: 593095 },
+      { id: 'bop', name: 'BOP', arquivo: `${bpIfruit}/musicas/BOP.ogg`, introStart: 256557, introEnd: 680137 },
+      { id: 'cash_shit', name: 'CASH_SHIT', arquivo: `${bpIfruit}/musicas/CASH_SHIT.ogg`, introStart: 216306, introEnd: 680932 },
+      { id: 'crime_pays', name: 'CRIME_PAYS', arquivo: `${bpIfruit}/musicas/CRIME_PAYS.ogg`, introStart: 242486, introEnd: 686900, finalStart: 7078623, finalEnd: 7693023 },
+      { id: 'dance_in_the_water', name: 'DANCE_IN_THE_WATER', arquivo: `${bpIfruit}/musicas/DANCE_IN_THE_WATER.ogg`, introStart: 242552, introEnd: 722734 },
+      { id: 'everything_she_wants', name: 'EVERYTHING_SHE_WANTS', arquivo: `${bpIfruit}/musicas/EVERYTHING_SHE_WANTS.ogg`, introStart: 227938, introEnd: 725815, finalStart: 10799872, finalEnd: 11277824 },
+      { id: 'highest_in_the_room', name: 'HIGHEST_IN_THE_ROOM', arquivo: `${bpIfruit}/musicas/HIGHEST_IN_THE_ROOM.ogg`, introStart: 236346, introEnd: 575047, finalStart: 7835648, finalEnd: 8188928 },
+      { id: 'hot_remix', name: 'HOT_REMIX', arquivo: `${bpIfruit}/musicas/HOT_REMIX.ogg`, introStart: 262358, introEnd: 1021418 },
+      { id: 'numb_numb_juice', name: 'NUMB_NUMB_JUICE', arquivo: `${bpIfruit}/musicas/NUMB_NUMB_JUICE.ogg` },
+      { id: 'pop_star', name: 'POP_STAR', arquivo: `${bpIfruit}/musicas/POP_STAR.ogg`, introStart: 197465, introEnd: 500122 },
+      { id: 'tbd', name: 'TBD', arquivo: `${bpIfruit}/musicas/TBD.ogg`, finalStart: 7032812, finalEnd: 7569388 },
+      { id: 'w', name: 'W', arquivo: `${bpIfruit}/musicas/W.ogg`, introStart: 246602, introEnd: 761072, finalStart: 10039296, finalEnd: 10674176 },
+      { id: 'wings', name: 'WINGS', arquivo: `${bpIfruit}/musicas/WINGS.ogg`, introStart: 451062, introEnd: 1338440, finalStart: 5874166, finalEnd: 6533622 },
+      { id: 'with_the_thing', name: 'WITH_THE_THING', arquivo: `${bpIfruit}/musicas/WITH_THE_THING.ogg`, introStart: 233089, introEnd: 912025 }
+    ],
+    grupoID: genList(bpIfruit, 'narracoes', padArr('GENERIC_ID', 2, 17)),
+    grupoDJSolo: genList(bpIfruit, 'narracoes', ['CUSTOM_MONO_SOLO_13', 'MONO_SOLO_01', 'MONO_SOLO_02', 'MONO_SOLO_03', 'MONO_SOLO_05', 'MONO_SOLO_07', 'MONO_SOLO_08', 'MONO_SOLO_09', 'MONO_SOLO_10', 'MONO_SOLO_11', 'MONO_SOLO_12', 'MONO_SOLO_13', 'MONO_SOLO_14', 'MONO_SOLO_15', 'MONO_SOLO_20', 'MONO_SOLO_21', 'MONO_SOLO_22', 'MONO_SOLO_23']),
+
+    // --- MÚSICAS E LOCUÇÕES: MODO TAKEOVER ---
+    takeoverMusicasList: [
+      { id: 'back_to_basics', name: 'BACK_TO_BASICS_FLOATING_POINTS_REMIX', arquivo: `${bpIfruit}/musicas/BACK_TO_BASICS_FLOATING_POINTS_REMIX.ogg`, introStart: 243352, introEnd: 669610, finalStart: 8627712, finalEnd: 9707520 },
+      { id: 'greaze_mode', name: 'GREAZE_MODE', arquivo: `${bpIfruit}/musicas/GREAZE_MODE.ogg`, introStart: 240892, introEnd: 568477 },
+      { id: 'hundred_k', name: 'HUNDRED_K_ON_A_COUPE', arquivo: `${bpIfruit}/musicas/HUNDRED_K_ON_A_COUPE.ogg`, introStart: 233280, introEnd: 622085 },
+      { id: 'i_need', name: 'I_NEED', arquivo: `${bpIfruit}/musicas/I_NEED.ogg`, introStart: 240735, introEnd: 655085 },
+      { id: 'killin_dem', name: 'KILLIN_DEM', arquivo: `${bpIfruit}/musicas/KILLIN_DEM.ogg`, introStart: 253718, introEnd: 741665 },
+      { id: 'kiss_and_tell', name: 'KISS_AND_TELL', arquivo: `${bpIfruit}/musicas/KISS_AND_TELL.ogg`, introStart: 250716, introEnd: 644184, finalStart: 8479602, finalEnd: 8864626 },
+      { id: 'kitchen_kings', name: 'KITCHEN_KINGS', arquivo: `${bpIfruit}/musicas/KITCHEN_KINGS.ogg`, introStart: 244789, introEnd: 632648 },
+      { id: 'knock_your_block', name: 'KNOCK_YOUR_BLOCK_OFF', arquivo: `${bpIfruit}/musicas/KNOCK_YOUR_BLOCK_OFF.ogg`, introStart: 247881, introEnd: 667234 },
+      { id: 'money_in_the_bank', name: 'MONEY_IN_THE_BANK', arquivo: `${bpIfruit}/musicas/MONEY_IN_THE_BANK.ogg`, introStart: 195319, introEnd: 477519 },
+      { id: 'must_be', name: 'MUST_BE', arquivo: `${bpIfruit}/musicas/MUST_BE.ogg`, introStart: 239517, introEnd: 1060072 },
+      { id: 'opotoyi', name: 'OPOTOYI', arquivo: `${bpIfruit}/musicas/OPOTOYI.ogg`, introStart: 372230, introEnd: 737152, finalStart: 10704692, finalEnd: 11245815 },
+      { id: 'original_format', name: 'ORIGINAL_FORMAT', arquivo: `${bpIfruit}/musicas/ORIGINAL_FORMAT.ogg`, introStart: 249180, introEnd: 810114, finalStart: 8571920, finalEnd: 9444368 },
+      { id: 'pattern_chanel', name: 'PATTERN_CHANEL', arquivo: `${bpIfruit}/musicas/PATTERN_CHANEL.ogg`, introStart: 598418, introEnd: 1171886 }
+    ],
+    takeoverGrupoID: genList(bpIfruit, 'narracoes', padArr('TAKEOVER_ID', 1, 10)),
+    takeoverGrupoDJSolo: genList(bpIfruit, 'narracoes', ['MONO_TAKEOVER_SOLO_02', 'MONO_TAKEOVER_SOLO_03', 'MONO_TAKEOVER_SOLO_04', 'MONO_TAKEOVER_SOLO_05', 'MONO_TAKEOVER_SOLO_10', 'MONO_TAKEOVER_SOLO_11', 'MONO_TAKEOVER_SOLO_12', 'MONO_TAKEOVER_SOLO_13', 'MONO_TAKEOVER_SOLO_14']),
+
+    // --- SHARED: HORÁRIOS ---
+    narracoesGeneral: [],
+    timePools: {
+      morning: genList(bpIfruit, 'narracoes', padArr('MORNING', 1, 4)),
+      evening: genList(bpIfruit, 'narracoes', padArr('EVENING', 1, 3)),
+      night: genList(bpIfruit, 'narracoes', padArr('NIGHT', 1, 4))
+    },
+    endto: null,
+    grupoAdv: [],
+    grupoWeazelNews: [],
+    
+    // --- EXCLUSIVAS DAS MÚSICAS (De ambos os modos) ---
+    musicIntroNarrations: {
+      'ACT_UP': genList(bpIfruit, 'narracoes', ['ACT_UP_01', 'ACT_UP_02']),
+      'ALIENS': genList(bpIfruit, 'narracoes', ['ALIENS_01', 'ALIENS_02']),
+      'BACK_TO_BASICS_FLOATING_POINTS_REMIX': genList(bpIfruit, 'narracoes', ['BACK_TO_BASICS_FLOATING_POINTS_REMIX_01', 'BACK_TO_BASICS_FLOATING_POINTS_REMIX_02', 'BACK_TO_BASICS_FLOATING_POINTS_REMIX_03']),
+      'BOP': genList(bpIfruit, 'narracoes', ['BOP_01', 'BOP_02']),
+      'CASH_SHIT': genList(bpIfruit, 'narracoes', ['CASH_SHIT_01', 'CASH_SHIT_02']),
+      'CRIME_PAYS': genList(bpIfruit, 'narracoes', ['CRIME_PAYS_01']),
+      'DANCE_IN_THE_WATER': genList(bpIfruit, 'narracoes', ['DANCE_IN_THE_WATER_01']),
+      'EVERYTHING_SHE_WANTS': genList(bpIfruit, 'narracoes', ['EVERYTHING_SHE_WANTS_01', 'EVERYTHING_SHE_WANTS_02']),
+      'GREAZE_MODE': genList(bpIfruit, 'narracoes', ['GREAZE_MODE_01', 'GREAZE_MODE_02', 'GREAZE_MODE_03', 'GREAZE_MODE_04']),
+      'HIGHEST_IN_THE_ROOM': genList(bpIfruit, 'narracoes', ['HIGHEST_IN_THE_ROOM_01', 'HIGHEST_IN_THE_ROOM_02']),
+      'HOT_REMIX': genList(bpIfruit, 'narracoes', ['HOT_REMIX_01', 'HOT_REMIX_02']),
+      'HUNDRED_K_ON_A_COUPE': genList(bpIfruit, 'narracoes', ['HUNDRED_K_ON_A_COUPE_01', 'HUNDRED_K_ON_A_COUPE_02', 'HUNDRED_K_ON_A_COUPE_03']),
+      'I_NEED': genList(bpIfruit, 'narracoes', ['I_NEED_01', 'I_NEED_02', 'I_NEED_03', 'I_NEED_04', 'I_NEED_05', 'I_NEED_06', 'I_NEED_07', 'I_NEED_08', 'I_NEED_09', 'I_NEED_10', 'I_NEED_11']),
+      'KILLIN_DEM': genList(bpIfruit, 'narracoes', ['KILLIN_DEM_01', 'KILLIN_DEM_02']),
+      'KISS_AND_TELL': genList(bpIfruit, 'narracoes', ['KISS_AND_TELL_01', 'KISS_AND_TELL_02', 'KISS_AND_TELL_03', 'KISS_AND_TELL_04', 'KISS_AND_TELL_05', 'KISS_AND_TELL_06', 'KISS_AND_TELL_07']),
+      'KITCHEN_KINGS': genList(bpIfruit, 'narracoes', ['KITCHEN_KINGS_01', 'KITCHEN_KINGS_02', 'KITCHEN_KINGS_03', 'KITCHEN_KINGS_04']),
+      'KNOCK_YOUR_BLOCK_OFF': genList(bpIfruit, 'narracoes', ['KNOCK_YOUR_BLOCK_OFF_01']),
+      'MONEY_IN_THE_BANK': genList(bpIfruit, 'narracoes', ['MONEY_IN_THE_BANK_01', 'MONEY_IN_THE_BANK_02', 'MONEY_IN_THE_BANK_03']),
+      'MUST_BE': genList(bpIfruit, 'narracoes', ['MUST_BE_01', 'MUST_BE_02']),
+      'NUMB_NUMB_JUICE': genList(bpIfruit, 'narracoes', ['NUMB_NUMB_JUICE_01']),
+      'OPOTOYI': genList(bpIfruit, 'narracoes', ['OPOTOYI_01']),
+      'ORIGINAL_FORMAT': genList(bpIfruit, 'narracoes', ['ORIGINAL_FORMAT_01', 'ORIGINAL_FORMAT_02', 'ORIGINAL_FORMAT_03']),
+      'PATTERN_CHANEL': genList(bpIfruit, 'narracoes', ['PATTERN_CHANEL_01', 'PATTERN_CHANEL_02', 'PATTERN_CHANEL_03']),
+      'POP_STAR': genList(bpIfruit, 'narracoes', ['POP_STAR_01', 'POP_STAR_02']),
+      'TBD': genList(bpIfruit, 'narracoes', ['TBD_01']),
+      'WINGS': genList(bpIfruit, 'narracoes', ['WINGS_01', 'WINGS_02', 'WINGS_03', 'WINGS_04']),
+      'WITH_THE_THING': genList(bpIfruit, 'narracoes', ['WITH_THE_THING_01', 'WITH_THE_THING_02']),
+      'W': genList(bpIfruit, 'narracoes', ['W_01', 'W_02'])
+    }
+  };
+
+  /* ================================================================================= */
+  /* =================== 17.5. WORLDWIDE FM (JAZZ) - ONLINE UPDATE =================== */
+  /* ================================================================================= */
+
+  const obj_jazz_online = {
+    chanceLocucao: 0,
+    isSequential: true, // Toca o Island Update na ordem correta
+    musicasList: [
+      { id: 'wwfm_island_update_part_1', name: 'WWFM_ISLAND_UPDATE_PART_1', arquivo: `${bpJazz}/WWFM_ISLAND_UPDATE_PART_1/playlist.m3u8`, durationMs: 2332661 },
+      { id: 'wwfm_island_update_part_2', name: 'WWFM_ISLAND_UPDATE_PART_2', arquivo: `${bpJazz}/WWFM_ISLAND_UPDATE_PART_2/playlist.m3u8`, durationMs: 2026730 },
+      { id: 'wwfm_island_update_part_3', name: 'WWFM_ISLAND_UPDATE_PART_3', arquivo: `${bpJazz}/WWFM_ISLAND_UPDATE_PART_3/playlist.m3u8`, durationMs: 1572411 },
+      { id: 'wwfm_island_update_part_4', name: 'WWFM_ISLAND_UPDATE_PART_4', arquivo: `${bpJazz}/WWFM_ISLAND_UPDATE_PART_4/playlist.m3u8`, durationMs: 1021937 },
+      { id: 'wwfm_island_update_part_5', name: 'WWFM_ISLAND_UPDATE_PART_5', arquivo: `${bpJazz}/WWFM_ISLAND_UPDATE_PART_5/playlist.m3u8`, durationMs: 1592777 }
+    ],
+    grupoID: [],
+    grupoDJSolo: [],
+    narracoesGeneral: [],
+    timePools: null,
+    endto: null,
+    grupoAdv: [],
+    grupoWeazelNews: [],
+    musicIntroNarrations: {}
+  };
+
+  /* ================================================================================= */
+  /* =================== 18.5. FLYLO FM (DANCE 02) - ONLINE UPDATE =================== */
+  /* ================================================================================= */
+
+  const obj_dance_02_online = {
+    chanceLocucao: 0,
+    isSequential: true, // Toca o Island Update na ordem correta
+    musicasList: [
+      { id: 'flylo_island_update_part_1', name: 'FLYLO_ISLAND_UPDATE_PART_1', arquivo: `${bpDance02}/FLYLO_ISLAND_UPDATE_PART_1/playlist.m3u8`, durationMs: 1683624 },
+      { id: 'flylo_island_update_part_2', name: 'FLYLO_ISLAND_UPDATE_PART_2', arquivo: `${bpDance02}/FLYLO_ISLAND_UPDATE_PART_2/playlist.m3u8`, durationMs: 1786848 }
+    ],
+    grupoID: [],
+    grupoDJSolo: [],
+    narracoesGeneral: [],
+    timePools: null,
+    endto: null,
+    grupoAdv: [],
+    grupoWeazelNews: [],
+    musicIntroNarrations: {}
+  };
+
+  /* ================================================================================= */
   /* =========================== EXPORTAÇÃO GLOBAL (GTA V) =========================== */
   /* ================================================================================= */
   
@@ -1186,11 +1325,12 @@
         'radio_12_reggae': obj_reggae,
         'radio_08_mexican': obj_mexican,
         'radio_11_talk_02': obj_talk_02,
-        'radio_13_jazz': obj_jazz,
-        'radio_14_dance_02': obj_dance_02,
+        'radio_13_jazz': obj_jazz_v,
+        'radio_14_dance_02': obj_dance_02_v,
         'radio_22_dlc_battle_mix1_radio': obj_lsur,
         'radio_20_thelab': obj_thelab,
-        'radio_21_dlc_xm17': obj_xm17
+        'radio_21_dlc_xm17': obj_xm17,
+        'radio_23_dlc_xm19_radio': obj_ifruit
       },
       'online': {
         // Todas essas sofrerão mutação de NEWS para ADVs sem perder sincronia
@@ -1210,11 +1350,12 @@
         'radio_12_reggae': obj_reggae,
         'radio_08_mexican': obj_mexican,
         'radio_11_talk_02': obj_talk_02,
-        'radio_13_jazz': obj_jazz,
-        'radio_14_dance_02': obj_dance_02,
+        'radio_13_jazz': obj_jazz_online,
+        'radio_14_dance_02': obj_dance_02_online,
         'radio_22_dlc_battle_mix1_radio': obj_lsur,
         'radio_20_thelab': obj_thelab,
-        'radio_21_dlc_xm17': obj_xm17
+        'radio_21_dlc_xm17': obj_xm17,
+        'radio_23_dlc_xm19_radio': obj_ifruit
       }
     }
   };

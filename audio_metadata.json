@@ -13204,5 +13204,1007 @@
     "sampleRate": 48000,
     "fusionStartType": "none",
     "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/musicas/ACT_UP.ogg": {
+    "duration": 149463,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_23_DLC_XM19_RADIO/musicas/ALIENS.ogg": {
+    "duration": 152959,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_23_DLC_XM19_RADIO/musicas/BACK_TO_BASICS_FLOATING_POINTS_REMIX.ogg": {
+    "duration": 207961,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_23_DLC_XM19_RADIO/musicas/BOP.ogg": {
+    "duration": 158436,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_23_DLC_XM19_RADIO/musicas/CASH_SHIT.ogg": {
+    "duration": 192060,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_23_DLC_XM19_RADIO/musicas/CRIME_PAYS.ogg": {
+    "duration": 164039,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "fade-out"
+  },
+  "RADIO_23_DLC_XM19_RADIO/musicas/DANCE_IN_THE_WATER.ogg": {
+    "duration": 154804,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "fade-out"
+  },
+  "RADIO_23_DLC_XM19_RADIO/musicas/EVERYTHING_SHE_WANTS.ogg": {
+    "duration": 240996,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_23_DLC_XM19_RADIO/musicas/GREAZE_MODE.ogg": {
+    "duration": 157828,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "fade-out"
+  },
+  "RADIO_23_DLC_XM19_RADIO/musicas/HIGHEST_IN_THE_ROOM.ogg": {
+    "duration": 176655,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_23_DLC_XM19_RADIO/musicas/HOT_REMIX.ogg": {
+    "duration": 261332,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_23_DLC_XM19_RADIO/musicas/HUNDRED_K_ON_A_COUPE.ogg": {
+    "duration": 95716,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "fade-out"
+  },
+  "RADIO_23_DLC_XM19_RADIO/musicas/I_NEED.ogg": {
+    "duration": 117668,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_23_DLC_XM19_RADIO/musicas/KILLIN_DEM.ogg": {
+    "duration": 209151,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "fade-out"
+  },
+  "RADIO_23_DLC_XM19_RADIO/musicas/KISS_AND_TELL.ogg": {
+    "duration": 190295,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_23_DLC_XM19_RADIO/musicas/KITCHEN_KINGS.ogg": {
+    "duration": 172724,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_23_DLC_XM19_RADIO/musicas/KNOCK_YOUR_BLOCK_OFF.ogg": {
+    "duration": 207777,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_23_DLC_XM19_RADIO/musicas/MONEY_IN_THE_BANK.ogg": {
+    "duration": 147492,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_23_DLC_XM19_RADIO/musicas/MUST_BE.ogg": {
+    "duration": 205895,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "fade-out"
+  },
+  "RADIO_23_DLC_XM19_RADIO/musicas/NUMB_NUMB_JUICE.ogg": {
+    "duration": 107577,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "fade-out"
+  },
+  "RADIO_23_DLC_XM19_RADIO/musicas/OPOTOYI.ogg": {
+    "duration": 239127,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_23_DLC_XM19_RADIO/musicas/ORIGINAL_FORMAT.ogg": {
+    "duration": 201948,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_23_DLC_XM19_RADIO/musicas/PATTERN_CHANEL.ogg": {
+    "duration": 122537,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_23_DLC_XM19_RADIO/musicas/POP_STAR.ogg": {
+    "duration": 171801,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_23_DLC_XM19_RADIO/musicas/TBD.ogg": {
+    "duration": 163220,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_23_DLC_XM19_RADIO/musicas/W.ogg": {
+    "duration": 229156,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_23_DLC_XM19_RADIO/musicas/WINGS.ogg": {
+    "duration": 142151,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "abrupt"
+  },
+  "RADIO_23_DLC_XM19_RADIO/musicas/WITH_THE_THING.ogg": {
+    "duration": 218964,
+    "sampleRate": 48000,
+    "fusionStartType": "normal",
+    "fusionEndType": "fade-out"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/ACT_UP_01.ogg": {
+    "duration": 2521,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/ACT_UP_02.ogg": {
+    "duration": 3379,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/ALIENS_01.ogg": {
+    "duration": 7476,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/ALIENS_02.ogg": {
+    "duration": 7959,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/BACK_TO_BASICS_FLOATING_POINTS_REMIX_01.ogg": {
+    "duration": 5295,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/BACK_TO_BASICS_FLOATING_POINTS_REMIX_02.ogg": {
+    "duration": 4575,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/BACK_TO_BASICS_FLOATING_POINTS_REMIX_03.ogg": {
+    "duration": 2687,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/BOP_01.ogg": {
+    "duration": 2636,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/BOP_02.ogg": {
+    "duration": 4631,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/CASH_SHIT_01.ogg": {
+    "duration": 4060,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/CASH_SHIT_02.ogg": {
+    "duration": 4676,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/CRIME_PAYS_01.ogg": {
+    "duration": 4828,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/CUSTOM_MONO_SOLO_13.ogg": {
+    "duration": 28199,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/DANCE_IN_THE_WATER_01.ogg": {
+    "duration": 5289,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/EVENING_01.ogg": {
+    "duration": 2452,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/EVENING_02.ogg": {
+    "duration": 2679,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/EVENING_03.ogg": {
+    "duration": 2545,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/EVERYTHING_SHE_WANTS_01.ogg": {
+    "duration": 5228,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/EVERYTHING_SHE_WANTS_02.ogg": {
+    "duration": 3500,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/GENERIC_ID_02.ogg": {
+    "duration": 9049,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/GENERIC_ID_03.ogg": {
+    "duration": 6943,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "normal"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/GENERIC_ID_04.ogg": {
+    "duration": 4900,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "normal"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/GENERIC_ID_05.ogg": {
+    "duration": 11903,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/GENERIC_ID_06.ogg": {
+    "duration": 7396,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/GENERIC_ID_07.ogg": {
+    "duration": 6825,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "normal"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/GENERIC_ID_08.ogg": {
+    "duration": 8471,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/GENERIC_ID_09.ogg": {
+    "duration": 8399,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/GENERIC_ID_10.ogg": {
+    "duration": 9463,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "normal"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/GENERIC_ID_11.ogg": {
+    "duration": 9535,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/GENERIC_ID_12.ogg": {
+    "duration": 8735,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/GENERIC_ID_13.ogg": {
+    "duration": 15977,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/GENERIC_ID_14.ogg": {
+    "duration": 6367,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/GENERIC_ID_15.ogg": {
+    "duration": 5033,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/GENERIC_ID_16.ogg": {
+    "duration": 7919,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/GENERIC_ID_17.ogg": {
+    "duration": 10705,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/GREAZE_MODE_01.ogg": {
+    "duration": 3433,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/GREAZE_MODE_02.ogg": {
+    "duration": 5375,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/GREAZE_MODE_03.ogg": {
+    "duration": 2679,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/GREAZE_MODE_04.ogg": {
+    "duration": 4423,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/HIGHEST_IN_THE_ROOM_01.ogg": {
+    "duration": 3396,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/HIGHEST_IN_THE_ROOM_02.ogg": {
+    "duration": 3655,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/HOT_REMIX_01.ogg": {
+    "duration": 5717,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/HOT_REMIX_02.ogg": {
+    "duration": 3764,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/HUNDRED_K_ON_A_COUPE_01.ogg": {
+    "duration": 3524,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/HUNDRED_K_ON_A_COUPE_02.ogg": {
+    "duration": 3464,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/HUNDRED_K_ON_A_COUPE_03.ogg": {
+    "duration": 3313,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/I_NEED_01.ogg": {
+    "duration": 6559,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/I_NEED_02.ogg": {
+    "duration": 5465,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/I_NEED_03.ogg": {
+    "duration": 8111,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/I_NEED_04.ogg": {
+    "duration": 4049,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/I_NEED_05.ogg": {
+    "duration": 5217,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/I_NEED_06.ogg": {
+    "duration": 2025,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/I_NEED_07.ogg": {
+    "duration": 3868,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/I_NEED_08.ogg": {
+    "duration": 6604,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/I_NEED_09.ogg": {
+    "duration": 10828,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/I_NEED_10.ogg": {
+    "duration": 6441,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/I_NEED_11.ogg": {
+    "duration": 8116,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/KILLIN_DEM_01.ogg": {
+    "duration": 6367,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/KILLIN_DEM_02.ogg": {
+    "duration": 4007,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/KISS_AND_TELL_01.ogg": {
+    "duration": 7297,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/KISS_AND_TELL_02.ogg": {
+    "duration": 5983,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/KISS_AND_TELL_03.ogg": {
+    "duration": 5121,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/KISS_AND_TELL_04.ogg": {
+    "duration": 5087,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/KISS_AND_TELL_05.ogg": {
+    "duration": 7343,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/KISS_AND_TELL_06.ogg": {
+    "duration": 6119,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/KISS_AND_TELL_07.ogg": {
+    "duration": 6145,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/KITCHEN_KINGS_01.ogg": {
+    "duration": 5028,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/KITCHEN_KINGS_02.ogg": {
+    "duration": 7660,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/KITCHEN_KINGS_03.ogg": {
+    "duration": 7039,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/KITCHEN_KINGS_04.ogg": {
+    "duration": 5631,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/KNOCK_YOUR_BLOCK_OFF_01.ogg": {
+    "duration": 5817,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/MONEY_IN_THE_BANK_01.ogg": {
+    "duration": 4332,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/MONEY_IN_THE_BANK_02.ogg": {
+    "duration": 4431,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/MONEY_IN_THE_BANK_03.ogg": {
+    "duration": 4711,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/MONO_SOLO_01.ogg": {
+    "duration": 136335,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/MONO_SOLO_02.ogg": {
+    "duration": 24265,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/MONO_SOLO_03.ogg": {
+    "duration": 19356,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/MONO_SOLO_05.ogg": {
+    "duration": 19468,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/MONO_SOLO_07.ogg": {
+    "duration": 6671,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/MONO_SOLO_08.ogg": {
+    "duration": 6900,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/MONO_SOLO_09.ogg": {
+    "duration": 15092,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/MONO_SOLO_10.ogg": {
+    "duration": 10593,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/MONO_SOLO_11.ogg": {
+    "duration": 14164,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/MONO_SOLO_12.ogg": {
+    "duration": 11876,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/MONO_SOLO_13.ogg": {
+    "duration": 6932,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/MONO_SOLO_14.ogg": {
+    "duration": 8484,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/MONO_SOLO_15.ogg": {
+    "duration": 7167,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/MONO_SOLO_20.ogg": {
+    "duration": 23487,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/MONO_SOLO_21.ogg": {
+    "duration": 19796,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/MONO_SOLO_22.ogg": {
+    "duration": 8383,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/MONO_SOLO_23.ogg": {
+    "duration": 5012,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/MONO_TAKEOVER_SOLO_02.ogg": {
+    "duration": 28735,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/MONO_TAKEOVER_SOLO_03.ogg": {
+    "duration": 28743,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/MONO_TAKEOVER_SOLO_04.ogg": {
+    "duration": 17991,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/MONO_TAKEOVER_SOLO_05.ogg": {
+    "duration": 26276,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/MONO_TAKEOVER_SOLO_10.ogg": {
+    "duration": 23399,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/MONO_TAKEOVER_SOLO_11.ogg": {
+    "duration": 19324,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/MONO_TAKEOVER_SOLO_12.ogg": {
+    "duration": 5889,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/MONO_TAKEOVER_SOLO_13.ogg": {
+    "duration": 5047,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/MONO_TAKEOVER_SOLO_14.ogg": {
+    "duration": 24551,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/MORNING_01.ogg": {
+    "duration": 2697,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/MORNING_02.ogg": {
+    "duration": 3713,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/MORNING_03.ogg": {
+    "duration": 2743,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/MORNING_04.ogg": {
+    "duration": 3732,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/MUST_BE_01.ogg": {
+    "duration": 6652,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/MUST_BE_02.ogg": {
+    "duration": 6567,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/NIGHT_01.ogg": {
+    "duration": 2732,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/NIGHT_02.ogg": {
+    "duration": 2671,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/NIGHT_03.ogg": {
+    "duration": 5079,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/NIGHT_04.ogg": {
+    "duration": 3340,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/NUMB_NUMB_JUICE_01.ogg": {
+    "duration": 8404,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/OPOTOYI_01.ogg": {
+    "duration": 5969,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/ORIGINAL_FORMAT_01.ogg": {
+    "duration": 4433,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/ORIGINAL_FORMAT_02.ogg": {
+    "duration": 2761,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/ORIGINAL_FORMAT_03.ogg": {
+    "duration": 5367,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/PATTERN_CHANEL_01.ogg": {
+    "duration": 8767,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/PATTERN_CHANEL_02.ogg": {
+    "duration": 3809,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/PATTERN_CHANEL_03.ogg": {
+    "duration": 9015,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/POP_STAR_01.ogg": {
+    "duration": 4337,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/POP_STAR_02.ogg": {
+    "duration": 2916,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/TAKEOVER_ID_01.ogg": {
+    "duration": 5484,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/TAKEOVER_ID_02.ogg": {
+    "duration": 11183,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/TAKEOVER_ID_03.ogg": {
+    "duration": 5593,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "normal"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/TAKEOVER_ID_04.ogg": {
+    "duration": 8084,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "normal"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/TAKEOVER_ID_05.ogg": {
+    "duration": 8284,
+    "sampleRate": 48000,
+    "fusionStartType": "none",
+    "fusionEndType": "normal"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/TAKEOVER_ID_06.ogg": {
+    "duration": 8492,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/TAKEOVER_ID_07.ogg": {
+    "duration": 8113,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/TAKEOVER_ID_08.ogg": {
+    "duration": 3881,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/TAKEOVER_ID_09.ogg": {
+    "duration": 8977,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/TAKEOVER_ID_10.ogg": {
+    "duration": 4316,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/TBD_01.ogg": {
+    "duration": 6052,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/WINGS_01.ogg": {
+    "duration": 4559,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/WINGS_02.ogg": {
+    "duration": 5249,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/WINGS_03.ogg": {
+    "duration": 4956,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/WINGS_04.ogg": {
+    "duration": 3436,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/WITH_THE_THING_01.ogg": {
+    "duration": 3249,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/WITH_THE_THING_02.ogg": {
+    "duration": 3167,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/W_01.ogg": {
+    "duration": 3665,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "normal"
+  },
+  "RADIO_23_DLC_XM19_RADIO/narracoes/W_02.ogg": {
+    "duration": 4257,
+    "sampleRate": 48000,
+    "fusionStartType": "possible",
+    "fusionEndType": "possible"
   }
 }

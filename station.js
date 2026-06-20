@@ -18,7 +18,7 @@
   const bpClassRock = 'RADIO_01_CLASS_ROCK';
   
   const obj_class_rock = {
-    chanceLocucao: 0.9,
+    chanceLocucao: 0.7,
     musicasList: [
       { id: 'all_the_things_she_said', name: 'ALL_THE_THINGS_SHE_SAID', arquivo: `${bpClassRock}/musicas/ALL_THE_THINGS_SHE_SAID.ogg`, introStart: 250879, introEnd: 1699792, finalStart: 10706944, finalEnd: 11536896 },
       { id: 'baker_street', name: 'BAKER_STREET', arquivo: `${bpClassRock}/musicas/BAKER_STREET.ogg`, introStart: 1375493, introEnd: 2458629, finalStart: 14612480, finalEnd: 15420416 },
@@ -116,7 +116,7 @@
   const bpSilverlake = 'RADIO_16_SILVERLAKE';
   
   const obj_silverlake = {
-    chanceLocucao: 0.9,
+    chanceLocucao: 0.7,
     musicasList: [
       { id: 'always', name: 'ALWAYS', arquivo: `${bpSilverlake}/musicas/ALWAYS.ogg`, introStart: 807008, introEnd: 1523808, finalStart: 8671232, finalEnd: 9777152 },
       { id: 'boogie_in_zero_gravity', name: 'BOOGIE_IN_ZERO_GRAVITY', arquivo: `${bpSilverlake}/musicas/BOOGIE_IN_ZERO_GRAVITY.ogg`, introStart: 247856, introEnd: 741376, finalStart: 7970816, finalEnd: 10113536 },
@@ -211,7 +211,7 @@
   const bpRock = 'RADIO_18_90S_ROCK';
   
   const obj_90s_rock = {
-    chanceLocucao: 0.9,
+    chanceLocucao: 0.8,
     musicasList: [
       { id: 'answer_to_yourself', name: 'ANSWER_TO_YOURSELF', arquivo: `${bpRock}/musicas/ANSWER_TO_YOURSELF.ogg`, introStart: 258048, introEnd: 1274829, finalStart: 8233984, finalEnd: 9037312 },
       { id: 'black_grease', name: 'BLACK_GREASE', arquivo: `${bpRock}/musicas/BLACK_GREASE.ogg`, introStart: 506496, introEnd: 1882752, finalStart: 9038464, finalEnd: 10278912 },
@@ -273,7 +273,7 @@
   const bpKult = 'RADIO_34_DLC_HEI4_KULT';
   
   const obj_kult = {
-    chanceLocucao: 0.7,
+    chanceLocucao: 0.5,
     musicasList: [
       { id: 'age_of_consent', name: 'AGE_OF_CONSENT', arquivo: `${bpKult}/musicas/AGE_OF_CONSENT.ogg`, introStart: 237689, introEnd: 1369525, finalStart: 13887493, finalEnd: 14694641 },
       { id: 'alien_crime_lord', name: 'ALIEN_CRIME_LORD', arquivo: `${bpKult}/musicas/ALIEN_CRIME_LORD.ogg`, introStart: 222720, introEnd: 1159680, finalStart: 11268000, finalEnd: 12169920 },
@@ -304,13 +304,19 @@
       { id: 'take_down_the_house', name: 'TAKE_DOWN_THE_HOUSE', arquivo: `${bpKult}/musicas/TAKE_DOWN_THE_HOUSE.ogg`, introStart: 253360, introEnd: 769538, finalStart: 8629765, finalEnd: 8833804 },
       { id: 'the_adults_are_talking', name: 'THE_ADULTS_ARE_TALKING', arquivo: `${bpKult}/musicas/THE_ADULTS_ARE_TALKING.ogg`, introStart: 207313, introEnd: 1047028, finalStart: 13209098, finalEnd: 14538566 },
       { id: 'this_is_the_day', name: 'THIS_IS_THE_DAY', arquivo: `${bpKult}/musicas/THIS_IS_THE_DAY.ogg`, introStart: 279588, introEnd: 868244, finalStart: 12311374, finalEnd: 13188176 },
+      { id: 'time_bomb', name: 'TIME_BOMB', arquivo: `${bpKult}/musicas/TIME_BOMB.ogg`, finalStart: 5726880, finalEnd: 5931360 },
       { id: 'too_much_money', name: 'TOO_MUCH_MONEY', arquivo: `${bpKult}/musicas/TOO_MUCH_MONEY.ogg`, introStart: 517333, introEnd: 999479, finalStart: 5507119, finalEnd: 6257442 },
       { id: 'tv_casualty', name: 'TV_CASUALTY', arquivo: `${bpKult}/musicas/TV_CASUALTY.ogg`, introStart: 171360, introEnd: 325440, finalStart: 6123360, finalEnd: 6747360 },
       { id: 'typical_girls', name: 'TYPICAL_GIRLS', arquivo: `${bpKult}/musicas/TYPICAL_GIRLS.ogg`, finalStart: 9775785, finalEnd: 10411558 },
       { id: 'where_no_eagles_fly', name: 'WHERE_NO_EAGLES_FLY', arquivo: `${bpKult}/musicas/WHERE_NO_EAGLES_FLY.ogg`, introStart: 280320, introEnd: 1199616, finalStart: 9330432, finalEnd: 10459392 }
     ],
-    // Combinação dos IDs curtos e longos da Kult
-    grupoID: genList(bpKult, 'narracoes', padArr('ID', 1, 36)),
+    // Array explícito para evitar a busca de arquivos que não existem na pasta
+    grupoID: genList(bpKult, 'narracoes', [
+      'ID_01', 'ID_02', 'ID_03', 'ID_04', 'ID_05', 'ID_06', 'ID_07', 'ID_08', 'ID_09', 'ID_10',
+      'ID_11', 'ID_12', 'ID_13', 'ID_14', 'ID_16', 'ID_17', 'ID_18', 'ID_19', 'ID_20', 'ID_21',
+      'ID_22', 'ID_23', 'ID_24', 'ID_25', 'ID_26', 'ID_27', 'ID_28', 'ID_29', 'ID_30', 'ID_36',
+      'ID_37', 'ID_38', 'ID_39', 'ID_40', 'ID_41', 'ID_43'
+    ]),
     grupoDJSolo: genList(bpKult, 'narracoes', padArr('MONO_SOLO', 1, 4)),
     narracoesGeneral: genList(bpKult, 'narracoes', padArr('GENERAL', 1, 11)),
     timePools: {
@@ -318,13 +324,12 @@
       evening: genList(bpKult, 'narracoes', padArr('EVENING', 1, 4))
     },
     endto: {},
-    // Comerciais exclusivos Zodiacais da Kult
     grupoAdv: genList(bpKult, 'narracoes', [
       'KULT_AD001_AQUARIUS', 'KULT_AD002_ARIES', 'KULT_AD003_CANCER', 'KULT_AD004_CAPRICORN', 
       'KULT_AD005_GEMINI', 'KULT_AD006_LEO', 'KULT_AD007_LIBRA', 'KULT_AD008_PISCES', 
       'KULT_AD009_SAGITARIUS', 'KULT_AD010_SCORPIO', 'KULT_AD011_TAURUS', 'KULT_AD012_VIRGO'
     ]),
-    grupoWeazelNews: [], // Sem notícias exclusivas, fica vazio ou global
+    grupoWeazelNews: [],
     musicIntroNarrations: {
       'AGE_OF_CONSENT': genList(bpKult, 'narracoes', ['AGE_OF_CONSENT_01', 'AGE_OF_CONSENT_02', 'AGE_OF_CONSENT_03']),
       'ALIEN_CRIME_LORD': genList(bpKult, 'narracoes', ['ALIEN_CRIME_LORD_01', 'ALIEN_CRIME_LORD_02', 'ALIEN_CRIME_LORD_03']),
@@ -341,6 +346,7 @@
       'HUMAN_FLY': genList(bpKult, 'narracoes', ['HUMAN_FLY_01', 'HUMAN_FLY_02']),
       'ITS_YOURS': genList(bpKult, 'narracoes', ['ITS_YOURS_01', 'ITS_YOURS_02', 'ITS_YOURS_03']),
       'LFT_ME_LONELY': genList(bpKult, 'narracoes', ['LFT_ME_LONELY_01', 'LFT_ME_LONELY_02', 'LFT_ME_LONELY_03']),
+      'LIEBE_AUF_DEN_ERSTEN_BLICK': genList(bpKult, 'narracoes', ['LIEBE_AUF_DEN_ERSTEN_BLICK_01', 'LIEBE_AUF_DEN_ERSTEN_BLICK_02', 'LIEBE_AUF_DEN_ERSTEN_BLICK_03']),
       'MANY_TEARS_AGO': genList(bpKult, 'narracoes', ['MANY_TEARS_AGO_01', 'MANY_TEARS_AGO_02', 'MANY_TEARS_AGO_03', 'MANY_TEARS_AGO_04']),
       'NIGHTCLUBBING': genList(bpKult, 'narracoes', ['NIGHTCLUBBING_01', 'NIGHTCLUBBING_02']),
       'ON_THE_LEVEL': genList(bpKult, 'narracoes', ['ON_THE_LEVEL_01', 'ON_THE_LEVEL_02']),
@@ -348,12 +354,15 @@
       'RAGA_MADHUVANTI': genList(bpKult, 'narracoes', ['RAGA_MADHUVANTI_01', 'RAGA_MADHUVANTI_02', 'RAGA_MADHUVANTI_03', 'RAGA_MADHUVANTI_04', 'RAGA_MADHUVANTI_05']),
       'ROCK_AND_ROLL': genList(bpKult, 'narracoes', ['ROCK_AND_ROLL_01', 'ROCK_AND_ROLL_02', 'ROCK_AND_ROLL_03']),
       'SHES_LOST_CONTROL': genList(bpKult, 'narracoes', ['SHES_LOST_CONTROL_01', 'SHES_LOST_CONTROL_02', 'SHES_LOST_CONTROL_03']),
+      'SO_IT_GOES': genList(bpKult, 'narracoes', ['SO_IT_GOES_01', 'SO_IT_GOES_02', 'SO_IT_GOES_03']),
       'TAINTED_LOVE': genList(bpKult, 'narracoes', ['TAINTED_LOVE_01', 'TAINTED_LOVE_02', 'TAINTED_LOVE_03']),
       'TAKE_DOWN_THE_HOUSE': genList(bpKult, 'narracoes', ['TAKE_DOWN_THE_HOUSE_01', 'TAKE_DOWN_THE_HOUSE_02', 'TAKE_DOWN_THE_HOUSE_03']),
       'THE_ADULTS_ARE_TALKING': genList(bpKult, 'narracoes', ['THE_ADULTS_ARE_TALKING_01', 'THE_ADULTS_ARE_TALKING_02', 'THE_ADULTS_ARE_TALKING_03']),
       'THIS_IS_THE_DAY': genList(bpKult, 'narracoes', ['THIS_IS_THE_DAY_01', 'THIS_IS_THE_DAY_02', 'THIS_IS_THE_DAY_03']),
+      'TIME_BOMB': genList(bpKult, 'narracoes', ['TIME_BOMB_01', 'TIME_BOMB_02', 'TIME_BOMB_03']),
       'TOO_MUCH_MONEY': genList(bpKult, 'narracoes', ['TOO_MUCH_MONEY_01', 'TOO_MUCH_MONEY_02', 'TOO_MUCH_MONEY_03', 'TOO_MUCH_MONEY_04']),
       'TV_CASUALTY': genList(bpKult, 'narracoes', ['TV_CASUALTY_01', 'TV_CASUALTY_02', 'TV_CASUALTY_03', 'TV_CASUALTY_04', 'TV_CASUALTY_05']),
+      'TYPICAL_GIRLS': genList(bpKult, 'narracoes', ['TYPICAL_GIRLS_01', 'TYPICAL_GIRLS_02', 'TYPICAL_GIRLS_03']),
       'WHERE_NO_EAGLES_FLY': genList(bpKult, 'narracoes', ['WHERE_NO_EAGLES_FLY_01'])
     }
   };
@@ -365,7 +374,7 @@
   const bpMotown = 'RADIO_15_MOTOWN';
   
   const obj_motown = {
-    chanceLocucao: 0.9,
+    chanceLocucao: 0.7,
     musicasList: [
       { id: 'ashleys_roachclip', name: 'ASHLEYS_ROACHCLIP', arquivo: `${bpMotown}/musicas/ASHLEYS_ROACHCLIP.ogg`, introStart: 259018, introEnd: 956928, finalStart: 10774528, finalEnd: 11807744 },
       { id: 'bouncy_lady', name: 'BOUNCY_LADY', arquivo: `${bpMotown}/musicas/BOUNCY_LADY.ogg`, introStart: 235824, introEnd: 506160, finalStart: 8904704, finalEnd: 9847296 },
@@ -429,7 +438,7 @@
   const bpPop = 'RADIO_02_POP';
   
   const obj_pop = {
-    chanceLocucao: 0.9,
+    chanceLocucao: 0.7,
     musicasList: [
       { id: 'adult_education', name: 'ADULT_EDUCATION', arquivo: `${bpPop}/musicas/ADULT_EDUCATION.ogg`, introStart: 312704, introEnd: 1577088, finalStart: 10340352, finalEnd: 11907072 },
       { id: 'alright', name: 'ALRIGHT', arquivo: `${bpPop}/musicas/ALRIGHT.ogg`, finalStart: 9302016, finalEnd: 10407936 },
@@ -538,7 +547,7 @@
   const bpFunk = 'RADIO_17_FUNK';
   
   const obj_funk = {
-    chanceLocucao: 0.9,
+    chanceLocucao: 0.7,
     musicasList: [
       { id: 'back_and_forth', name: 'BACK_AND_FORTH', arquivo: `${bpFunk}/musicas/BACK_AND_FORTH.ogg`, introStart: 253952, introEnd: 1265664, finalStart: 9195520, finalEnd: 10294555 },
       { id: 'cant_hold_back', name: 'CANT_HOLD_BACK', arquivo: `${bpFunk}/musicas/CANT_HOLD_BACK.ogg`, introStart: 282977, introEnd: 835328, finalStart: 9224192, finalEnd: 10705408 },
@@ -599,7 +608,7 @@
   const bpHipHopNew = 'RADIO_03_HIPHOP_NEW';
   
   const obj_hiphop_new = {
-    chanceLocucao: 0.9,
+    chanceLocucao: 0.7,
     musicasList: [
       { id: 'adhd', name: 'ADHD', arquivo: `${bpHipHopNew}/musicas/ADHD.ogg`, finalStart: 7233536, finalEnd: 9030656 },
       { id: 'ali_bomaye', name: 'ALI_BOMAYE', arquivo: `${bpHipHopNew}/musicas/ALI_BOMAYE.ogg`, finalStart: 11010048, finalEnd: 12494848 },
@@ -712,7 +721,7 @@
   const bpPunk = 'RADIO_04_PUNK';
   
   const obj_punk = {
-    chanceLocucao: 0.9,
+    chanceLocucao: 0.7,
     musicasList: [
       { id: 'amoeba', name: 'AMOEBA', arquivo: `${bpPunk}/musicas/AMOEBA.ogg`, introStart: 297136, introEnd: 970496, finalStart: 7423744, finalEnd: 8528384 },
       { id: 'blown_away', name: 'BLOWN_AWAY', arquivo: `${bpPunk}/musicas/BLOWN_AWAY.ogg`, introStart: 258686, introEnd: 701952, finalStart: 6625280, finalEnd: 7575552 },
@@ -796,7 +805,7 @@
   const bpCountry = 'RADIO_06_COUNTRY';
   
   const obj_country = {
-    chanceLocucao: 0.9,
+    chanceLocucao: 0.7,
     musicasList: [
       { id: 'are_you_sure_hank', name: 'ARE_YOU_SURE_HANK', arquivo: `${bpCountry}/musicas/ARE_YOU_SURE_HANK.ogg`, introStart: 243712, introEnd: 800256, finalStart: 6049792, finalEnd: 7008256 },
       { id: 'cant_hardly_stand', name: 'CANT_HARDLY_STAND', arquivo: `${bpCountry}/musicas/CANT_HARDLY_STAND.ogg`, introStart: 179130, introEnd: 420864, finalStart: 6250496, finalEnd: 7174144 },
@@ -851,7 +860,7 @@
   const bpHipHopOld = 'RADIO_09_HIPHOP_OLD';
   
   const obj_hiphop_old = {
-    chanceLocucao: 0.9,
+    chanceLocucao: 0.7,
     musicasList: [
       { id: 'afro_puffs', name: 'AFRO_PUFFS', arquivo: `${bpHipHopOld}/musicas/AFRO_PUFFS.ogg`, introStart: 173912, introEnd: 477016, finalStart: 12025856, finalEnd: 13016064 },
       { id: 'ambitionz_az_a_ridah', name: 'AMBITIONZ_AZ_A_RIDAH', arquivo: `${bpHipHopOld}/musicas/AMBITIONZ_AZ_A_RIDAH.ogg`, introStart: 406528, introEnd: 2006528, finalStart: 11395072, finalEnd: 12566528 },
@@ -933,7 +942,7 @@
   const bpReggae = 'RADIO_12_REGGAE';
   
   const obj_reggae = {
-    chanceLocucao: 0.9,
+    chanceLocucao: 0.7,
     musicasList: [
       { id: 'addi_truth', name: 'ADDI_TRUTH', arquivo: `${bpReggae}/musicas/ADDI_TRUTH.ogg`, introStart: 237568, introEnd: 430080, finalStart: 7267328, finalEnd: 8404992 },
       { id: 'chapter3', name: 'CHAPTER3', arquivo: `${bpReggae}/musicas/CHAPTER3.ogg`, introStart: 706688, introEnd: 1504384, finalStart: 8464512, finalEnd: 9334912 },
@@ -1304,6 +1313,79 @@
   };
 
   /* ================================================================================= */
+  /* ===================== 23. STILL SLIPPING LOS SANTOS ============================= */
+  /* ================================================================================= */
+
+  const bpStillSlipping = 'RADIO_27_DLC_PRHEI4';
+  
+  const obj_stillslipping = {
+    chanceLocucao: 0,
+    isSequential: true, // Toca as partes na ordem exata e reinicia
+    musicasList: [
+      { id: 'hei4_still_slipping_p1', name: 'HEI4_STILL_SLIPPING_P1', arquivo: `${bpStillSlipping}/HEI4_STILL_SLIPPING_P1/playlist.m3u8`, durationMs: 1383792 },
+      { id: 'hei4_still_slipping_p2', name: 'HEI4_STILL_SLIPPING_P2', arquivo: `${bpStillSlipping}/HEI4_STILL_SLIPPING_P2/playlist.m3u8`, durationMs: 1283219 },
+      { id: 'hei4_still_slipping_p3', name: 'HEI4_STILL_SLIPPING_P3', arquivo: `${bpStillSlipping}/HEI4_STILL_SLIPPING_P3/playlist.m3u8`, durationMs: 1390419 },
+      { id: 'hei4_still_slipping_p4', name: 'HEI4_STILL_SLIPPING_P4', arquivo: `${bpStillSlipping}/HEI4_STILL_SLIPPING_P4/playlist.m3u8`, durationMs: 460619 }
+    ],
+    grupoID: [],
+    grupoDJSolo: [],
+    narracoesGeneral: [],
+    timePools: null,
+    endto: null,
+    grupoAdv: [],
+    grupoWeazelNews: [],
+    musicIntroNarrations: {}
+  };
+
+  /* ================================================================================= */
+  /* ===================== 24. THE MUSIC LOCKER RADIO (MLR) ========================== */
+  /* ================================================================================= */
+
+  const bpMlr = 'RADIO_35_DLC_HEI4_MLR';
+  
+  const obj_mlr = {
+    chanceLocucao: 0,
+    isGroupedSequential: true, // Aciona o motor de embaralhamento por blocos (Sets dos DJs)
+    musicGroups: [
+      // DJ 1: Keinemusik (Club)
+      [
+        { id: 'hei4_mlr_km_club_p1', name: 'HEI4_MLR_KM_CLUB_P1', arquivo: `${bpMlr}/hei4_mlr_km_club_p1/playlist.m3u8`, durationMs: 2352424 },
+        { id: 'hei4_mlr_km_club_p2', name: 'HEI4_MLR_KM_CLUB_P2', arquivo: `${bpMlr}/hei4_mlr_km_club_p2/playlist.m3u8`, durationMs: 1552637 },
+        { id: 'hei4_mlr_km_club_p3', name: 'HEI4_MLR_KM_CLUB_P3', arquivo: `${bpMlr}/hei4_mlr_km_club_p3/playlist.m3u8`, durationMs: 1152081 },
+        { id: 'hei4_mlr_km_club_p4', name: 'HEI4_MLR_KM_CLUB_P4', arquivo: `${bpMlr}/hei4_mlr_km_club_p4/playlist.m3u8`, durationMs: 1813200 }
+      ],
+      // DJ 2: Keinemusik (Beach)
+      [
+        { id: 'hei4_mlr_km_beach_p1', name: 'HEI4_MLR_KM_BEACH_P1', arquivo: `${bpMlr}/hei4_mlr_km_beach_p1/playlist.m3u8`, durationMs: 2329811 },
+        { id: 'hei4_mlr_km_beach_p2', name: 'HEI4_MLR_KM_BEACH_P2', arquivo: `${bpMlr}/hei4_mlr_km_beach_p2/playlist.m3u8`, durationMs: 1575251 },
+        { id: 'hei4_mlr_km_beach_p3', name: 'HEI4_MLR_KM_BEACH_P3', arquivo: `${bpMlr}/hei4_mlr_km_beach_p3/playlist.m3u8`, durationMs: 1152081 },
+        { id: 'hei4_mlr_km_beach_p4', name: 'HEI4_MLR_KM_BEACH_P4', arquivo: `${bpMlr}/hei4_mlr_km_beach_p4/playlist.m3u8`, durationMs: 1075877 }
+      ],
+      // DJ 3: Moodymann
+      [
+        { id: 'hei4_mlr_mm_p1', name: 'HEI4_MLR_MM_P1', arquivo: `${bpMlr}/hei4_mlr_mm_p1/playlist.m3u8`, durationMs: 1690198 },
+        { id: 'hei4_mlr_mm_p2', name: 'HEI4_MLR_MM_P2', arquivo: `${bpMlr}/hei4_mlr_mm_p2/playlist.m3u8`, durationMs: 1610773 },
+        { id: 'hei4_mlr_mm_p3', name: 'HEI4_MLR_MM_P3', arquivo: `${bpMlr}/hei4_mlr_mm_p3/playlist.m3u8`, durationMs: 2228756 },
+        { id: 'hei4_mlr_mm_p4', name: 'HEI4_MLR_MM_P4', arquivo: `${bpMlr}/hei4_mlr_mm_p4/playlist.m3u8`, durationMs: 2060106 }
+      ],
+      // DJ 4: Palms Trax
+      [
+        { id: 'hei4_mlr_pt_p1', name: 'HEI4_MLR_PT_P1', arquivo: `${bpMlr}/hei4_mlr_pt_p1/playlist.m3u8`, durationMs: 1041521 },
+        { id: 'hei4_mlr_pt_p2', name: 'HEI4_MLR_PT_P2', arquivo: `${bpMlr}/hei4_mlr_pt_p2/playlist.m3u8`, durationMs: 1537939 },
+        { id: 'hei4_mlr_pt_p3', name: 'HEI4_MLR_PT_P3', arquivo: `${bpMlr}/hei4_mlr_pt_p3/playlist.m3u8`, durationMs: 1811912 }
+      ]
+    ],
+    grupoID: [],
+    grupoDJSolo: [],
+    narracoesGeneral: [],
+    timePools: null,
+    endto: null,
+    grupoAdv: [],
+    grupoWeazelNews: [],
+    musicIntroNarrations: {}
+  };
+
+  /* ================================================================================= */
   /* =========================== EXPORTAÇÃO GLOBAL (GTA V) =========================== */
   /* ================================================================================= */
   
@@ -1355,7 +1437,9 @@
         'radio_22_dlc_battle_mix1_radio': obj_lsur,
         'radio_20_thelab': obj_thelab,
         'radio_21_dlc_xm17': obj_xm17,
-        'radio_23_dlc_xm19_radio': obj_ifruit
+        'radio_23_dlc_xm19_radio': obj_ifruit,
+        'radio_27_dlc_prhei4': obj_stillslipping,
+        'radio_35_dlc_hei4_mlr': obj_mlr
       }
     }
   };
